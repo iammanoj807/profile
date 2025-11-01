@@ -235,22 +235,20 @@ const SplashScreen = ({ onComplete }) => {
   
   React.useEffect(() => {
     const terminalLines = [
-      { text: '$ npm run dev', delay: 100 },
-      { text: '', delay: 300 },
-      { text: '> manoj-portfolio@1.0.0 dev', delay: 500 },
-      { text: '> vite --host', delay: 700 },
-      { text: '', delay: 900 },
-      { text: 'VITE v5.0.0  ready in 482 ms', delay: 1100, class: 'terminal-info' },
-      { text: '', delay: 1300 },
-      { text: '➡  Local:   http://localhost:3000/', delay: 1500, class: 'terminal-info' },
-      { text: '➡  Network: use --host to expose', delay: 1700, class: 'terminal-info' },
-      { text: '', delay: 1900 },
-      { text: '✓ React components loaded', delay: 2100, class: 'terminal-success' },
-      { text: '✓ Framer Motion initialized', delay: 2300, class: 'terminal-success' },
-      { text: '✓ Portfolio data compiled', delay: 2500, class: 'terminal-success' },
-      { text: '', delay: 2700 },
-      { text: '🚀 Portfolio is ready!', delay: 2900, class: 'terminal-success' },
+      { text: '👋 Welcome to Manoj Kumar Thapa Portfolio', delay: 100, class: 'terminal-success' },
+      { text: '', delay: 400 },
+      { text: '👤 A hiring manager is visiting...', delay: 500, class: 'terminal-info' },
+      { text: '', delay: 800 },
+      { text: '🔨 Building portfolio...', delay: 1000, class: 'terminal-info' },
+      { text: '⚡ Loading content...', delay: 1200, class: 'terminal-info' },
+      { text: '🎨 Rendering design...', delay: 1400, class: 'terminal-info' },
+      { text: '', delay: 1600 },
+      { text: '✓ Ready', delay: 1800, class: 'terminal-success' },
+      { text: '', delay: 2000 },
+      { text: '🚀 Portfolio Loaded!', delay: 2200, class: 'terminal-success' },
+      { text: '', delay: 2350 },
     ];
+    
     
     terminalLines.forEach((line, index) => {
       setTimeout(() => {
@@ -492,7 +490,6 @@ const FloatingCodeSnippets = () => {
     'import skills from "Manoj Kumar Thapa";',
     'const ai = tensorflow.model();',
     'SELECT * FROM skills;',
-    'const result = await agent.run(userQuery);',
     'docker build -t app .',
     'git commit -m "awesome"'
   ];
@@ -784,10 +781,10 @@ const AvailabilityWidget = () => {
           </div>
           <div className="modal-detail"><strong>Position:</strong> 2026 Graduate Software Engineer</div>
           <div className="modal-detail"><strong>Graduating:</strong> Jan 2026</div>
-          <div className="modal-detail"><strong>University:</strong> Aston University, Birmingham</div>
+          <div className="modal-detail"><strong>University:</strong> Aston University</div>
           <div className="modal-detail"><strong>Location:</strong> Birmingham, UK</div>
           <div className="modal-detail"><strong>Visa:</strong> UK Graduate Route (2026-2028)</div>
-          <div className="modal-detail"><strong>Sponsorship:</strong> Not Required ✅</div>
+          <div className="modal-detail"><strong>Sponsorship:</strong> Not Required</div>
           <div className="modal-detail"><strong>Experience:</strong> 2+ years professional experience</div>
         </motion.div>
       )}
