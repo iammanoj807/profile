@@ -21,58 +21,62 @@ const portfolioData = {
     { name: "Email", url: "mailto:thapam807@gmail.com", icon: "fa-solid fa-envelope", color: "#EA4335" }
   ],
   
-  skills: [
-    {
-      category: "Languages",
-      skills: [
-        { name: "Python", icon: "fa-brands fa-python", level: 95, color: "#3776AB" },
-        { name: "JavaScript", icon: "fa-brands fa-js", level: 90, color: "#F7DF1E" },
-        { name: "Java", icon: "fa-brands fa-java", level: 88, color: "#007396" },
-        { name: "SQL", icon: "fas fa-database", level: 85, color: "#4479A1" }
-      ]
-    },
-    {
-      category: "AI & Machine Learning",
-      skills: [
-        { name: "Machine Learning", icon: "fa-solid fa-brain", level: 88, color: "#FFB81C" },
-        { name: "Deep Learning", icon: "fa-solid fa-network-wired", level: 87, color: "#FF6B6B" },
-        { name: "PyTorch", icon: "simple-icons:pytorch", level: 90, color: "#EE4C2C" },
-        { name: "TensorFlow", icon: "simple-icons:tensorflow", level: 88, color: "#FF6F00" },
-        { name: "Keras", icon: "simple-icons:keras", level: 87, color: "#D00000" },
-        { name: "Hugging Face", icon: "simple-icons:huggingface", level: 85, color: "#FFD21E" },
-        { name: "Scikit-learn", icon: "simple-icons:scikitlearn", level: 86, color: "#F7931E" },
-        { name: "OpenCV", icon: "simple-icons:opencv", level: 83, color: "#5C3EEE" }
-      ]
-    },
-    {
-      category: "Web Development",
-      skills: [
-        { name: "React.js", icon: "fa-brands fa-react", level: 92, color: "#61DAFB" },
-        { name: "HTML5", icon: "fa-brands fa-html5", level: 93, color: "#E34F26" },
-        { name: "CSS3", icon: "fa-brands fa-css3-alt", level: 90, color: "#1572B6" },
-        { name: "Spring Boot", icon: "simple-icons:springboot", level: 85, color: "#6DB33F" },
-        { name: "Node.js", icon: "fa-brands fa-node-js", level: 82, color: "#339933" }
-      ]
-    },
-    {
-      category: "Developer Tools & Platforms",
-      skills: [
-        { name: "Git", icon: "fa-brands fa-git-alt", level: 95, color: "#F05032" },
-        { name: "Docker", icon: "fa-brands fa-docker", level: 82, color: "#2496ED" },
-        { name: "Jupyter", icon: "simple-icons:jupyter", level: 88, color: "#F37726" },
-        { name: "VS Code", icon: "simple-icons:visualstudiocode", level: 94, color: "#007ACC" },
-        { name: "GitHub", icon: "fa-brands fa-github", level: 95, color: "#181717" }
-      ]
-    },
-    {
-      category: "Databases",
-      skills: [
-        { name: "MySQL", icon: "simple-icons:mysql", level: 85, color: "#00758F" },
-        { name: "Firebase", icon: "simple-icons:firebase", level: 80, color: "#FFCA28" }
-      ]
-    }
-  ],
-  
+  skills: [ 
+    { 
+      category: "Languages", 
+      skills: [ 
+        { name: "Python", icon: "fa-brands fa-python", color: "#3776AB" }, 
+        { name: "JavaScript", icon: "fa-brands fa-js", color: "#F7DF1E" }, 
+        { name: "Java", icon: "fa-brands fa-java", color: "#007396" }, 
+        { name: "SQL", icon: "fa-solid fa-database", color: "#4479A1" } 
+      ] 
+    }, 
+    { 
+      category: "AI & Machine Learning", 
+      skills: [ 
+        { name: "Machine Learning", icon: "fa-solid fa-brain", color: "#FFB81C" }, 
+        { name: "Deep Learning", icon: "fa-solid fa-network-wired", color: "#FF6B6B" }, 
+        { name: "PyTorch", icon: "fa-solid fa-fire", color: "#EE4C2C" }, 
+        { name: "TensorFlow", icon: "fa-solid fa-cube", color: "#FF6F00" }, 
+        { name: "Keras", icon: "fa-solid fa-layer-group", color: "#D00000" }, 
+        { name: "Hugging Face", icon: "fa-solid fa-face-smile", color: "#FFD21E" }, 
+        { name: "Scikit-learn", icon: "fa-solid fa-chart-line", color: "#F7931E" }, 
+        { name: "OpenCV", icon: "fa-solid fa-image", color: "#5C3EEE" },
+        { name: "LangChain", icon: "fa-solid fa-link", color: "#1C3144" },
+        { name: "LLM", icon: "fa-solid fa-wand-magic-sparkles", color: "#9333EA" },
+        { name: "Agents", icon: "fa-solid fa-robot", color: "#EF4444" },
+        { name: "RAG", icon: "fa-solid fa-database", color: "#0EA5E9" },
+        { name: "Vector DB", icon: "fa-solid fa-cubes", color: "#8B5CF6" },
+      ] 
+    }, 
+    { 
+      category: "Frameworks", 
+      skills: [ 
+        { name: "React.js", icon: "fa-brands fa-react", color: "#61DAFB" }, 
+        { name: "HTML5", icon: "fa-brands fa-html5", color: "#E34F26" }, 
+        { name: "CSS3", icon: "fa-brands fa-css3-alt", color: "#1572B6" }, 
+        { name: "Spring Boot", icon: "fa-solid fa-leaf", color: "#6DB33F" }, 
+        { name: "Node.js", icon: "fa-brands fa-node-js", color: "#339933" } 
+      ] 
+    }, 
+    { 
+      category: "Developer Tools & Platforms", 
+      skills: [ 
+        { name: "Git", icon: "fa-brands fa-git-alt", color: "#F05032" }, 
+        { name: "Docker", icon: "fa-brands fa-docker", color: "#2496ED" }, 
+        { name: "Jupyter", icon: "fa-solid fa-book", color: "#F37726" }, 
+        { name: "VS Code", icon: "fa-solid fa-code", color: "#007ACC" }, 
+        { name: "GitHub", icon: "fa-brands fa-github", color: "#181717" } 
+      ] 
+    }, 
+    { 
+      category: "Databases", 
+      skills: [ 
+        { name: "MySQL", icon: "fa-solid fa-database", color: "#00758F" }, 
+        { name: "Firebase", icon: "fa-solid fa-fire", color: "#FF9800" }
+      ] 
+    } 
+  ],  
   experience: [
     {
       title: "Mentor",
@@ -947,7 +951,6 @@ const SkillsSection = () => {
                         <iconify-icon icon={skill.icon} className="skill-card-icon" style={{ color: skill.color || 'var(--accent-green)' }}></iconify-icon>
                       ) : null}
                       <div className="skill-card-name">{skill.name}</div>
-                      <div className="skill-card-level">{skill.level}%</div>
                     </motion.div>
                   ))}
                 </div>
