@@ -1190,7 +1190,7 @@ body {
   font-family: 'Fira Code', monospace;
   font-size: 0.9rem;
   color: var(--accent-green);
-  opacity: 0.08;
+  opacity: 0.06 !important;
   animation: float-code 20s linear infinite;
 }
 
@@ -2996,4 +2996,54 @@ body::after {
 /* Enhanced hover effect on Hire Me button */
 .availability-widget:hover .widget-bubble {
   transform: scale(1.05);
+}
+
+/* ===== MOBILE POPUP FIX ===== */
+/* Mobile responsiveness for Hire Me popup */
+@media (max-width: 768px) {
+  .modal {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    bottom: auto !important;
+    right: auto !important;
+    max-height: 85vh !important;
+    overflow-y: auto !important;
+    max-width: 90vw !important;
+    width: auto !important;
+  }
+
+  .modal-content {
+    max-height: calc(100vh - 120px) !important;
+  }
+
+  .availability-modal {
+    position: fixed !important;
+    top: 38% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    bottom: auto !important;
+    right: auto !important;
+    margin: 0 !important;
+  }
+
+  .modal-overlay {
+    padding: 10px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Extra small screens (< 480px) */
+@media (max-width: 480px) {
+  .modal {
+    max-width: 95vw !important;
+    max-height: 90vh !important;
+  }
+
+  .availability-modal {
+    top: 35% !important;
+  }
 }

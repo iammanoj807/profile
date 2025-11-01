@@ -235,20 +235,21 @@ const SplashScreen = ({ onComplete }) => {
   
   React.useEffect(() => {
     const terminalLines = [
-      { text: '👋 Welcome to Manoj Kumar Thapa Portfolio', delay: 100, class: 'terminal-success' },
-      { text: '', delay: 400 },
-      { text: '👤 A hiring manager is visiting...', delay: 500, class: 'terminal-info' },
-      { text: '', delay: 800 },
-      { text: '🔨 Building portfolio...', delay: 1000, class: 'terminal-info' },
-      { text: '⚡ Loading content...', delay: 1200, class: 'terminal-info' },
-      { text: '🎨 Rendering design...', delay: 1400, class: 'terminal-info' },
-      { text: '', delay: 1600 },
-      { text: '✓ Ready', delay: 1800, class: 'terminal-success' },
-      { text: '', delay: 2000 },
-      { text: '🚀 Portfolio Loaded!', delay: 2200, class: 'terminal-success' },
-      { text: '', delay: 2350 },
+      { text: '📚 Manoj is learning...', delay: 100, class: 'terminal-info' },
+      { text: '', delay: 500 },
+      { text: '👤 Oh! A hiring manager is looking at your profile', delay: 700, class: 'terminal-warning' },
+      { text: '', delay: 1000 },
+      { text: '🔨 Building portfolio...', delay: 1200, class: 'terminal-info' },
+      { text: '⚡ Loading content...', delay: 1400, class: 'terminal-info' },
+      { text: '🎨 Rendering design...', delay: 1600, class: 'terminal-info' },
+      { text: '', delay: 1800 },
+      { text: '✓ Ready', delay: 2000, class: 'terminal-success' },
+      { text: '', delay: 2200 },
+      { text: '🚀 Portfolio Loaded!', delay: 2400, class: 'terminal-success' },
+      { text: '', delay: 2600 },
+      { text: '👋 Welcome to Manoj Kumar Thapa Portfolio', delay: 2800, class: 'terminal-success' },
+      { text: '', delay: 2950 },
     ];
-    
     
     terminalLines.forEach((line, index) => {
       setTimeout(() => {
@@ -614,7 +615,7 @@ const Navigation = () => {
 
 // Background Code Rain Animation
 const BackgroundCodeRain = () => {
-  const codeSymbols = ['{', '}', '<', '>', '/', ';', '(', ')', '[', ']', 'const', 'if', 'return', '=', '=>', '...', '&&', '||'];
+  const codeSymbols = ['{', '}', '<', '>', '/', ';', '(', ')', '[', ']', 'const', 'if', 'return', '=', '=>', '...', '&&', '||', 'hire manoj'];
   
   return (
     <div className="code-rain-container">
@@ -1114,7 +1115,7 @@ const Footer = () => {
               <div className="console-dot red"></div>
               <div className="console-dot yellow"></div>
               <div className="console-dot green"></div>
-              <div className="console-title">debug_console.js — contact_info</div>
+              <div className="console-title">System.out.println(contact_info);</div>
             </div>
             <div className="console-body">
               <div className="console-line">
@@ -1345,6 +1346,50 @@ const App = () => {
     </div>
   );
 };
+
+
+// ===== MOBILE POPUP FIX FOR HIRE ME BUTTON =====
+// Handle modal positioning for mobile devices
+window.addEventListener('DOMContentLoaded', () => {
+  const handleModalResize = () => {
+    const modal = document.querySelector('.availability-modal') || document.querySelector('.modal');
+    if (modal) {
+      if (window.innerWidth <= 768) {
+        // Mobile: Center the modal
+        modal.style.position = 'fixed';
+        modal.style.top = '50%';
+        modal.style.left = '50%';
+        modal.style.transform = 'translate(-50%, -50%)';
+        modal.style.bottom = 'auto';
+        modal.style.right = 'auto';
+        modal.style.maxHeight = '85vh';
+        modal.style.overflowY = 'auto';
+      } else {
+        // Desktop: Keep original positioning
+        modal.style.position = 'fixed';
+        modal.style.maxHeight = '90vh';
+      }
+    }
+  };
+
+  // Handle window resize
+  window.addEventListener('resize', handleModalResize);
+
+  // Handle modal visibility changes
+  const observer = new MutationObserver(() => {
+    const modal = document.querySelector('.availability-modal') || document.querySelector('.modal');
+    if (modal && modal.style.display !== 'none') {
+      handleModalResize();
+    }
+  });
+
+  // Observe modal changes
+  const config = { attributes: true, subtree: true };
+  const targetElement = document.querySelector('.availability-modal') || document.querySelector('.modal');
+  if (targetElement) {
+    observer.observe(targetElement, config);
+  }
+});
 
 // Render App
 const root = ReactDOM.createRoot(document.getElementById('root'));
