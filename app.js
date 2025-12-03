@@ -13,70 +13,70 @@ const portfolioData = {
   phone: "+447438029689",
   phoneDisplay: "+44 7438 029689",
   phoneLink: "tel:+447438029689",
-  
+
   social_links: [
     { name: "GitHub", url: "https://github.com/iammanoj807", icon: "fa-brands fa-github", color: "#FFFFFF" },
     { name: "LinkedIn", url: "https://www.linkedin.com/in/manoj-kumar-thapa-7595a5168", icon: "fa-brands fa-linkedin-in", color: "#0077B5" },
     { name: "Blog", url: "https://hamropedia.com", icon: "fa-solid fa-blog", color: "#FFA500" },
     { name: "Email", url: "mailto:thapam807@gmail.com", icon: "fa-solid fa-envelope", color: "#EA4335" }
   ],
-  
-  skills: [ 
-    { 
-      category: "Languages", 
-      skills: [ 
-        { name: "Python", icon: "fa-brands fa-python", color: "#3776AB" }, 
-        { name: "JavaScript", icon: "fa-brands fa-js", color: "#F7DF1E" }, 
-        { name: "Java", icon: "fa-brands fa-java", color: "#007396" }, 
-        { name: "SQL", icon: "fa-solid fa-database", color: "#4479A1" } 
-      ] 
-    }, 
-    { 
-      category: "AI & Machine Learning", 
-      skills: [ 
-        { name: "Machine Learning", icon: "fa-solid fa-brain", color: "#FFB81C" }, 
-        { name: "Deep Learning", icon: "fa-solid fa-network-wired", color: "#FF6B6B" }, 
-        { name: "PyTorch", icon: "fa-solid fa-fire", color: "#EE4C2C" }, 
-        { name: "TensorFlow", icon: "fa-solid fa-cube", color: "#FF6F00" }, 
-        { name: "Keras", icon: "fa-solid fa-layer-group", color: "#D00000" }, 
-        { name: "Hugging Face", icon: "fa-solid fa-face-smile", color: "#FFD21E" }, 
-        { name: "Scikit-learn", icon: "fa-solid fa-chart-line", color: "#F7931E" }, 
+
+  skills: [
+    {
+      category: "Languages",
+      skills: [
+        { name: "Python", icon: "fa-brands fa-python", color: "#3776AB" },
+        { name: "JavaScript", icon: "fa-brands fa-js", color: "#F7DF1E" },
+        { name: "Java", icon: "fa-brands fa-java", color: "#007396" },
+        { name: "SQL", icon: "fa-solid fa-database", color: "#4479A1" }
+      ]
+    },
+    {
+      category: "AI & Machine Learning",
+      skills: [
+        { name: "Machine Learning", icon: "fa-solid fa-brain", color: "#FFB81C" },
+        { name: "Deep Learning", icon: "fa-solid fa-network-wired", color: "#FF6B6B" },
+        { name: "PyTorch", icon: "fa-solid fa-fire", color: "#EE4C2C" },
+        { name: "TensorFlow", icon: "fa-solid fa-cube", color: "#FF6F00" },
+        { name: "Keras", icon: "fa-solid fa-layer-group", color: "#D00000" },
+        { name: "Hugging Face", icon: "fa-solid fa-face-smile", color: "#FFD21E" },
+        { name: "Scikit-learn", icon: "fa-solid fa-chart-line", color: "#F7931E" },
         { name: "OpenCV", icon: "fa-solid fa-image", color: "#5C3EEE" },
         { name: "LangChain", icon: "fa-solid fa-link", color: "#1C3144" },
         { name: "LLM", icon: "fa-solid fa-wand-magic-sparkles", color: "#9333EA" },
         { name: "Agents", icon: "fa-solid fa-robot", color: "#EF4444" },
         { name: "RAG", icon: "fa-solid fa-database", color: "#0EA5E9" },
         { name: "Vector DB", icon: "fa-solid fa-cubes", color: "#8B5CF6" },
-      ] 
-    }, 
-    { 
-      category: "Frameworks", 
-      skills: [ 
-        { name: "React.js", icon: "fa-brands fa-react", color: "#61DAFB" }, 
-        { name: "HTML5", icon: "fa-brands fa-html5", color: "#E34F26" }, 
-        { name: "CSS3", icon: "fa-brands fa-css3-alt", color: "#1572B6" }, 
-        { name: "Spring Boot", icon: "fa-solid fa-leaf", color: "#6DB33F" }, 
-        { name: "Node.js", icon: "fa-brands fa-node-js", color: "#339933" } 
-      ] 
-    }, 
-    { 
-      category: "Developer Tools & Platforms", 
-      skills: [ 
-        { name: "Git", icon: "fa-brands fa-git-alt", color: "#F05032" }, 
-        { name: "Docker", icon: "fa-brands fa-docker", color: "#2496ED" }, 
-        { name: "Jupyter", icon: "fa-solid fa-book", color: "#F37726" }, 
-        { name: "VS Code", icon: "fa-solid fa-code", color: "#007ACC" }, 
-        { name: "GitHub", icon: "fa-brands fa-github", color: "#181717" } 
-      ] 
-    }, 
-    { 
-      category: "Databases", 
-      skills: [ 
-        { name: "MySQL", icon: "fa-solid fa-database", color: "#00758F" }, 
+      ]
+    },
+    {
+      category: "Frameworks",
+      skills: [
+        { name: "React.js", icon: "fa-brands fa-react", color: "#61DAFB" },
+        { name: "HTML5", icon: "fa-brands fa-html5", color: "#E34F26" },
+        { name: "CSS3", icon: "fa-brands fa-css3-alt", color: "#1572B6" },
+        { name: "Spring Boot", icon: "fa-solid fa-leaf", color: "#6DB33F" },
+        { name: "Node.js", icon: "fa-brands fa-node-js", color: "#339933" }
+      ]
+    },
+    {
+      category: "Developer Tools & Platforms",
+      skills: [
+        { name: "Git", icon: "fa-brands fa-git-alt", color: "#F05032" },
+        { name: "Docker", icon: "fa-brands fa-docker", color: "#2496ED" },
+        { name: "Jupyter", icon: "fa-solid fa-book", color: "#F37726" },
+        { name: "VS Code", icon: "fa-solid fa-code", color: "#007ACC" },
+        { name: "GitHub", icon: "fa-brands fa-github", color: "#181717" }
+      ]
+    },
+    {
+      category: "Databases",
+      skills: [
+        { name: "MySQL", icon: "fa-solid fa-database", color: "#00758F" },
         { name: "Firebase", icon: "fa-solid fa-fire", color: "#FF9800" }
-      ] 
-    } 
-  ],  
+      ]
+    }
+  ],
   experience: [
     {
       title: "Mentor",
@@ -104,7 +104,7 @@ const portfolioData = {
       description: "Engineered secure authentication modules and improved application performance by 30% through strategic code splitting and caching."
     }
   ],
-  
+
   education: [
     {
       title: "Aston University, Birmingham",
@@ -146,7 +146,7 @@ const portfolioData = {
       ]
     }
   ],
-  
+
   certifications: [
     {
       title: "AI Masterclass: How AI Thinks",
@@ -191,7 +191,7 @@ const portfolioData = {
       iconColor: "#E97627"
     }
   ],
-  
+
   projects: [
     {
       title: "Fruit Detection and Ripeness Assessment based on Transfer Learning for Agricultural Automation",
@@ -236,7 +236,7 @@ const portfolioData = {
 // Terminal Splash Screen Component
 const SplashScreen = ({ onComplete }) => {
   const [lines, setLines] = React.useState([]);
-  
+
   React.useEffect(() => {
     const terminalLines = [
       { text: '📚 Manoj is learning...', delay: 100, class: 'terminal-info' },
@@ -254,7 +254,7 @@ const SplashScreen = ({ onComplete }) => {
       { text: '👋 Welcome to Manoj Kumar Thapa Portfolio', delay: 2800, class: 'terminal-success' },
       { text: '', delay: 2950 },
     ];
-    
+
     terminalLines.forEach((line, index) => {
       setTimeout(() => {
         setLines(prev => [...prev, line]);
@@ -264,7 +264,7 @@ const SplashScreen = ({ onComplete }) => {
       }, line.delay);
     });
   }, [onComplete]);
-  
+
   return (
     <div className="splash-screen">
       <div className="terminal-window">
@@ -313,7 +313,7 @@ const DeveloperCharacter = () => {
         animate={{ opacity: [0.7, 1, 0.7] }}
         transition={{ duration: 3, repeat: Infinity }}
       />
-      
+
       {/* Monitor */}
       <motion.rect
         x="150"
@@ -327,7 +327,7 @@ const DeveloperCharacter = () => {
         animate={{ scale: [1, 1.02, 1] }}
         transition={{ duration: 2, repeat: Infinity }}
       />
-      
+
       {/* Code Lines on Monitor */}
       <motion.line
         x1="160"
@@ -369,10 +369,10 @@ const DeveloperCharacter = () => {
         animate={{ opacity: [0.5, 1, 0.5] }}
         transition={{ duration: 1.5, repeat: Infinity, delay: 0.9 }}
       />
-      
+
       {/* Monitor Stand */}
       <rect x="210" y="280" width="20" height="30" fill="#00d4ff" />
-      
+
       {/* Person Head */}
       <motion.circle
         cx="100"
@@ -382,7 +382,7 @@ const DeveloperCharacter = () => {
         animate={{ y: [0, -3, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       />
-      
+
       {/* Person Body */}
       <motion.rect
         x="75"
@@ -394,7 +394,7 @@ const DeveloperCharacter = () => {
         animate={{ y: [0, -2, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       />
-      
+
       {/* Arms */}
       <motion.rect
         x="60"
@@ -406,7 +406,7 @@ const DeveloperCharacter = () => {
         animate={{ rotate: [-2, 2, -2] }}
         transition={{ duration: 2, repeat: Infinity }}
       />
-      
+
       {/* Coffee Cup */}
       <motion.g
         animate={{ y: [0, -5, 0] }}
@@ -432,10 +432,10 @@ const DeveloperCharacter = () => {
           transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
         />
       </motion.g>
-      
+
       {/* Keyboard */}
       <rect x="140" y="295" width="80" height="5" fill="#00ff88" rx="2" />
-      
+
       {/* Floating Particles */}
       <motion.circle
         cx="50"
@@ -468,7 +468,7 @@ const DeveloperCharacter = () => {
 // Typing Effect Hook
 const useTypingEffect = (text, speed = 100) => {
   const [displayText, setDisplayText] = useState('');
-  
+
   useEffect(() => {
     let i = 0;
     const timer = setInterval(() => {
@@ -479,10 +479,10 @@ const useTypingEffect = (text, speed = 100) => {
         clearInterval(timer);
       }
     }, speed);
-    
+
     return () => clearInterval(timer);
   }, [text, speed]);
-  
+
   return displayText;
 };
 
@@ -498,7 +498,7 @@ const FloatingCodeSnippets = () => {
     'docker build -t app .',
     'git commit -m "awesome"'
   ];
-  
+
   return (
     <>
       {codeSnippets.map((snippet, index) => (
@@ -510,7 +510,7 @@ const FloatingCodeSnippets = () => {
             left: `${Math.random() * 100}%`
           }}
           initial={{ opacity: 0, y: 20 }}
-          animate={{ 
+          animate={{
             opacity: [0, 0.3, 0],
             y: [20, -20, -40]
           }}
@@ -535,18 +535,18 @@ const FloatingCodeSnippets = () => {
 const Navigation = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
+
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['home', 'skills', 'experience', 'education', 'projects', 'contact'];
       const scrollPosition = window.scrollY + 100;
-      
+
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
           const offsetTop = element.offsetTop;
           const offsetHeight = element.offsetHeight;
-          
+
           if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
             setActiveSection(section);
             break;
@@ -554,13 +554,13 @@ const Navigation = () => {
         }
       }
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     handleScroll();
-    
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  
+
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -568,16 +568,16 @@ const Navigation = () => {
       setMobileMenuOpen(false);
     }
   };
-  
+
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
-  
+
   const handleMobileNavigation = (sectionId) => {
     scrollToSection(sectionId);
     setMobileMenuOpen(false);
   };
-  
+
   return (
     <>
       <nav className="navbar">
@@ -591,7 +591,7 @@ const Navigation = () => {
             <li><a onClick={() => scrollToSection('projects')} className={activeSection === 'projects' ? 'active' : ''}>{'{ projects }'}</a></li>
             <li><a onClick={() => scrollToSection('contact')} className={activeSection === 'contact' ? 'active' : ''}>{'{ contact }'}</a></li>
           </ul>
-          
+
           <button className="mobile-menu-toggle" onClick={toggleMobileMenu} aria-label="Menu">
             ☰
           </button>
@@ -620,7 +620,7 @@ const Navigation = () => {
 // Background Code Rain Animation
 const BackgroundCodeRain = () => {
   const codeSymbols = ['{', '}', '<', '>', '/', ';', '(', ')', '[', ']', 'const', 'if', 'return', '=', '=>', '...', '&&', '||', 'hire manoj'];
-  
+
   return (
     <div className="code-rain-container">
       {Array.from({ length: 30 }).map((_, i) => (
@@ -646,6 +646,175 @@ const BackgroundCodeRain = () => {
           {codeSymbols[Math.floor(Math.random() * codeSymbols.length)]}
         </motion.div>
       ))}
+    </div>
+  );
+};
+
+// Mouse Trail Effect
+const MouseTrail = () => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [cursorVariant, setCursorVariant] = useState("default");
+
+  useEffect(() => {
+    const mouseMove = (e) => {
+      setMousePosition({
+        x: e.clientX,
+        y: e.clientY
+      });
+    };
+
+    window.addEventListener("mousemove", mouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", mouseMove);
+    };
+  }, []);
+
+  const variants = {
+    default: {
+      x: mousePosition.x - 16,
+      y: mousePosition.y - 16,
+      opacity: 1,
+    }
+  };
+
+  return (
+    <>
+      <motion.div
+        className="cursor-trail"
+        variants={variants}
+        animate="default"
+        transition={{
+          type: "spring",
+          stiffness: 500,
+          damping: 28,
+          mass: 0.5
+        }}
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '32px',
+          height: '32px',
+          borderRadius: '50%',
+          border: '2px solid var(--accent-green)',
+          pointerEvents: 'none',
+          zIndex: 9999,
+          mixBlendMode: 'difference'
+        }}
+      />
+      <motion.div
+        className="cursor-dot"
+        variants={variants}
+        animate="default"
+        transition={{
+          type: "spring",
+          stiffness: 1500,
+          damping: 50,
+          mass: 0.1
+        }}
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '8px',
+          height: '8px',
+          borderRadius: '50%',
+          backgroundColor: 'var(--accent-cyan)',
+          pointerEvents: 'none',
+          zIndex: 9999,
+          marginTop: '12px',
+          marginLeft: '12px'
+        }}
+      />
+    </>
+  );
+};
+
+// Audio Manager (Web Audio API)
+const playHoverSound = () => {
+  const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  const oscillator = audioCtx.createOscillator();
+  const gainNode = audioCtx.createGain();
+
+  oscillator.type = 'sine';
+  oscillator.frequency.setValueAtTime(440, audioCtx.currentTime);
+  oscillator.frequency.exponentialRampToValueAtTime(880, audioCtx.currentTime + 0.1);
+
+  gainNode.gain.setValueAtTime(0.05, audioCtx.currentTime);
+  gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.1);
+
+  oscillator.connect(gainNode);
+  gainNode.connect(audioCtx.destination);
+
+  oscillator.start();
+  oscillator.stop(audioCtx.currentTime + 0.1);
+};
+
+const playClickSound = () => {
+  const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  const oscillator = audioCtx.createOscillator();
+  const gainNode = audioCtx.createGain();
+
+  oscillator.type = 'square';
+  oscillator.frequency.setValueAtTime(150, audioCtx.currentTime);
+  oscillator.frequency.exponentialRampToValueAtTime(40, audioCtx.currentTime + 0.1);
+
+  gainNode.gain.setValueAtTime(0.05, audioCtx.currentTime);
+  gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.1);
+
+  oscillator.connect(gainNode);
+  gainNode.connect(audioCtx.destination);
+
+  oscillator.start();
+  oscillator.stop(audioCtx.currentTime + 0.1);
+};
+
+// Glitch Text Component
+const GlitchText = ({ text }) => {
+  return (
+    <div className="glitch-wrapper">
+      <div className="glitch" data-text={text}>{text}</div>
+    </div>
+  );
+};
+
+// Import Animation Component
+const ImportAnimation = ({ text, onComplete }) => {
+  const [displayText, setDisplayText] = useState('');
+  const [stage, setStage] = useState(0); // 0: typing import, 1: pause, 2: show name
+
+  useEffect(() => {
+    const importText = text; // Only type the name to avoid duplication bug
+
+    if (stage === 0) {
+      let i = 0;
+      const timer = setInterval(() => {
+        if (i < importText.length) {
+          setDisplayText(importText.substring(0, i + 1));
+          i++;
+        } else {
+          clearInterval(timer);
+          setTimeout(() => setStage(1), 1000); // Pause after typing
+        }
+      }, 100); // Slower typing speed (Medium)
+      return () => clearInterval(timer);
+    } else if (stage === 1) {
+      setDisplayText(text);
+      setStage(2);
+    }
+  }, [text, stage]);
+
+  return (
+    <div className="import-animation">
+      {stage === 0 ? (
+        <span className="import-text">
+          <span className="keyword">from</span> skills <span className="keyword">import</span> {displayText}
+          <span className="cursor">|</span>
+        </span>
+      ) : (
+        <span className="final-name">{text}</span>
+      )}
     </div>
   );
 };
@@ -770,11 +939,11 @@ const AvailabilityWidget = () => {
       </motion.div>
 
       {showModal && (
-        <motion.div 
-          className="availability-modal" 
-          ref={modalRef} 
-          initial={{ opacity: 0, y: 50 }} 
-          animate={{ opacity: 1, y: 0 }} 
+        <motion.div
+          className="availability-modal"
+          ref={modalRef}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
         >
           <button className="modal-close-btn" onClick={handleCloseModal} aria-label="Close modal">
@@ -801,7 +970,7 @@ const AvailabilityWidget = () => {
 // Coding Profiles Section
 const CodingProfilesSection = () => {
   return (
-    <motion.div 
+    <motion.div
       className="coding-profiles-section"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -817,7 +986,7 @@ const CodingProfilesSection = () => {
           whileHover={{ scale: 1.05 }}
         >
           <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/>
+            <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z" />
           </svg>
           LeetCode Profile
         </motion.a>
@@ -828,11 +997,11 @@ const CodingProfilesSection = () => {
 
 // Hero Section
 const HeroSection = () => {
-  
+
   return (
     <section id="home" className="hero">
       <FloatingCodeSnippets />
-      <motion.div 
+      <motion.div
         className="hero-content"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -852,9 +1021,9 @@ const HeroSection = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            {portfolioData.name}
+            <ImportAnimation text={portfolioData.name} />
           </motion.h1>
-          <motion.div 
+          <motion.div
             className="title"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -862,7 +1031,7 @@ const HeroSection = () => {
           >
             {portfolioData.title}
           </motion.div>
-          <motion.div 
+          <motion.div
             className="description"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -871,7 +1040,7 @@ const HeroSection = () => {
             {portfolioData.description}
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="hero-buttons"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -887,7 +1056,7 @@ const HeroSection = () => {
             </button>
           </motion.div>
         </div>
-        <div className="hero-animation" style={{ display: 'none' }}>
+        <div className="hero-animation">
           <DeveloperCharacter />
         </div>
       </motion.div>
@@ -899,16 +1068,16 @@ const HeroSection = () => {
 const SkillsSection = () => {
   const [ref, inView] = useIntersectionObserver();
   const [expandedFolders, setExpandedFolders] = useState([]);
-  
+
   const toggleFolder = (index) => {
-    setExpandedFolders(prev => 
+    setExpandedFolders(prev =>
       prev.includes(index) ? prev.filter(i => i !== index) : [...prev, index]
     );
   };
-  
+
   return (
     <section id="skills" className="section" ref={ref}>
-      <motion.h2 
+      <motion.h2
         className="section-title"
         initial={{ opacity: 0, y: 30 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -921,14 +1090,14 @@ const SkillsSection = () => {
         {portfolioData.skills.map((category, catIndex) => {
           const isExpanded = expandedFolders.includes(catIndex);
           return (
-            <motion.div 
+            <motion.div
               key={catIndex}
               className="skill-folder"
               initial={{ opacity: 0, y: 50 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: catIndex * 0.15 }}
             >
-              <div 
+              <div
                 className="folder-header"
                 onClick={() => toggleFolder(catIndex)}
               >
@@ -938,11 +1107,18 @@ const SkillsSection = () => {
               <div className={`folder-contents ${isExpanded ? 'expanded' : ''}`}>
                 <div className="skills-grid-layout">
                   {category.skills.map((skill, skillIndex) => (
-                    <motion.div 
+                    <motion.div
                       key={skillIndex}
                       className="skill-card"
+                      onMouseEnter={playHoverSound}
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={isExpanded ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                      whileHover={{
+                        scale: 1.1,
+                        boxShadow: "0 0 15px rgba(57, 255, 20, 0.3)",
+                        borderColor: "var(--accent-green)",
+                        y: -5
+                      }}
                       transition={{ duration: 0.3, delay: skillIndex * 0.05 }}
                     >
                       {skill.icon && skill.icon.startsWith('fa-') ? (
@@ -966,10 +1142,10 @@ const SkillsSection = () => {
 // Experience Section
 const ExperienceSection = () => {
   const [ref, inView] = useIntersectionObserver();
-  
+
   return (
     <section id="experience" className="section">
-      <motion.h2 
+      <motion.h2
         className="section-title"
         initial={{ opacity: 0, y: 30 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -979,14 +1155,14 @@ const ExperienceSection = () => {
       </motion.h2>
       <div className="timeline" ref={ref}>
         {portfolioData.experience.map((exp, index) => (
-          <motion.div 
+          <motion.div
             key={index}
             className="timeline-item"
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: index * 0.2 }}
           >
-            <motion.div 
+            <motion.div
               className="timeline-dot"
               initial={{ scale: 0 }}
               animate={inView ? { scale: 1 } : {}}
@@ -1020,10 +1196,10 @@ const ExperienceSection = () => {
 // Projects Section - Command Line Style
 const ProjectsSection = () => {
   const [ref, inView] = useIntersectionObserver();
-  
+
   return (
     <section id="projects" className="section" ref={ref}>
-      <motion.h2 
+      <motion.h2
         className="section-title"
         initial={{ opacity: 0, y: 30 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -1033,7 +1209,7 @@ const ProjectsSection = () => {
       </motion.h2>
       <div className="projects-grid">
         {portfolioData.projects.map((project, index) => (
-          <motion.div 
+          <motion.div
             key={index}
             className={`project-terminal ${project.status === 'In Progress' ? 'in-progress' : ''}`}
             initial={{ opacity: 0, y: 50 }}
@@ -1062,7 +1238,7 @@ const ProjectsSection = () => {
                 )}
                 <div className="command-tags">
                   {project.tags.map((tag, tagIndex) => (
-                    <motion.span 
+                    <motion.span
                       key={tagIndex}
                       className="command-tag"
                       initial={{ opacity: 0, scale: 0 }}
@@ -1095,7 +1271,7 @@ const ProjectsSection = () => {
 // Footer Component - Debug Console Style
 const Footer = () => {
   // Render proper Font Awesome icons
-  
+
   return (
     <footer id="contact" className="footer">
       <div className="footer-content">
@@ -1106,7 +1282,7 @@ const Footer = () => {
           viewport={{ once: true }}
         >
           <h2 className="section-title">Connection Port</h2>
-          
+
           <motion.div
             className="debug-console"
             initial={{ opacity: 0, y: 30 }}
@@ -1167,7 +1343,7 @@ const Footer = () => {
               </div>
             </div>
           </motion.div>
-          
+
           <div className="social-links" style={{ marginTop: '3rem' }}>
             {portfolioData.social_links.map((link, index) => (
               <motion.a
@@ -1200,7 +1376,7 @@ const Footer = () => {
 const useIntersectionObserver = () => {
   const [isInView, setIsInView] = useState(false);
   const ref = useRef(null);
-  
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -1210,28 +1386,28 @@ const useIntersectionObserver = () => {
       },
       { threshold: 0.1 }
     );
-    
+
     if (ref.current) {
       observer.observe(ref.current);
     }
-    
+
     return () => {
       if (ref.current) {
         observer.unobserve(ref.current);
       }
     };
   }, []);
-  
+
   return [ref, isInView];
 };
 
 // Education Section - Stack Trace Style
 const EducationSection = () => {
   const [ref, inView] = useIntersectionObserver();
-  
+
   return (
     <section id="education" className="section" ref={ref}>
-      <motion.h2 
+      <motion.h2
         className="section-title"
         initial={{ opacity: 0, y: 30 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -1241,7 +1417,7 @@ const EducationSection = () => {
       </motion.h2>
       <div className="education-stack">
         {portfolioData.education.slice(0, 2).map((edu, index) => (
-          <motion.div 
+          <motion.div
             key={index}
             className="stack-frame"
             data-index={index}
@@ -1275,12 +1451,12 @@ const EducationSection = () => {
 // Certifications Section - Achievement Badges
 const CertificationsSection = () => {
   const [ref, inView] = useIntersectionObserver();
-  
+
   // Icons are now in the cert data
-  
+
   return (
     <section id="certifications" className="section" ref={ref}>
-      <motion.h2 
+      <motion.h2
         className="section-title"
         initial={{ opacity: 0, y: 30 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -1325,18 +1501,19 @@ const CertificationsSection = () => {
 // Main App Component
 const App = () => {
   const [showSplash, setShowSplash] = React.useState(true);
-  
+
   const handleSplashComplete = () => {
     setShowSplash(false);
   };
-  
+
   if (showSplash) {
     return <SplashScreen onComplete={handleSplashComplete} />;
   }
-  
+
   return (
     <div>
       <BackgroundCodeRain />
+      <MouseTrail />
       <Navigation />
       <AvailabilityWidget />
       <HeroSection />
