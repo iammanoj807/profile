@@ -798,13 +798,28 @@ html {
 }
 
 body {
-  font-family: 'Fira Code', 'Space Mono', 'Courier New', monospace;
+  font-family: 'Inter', sans-serif;
   background: var(--bg-darker);
   color: var(--text-primary);
   overflow-x: hidden;
   line-height: 1.7;
   font-size: 18px;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar,
+.code,
+pre,
+.terminal-text,
+.command-prompt,
+.console-body {
+  font-family: 'Fira Code', monospace;
 }
 
 /* Scrollbar Styling */
@@ -1118,11 +1133,11 @@ body {
 }
 
 .hero-text .description {
-  font-size: 1.18rem;
+  font-size: 1.35rem;
   color: var(--text-secondary);
   margin-bottom: 2rem;
-  line-height: 1.9;
-  max-width: 600px;
+  line-height: 1.8;
+  max-width: 650px;
 }
 
 .hero-buttons {
@@ -1455,8 +1470,9 @@ body::after {
 .profile-photo {
   width: 180px;
   height: 180px;
-  border-radius: 50%;
+  border-radius: 12px;
   object-fit: cover;
+  object-position: top;
   border: none;
   box-shadow: none;
   margin-bottom: 2rem;
@@ -3487,5 +3503,19 @@ body::after {
 
   50% {
     opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .availability-modal {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: auto;
+    right: auto;
+    max-height: 85vh;
+    overflow-y: auto;
+    width: 90%;
+    max-width: 320px;
   }
 }
