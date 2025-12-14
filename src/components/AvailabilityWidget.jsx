@@ -135,7 +135,6 @@ const AvailabilityWidget = () => {
                         ✕
                     </button>
                     <div className="modal-header">
-                        <div className="status-dot"></div>
                         <div className="modal-title">Open for Opportunities</div>
                     </div>
                     <div className="modal-detail"><strong>Position:</strong> 2026 Graduate Software Engineer</div>

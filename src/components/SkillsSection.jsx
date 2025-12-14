@@ -40,7 +40,7 @@ const SkillsSection = () => {
                                 className="folder-header"
                                 onClick={() => toggleFolder(catIndex)}
                             >
-                                <div className={`folder-icon ${isExpanded ? 'expanded' : ''}`}>▶</div>
+                                <div className={`folder-icon ${isExpanded ? 'expanded' : ''}`}>{isExpanded ? '−' : '+'}</div>
                                 <div className="folder-name">{category.category}</div>
                             </div>
                             <div className={`folder-contents ${isExpanded ? 'expanded' : ''}`}>
