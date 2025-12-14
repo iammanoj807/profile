@@ -1107,8 +1107,8 @@ pre,
 }
 
 .hero-text .title::before {
-  content: '// ';
-  color: var(--text-dim);
+  content: '';
+  display: none;
 }
 
 .hero-text .subtitle {
@@ -1322,14 +1322,14 @@ body::after {
   bottom: 110px;
   right: -10px;
   background: var(--bg-card);
-  border: 3px solid var(--accent-green);
+  border: 2px solid var(--accent-green);
   border-radius: 16px;
   padding: 1rem 1.6rem;
   white-space: normal;
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--text-primary);
-  box-shadow: 0 6px 25px rgba(57, 255, 20, 0.4);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
   animation: bounce-bubble 2s infinite;
   max-width: 250px;
   text-align: center;
@@ -2175,13 +2175,13 @@ body::after {
     padding: 1.2rem 0.8rem;
     overflow-x: hidden;
     word-break: break-word;
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
 
   .console-line .value,
   .console-line .key {
     word-break: break-all;
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
 
   .console-line .key {
@@ -2344,7 +2344,7 @@ body::after {
   }
 
   .hero-text h1 {
-    font-size: 2.2rem;
+    font-size: 3.5rem;
     white-space: nowrap;
     overflow: visible;
   }
@@ -2354,7 +2354,11 @@ body::after {
   }
 
   .hero-text .title {
-    font-size: 1.68rem;
+    font-size: 1.5rem;
+  }
+
+  .hero-text .description {
+    text-align: justify;
   }
 
   .hero-text .subtitle {
@@ -2788,7 +2792,7 @@ body::after {
 
 .achievement-badge {
   background: var(--bg-card);
-  border: 2px solid #00FF00;
+  border: 2px solid var(--border-color);
   border-radius: 12px;
   padding: 1.5rem;
   text-align: center;
@@ -2816,7 +2820,6 @@ body::after {
 .achievement-badge:hover {
   transform: translateY(-5px) scale(1.02);
   border-color: var(--accent-green);
-  box-shadow: 0 10px 30px rgba(57, 255, 20, 0.2);
 }
 
 .achievement-icon {

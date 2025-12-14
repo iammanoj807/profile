@@ -1,6 +1,6 @@
 export const portfolioData = {
     name: "Manoj Kumar Thapa",
-    title: "Software Engineer & AI Engineer",
+    title: "Software Engineer",
     description: "MSc Artificial Intelligence (Computer Science) student with a strong foundation in software development. Seeking a challenging software developer role to contribute to impactful projects and apply academic knowledge to real-world, data-driven solutions.",
     resume_link: "https://drive.google.com/file/d/1pN7YiclFrzZHM103MgIlxmlDGNieQ8Pk/view?usp=sharing",
     leetcode: "https://leetcode.com/u/manojthapa/",
