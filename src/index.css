@@ -1085,7 +1085,7 @@ pre,
 
 .hero-text h1 {
   font-size: 4.2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.3rem;
   color: var(--text-primary);
   font-weight: 700;
   line-height: 1.2;
@@ -2358,7 +2358,7 @@ body::after {
   }
 
   .hero-text .description {
-    text-align: justify;
+    text-align: left;
   }
 
   .hero-text .subtitle {

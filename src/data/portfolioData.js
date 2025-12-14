@@ -94,7 +94,6 @@ export const portfolioData = {
         {
             title: "Web Development Intern",
             company: "The Sparks Foundation",
-            company_logo: "https://media.licdn.com/dms/image/v2/C560BAQFgHU3sTF4LfQ/company-logo_200_200/company-logo_200_200/0/1631365213896?e=1763596800&v=beta&t=QSrx27CA2yvCzY64JvJZrnuoCTUiUTLX8eIG191v168",
             duration: "October 2020 - November 2020",
             location: "Remote",
             description: "Engineered secure authentication modules and improved application performance by 30% through strategic code splitting and caching."
