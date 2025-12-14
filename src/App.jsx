@@ -20,10 +20,10 @@ const App = () => {
             <AvailabilityWidget />
             <HeroSection />
             <SkillsSection />
-            <ExperienceSection />
             <EducationSection />
-            <CertificationsSection />
+            <ExperienceSection />
             <ProjectsSection />
+            <CertificationsSection />
             <Footer />
         </div>
     );
