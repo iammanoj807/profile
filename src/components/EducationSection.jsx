@@ -36,7 +36,7 @@ const EducationSection = () => {
                             )}
                         </h3>
                         <div className="stack-subtitle">{edu.subtitle}</div>
-                        <div className="stack-duration">{edu.duration}</div>
+                        <div className="stack-duration" style={{ color: '#c9d1d9' }}>{edu.duration}</div>
                         <ul className="stack-description">
                             {edu.descriptions.map((desc, i) => (
                                 <li key={i}>{desc}</li>

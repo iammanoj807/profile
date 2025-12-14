@@ -52,12 +52,12 @@ const Navigation = () => {
                 <div className="nav-container">
                     <div className="nav-logo">MKT</div>
                     <ul className="nav-links">
-                        <li><a onClick={() => scrollToSection('home')} className={activeSection === 'home' ? 'active' : ''}>{'{ home }'}</a></li>
-                        <li><a onClick={() => scrollToSection('skills')} className={activeSection === 'skills' ? 'active' : ''}>{'{ skills }'}</a></li>
-                        <li><a onClick={() => scrollToSection('experience')} className={activeSection === 'experience' ? 'active' : ''}>{'{ experience }'}</a></li>
-                        <li><a onClick={() => scrollToSection('education')} className={activeSection === 'education' ? 'active' : ''}>{'{ education }'}</a></li>
-                        <li><a onClick={() => scrollToSection('projects')} className={activeSection === 'projects' ? 'active' : ''}>{'{ projects }'}</a></li>
-                        <li><a onClick={() => scrollToSection('contact')} className={activeSection === 'contact' ? 'active' : ''}>{'{ contact }'}</a></li>
+                        <li><a onClick={() => scrollToSection('home')} className={activeSection === 'home' ? 'active' : ''}>Home</a></li>
+                        <li><a onClick={() => scrollToSection('skills')} className={activeSection === 'skills' ? 'active' : ''}>Skills</a></li>
+                        <li><a onClick={() => scrollToSection('experience')} className={activeSection === 'experience' ? 'active' : ''}>Experience</a></li>
+                        <li><a onClick={() => scrollToSection('education')} className={activeSection === 'education' ? 'active' : ''}>Education</a></li>
+                        <li><a onClick={() => scrollToSection('projects')} className={activeSection === 'projects' ? 'active' : ''}>Projects</a></li>
+                        <li><a onClick={() => scrollToSection('contact')} className={activeSection === 'contact' ? 'active' : ''}>Contact</a></li>
                     </ul>
 
                     <button className="mobile-menu-toggle" onClick={toggleMobileMenu} aria-label="Menu">

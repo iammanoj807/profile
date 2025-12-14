@@ -2,12 +2,12 @@ export const portfolioData = {
     name: "Manoj Kumar Thapa",
     title: "Software Engineer & AI Engineer",
     description: "MSc Artificial Intelligence (Computer Science) student with a strong foundation in software development. Seeking a challenging software developer role to contribute to impactful projects and apply academic knowledge to real-world, data-driven solutions.",
-    resume_link: "https://drive.google.com/file/d/1Qsc1ImHcuJYK-zkoO-c7g1x_f1oxHhVh/view?usp=sharing",
+    resume_link: "https://drive.google.com/file/d/1pN7YiclFrzZHM103MgIlxmlDGNieQ8Pk/view?usp=sharing",
     leetcode: "https://leetcode.com/u/manojthapa/",
     blog_link: "https://hamropedia.com",
     address: "Birmingham, UK",
     phone: "+447438029689",
-    phoneDisplay: "+44 7438 029689",
+    phoneDisplay: "+44 7438029689",
     phoneLink: "tel:+447438029689",
 
     social_links: [
@@ -78,7 +78,7 @@ export const portfolioData = {
             title: "Mentor",
             company: "Aston University",
             company_logo: "https://www.aston.ac.uk/themes/custom/aston_university/logo.svg",
-            duration: "Aug 2025 - Present (3 months)",
+            duration: "August 2025 - Present",
             location: "Birmingham, England, United Kingdom · On-site",
             description: "Guiding new MSc AI students in their academic transition, supporting coursework, projects, and skill development.",
             skills: ["Leadership", "Communication", "Teaching", "Mentoring"]
@@ -105,7 +105,7 @@ export const portfolioData = {
         {
             title: "Aston University, Birmingham",
             subtitle: "MSc Artificial Intelligence",
-            duration: "Jan 2025 - Jan 2026 (Expected)",
+            duration: "January 2025 - January 2026 (Expected)",
             expected_distinction: true,
             descriptions: [
                 "Specializing in advanced AI, including Deep Learning, Natural Language Processing (NLP), and Computer Vision.",
@@ -115,7 +115,7 @@ export const portfolioData = {
         {
             title: "Dr. Ambedkar Institute of Technology, Bangalore",
             subtitle: "Bachelor of Engineering in Computer Science and Engineering",
-            duration: "2017 - 2021",
+            duration: "August 2017 – September 2021",
             cgpa: "9.45/10",
             descriptions: [
                 "Built a strong foundation in Data Structures, Algorithms, DBMS, Operating Systems, and Computer Architecture.",
@@ -190,41 +190,31 @@ export const portfolioData = {
 
     projects: [
         {
-            title: "Fruit Detection and Ripeness Assessment based on Transfer Learning for Agricultural Automation",
-            description: "Real-time fruit classification and ripeness assessment using transfer learning. Final Year MSc project - currently in progress.",
-            tags: ["Python", "Transfer Learning", "Computer Vision", "OpenCV", "Agriculture"],
-            github: "https://github.com/iammanoj807",
-            date: "Sep 2025 - Present",
-            status: "In Progress",
-            note: "Final Year MSc Project"
-        },
-        {
-            title: "Sentiment Classification with DistilBERT",
-            description: "Fine-tuned DistilBERT for sentiment classification on IMDb dataset. Achieved 86.68% accuracy with efficient model size and runtime.",
-            tags: ["Python", "Transformers", "PyTorch", "HuggingFace", "NLP"],
-            github: "https://github.com/iammanoj807/Sentiment-Classification-with-DistilBERT",
-            date: "Jun 2025 - Jul 2025",
-            accuracy: "86.68%",
+            title: "Planck AI",
+            description: "Created agentic AI system with multi-step reasoning combining GPT-4o with real-time web search and document analysis capabilities.",
+            tags: ["Python", "FastAPI", "React", "LangGraph", "GPT-4o"],
+            link: "https://huggingface.co/spaces/manojthapaa/planck-ai",
+            linkText: "open:demo",
+            date: "October 2025 - November 2025",
             status: "Deployed"
         },
         {
-            title: "Face Mask Detection",
-            description: "Real-time face mask detection system using MobileNetV2 architecture. Computationally efficient with 98% accuracy.",
-            tags: ["Python", "TensorFlow", "Keras", "MobileNetV2", "OpenCV"],
-            github: "https://github.com/Manoj-Thapa/Face-Mask-Detection",
-            date: "Apr 2021 - Jul 2021",
-            accuracy: "98%",
+            title: "Online Bookstore",
+            description: "Developed full-stack e-commerce application with JWT authentication, shopping cart, order tracking, and responsive React frontend with dark mode.",
+            tags: ["Java", "Spring Boot", "React", "PostgreSQL"],
+            link: "https://bookstore-g9ob.onrender.com/",
+            linkText: "open:demo",
+            date: "August 2025 - September 2025",
             status: "Deployed"
         },
         {
-            title: "Indian Currency Recognition for Visually Impaired using Deep Learning Technique",
-            description: "Currency recognition system using CNN achieving 96% accuracy. Published research paper on this innovative accessibility project.",
-            tags: ["Python", "TensorFlow", "CNN", "Research", "Accessibility"],
-            link: "https://www.researchgate.net/publication/390832714_Indian_Currency_Recognition_for_Visually_Impaired_using_Deep_Learning_Technique",
-            linkText: "open:repository",
-            date: "Jan 2021 - Jul 2021",
-            accuracy: "96%",
+            title: "CogniGraph",
+            description: "Built AI-powered knowledge graph explorer that transforms PDFs into interactive visualizations with entity extraction and RAG-based document chat.",
+            tags: ["Python", "FastAPI", "React", "ChromaDB", "RAG"],
+            link: "https://huggingface.co/spaces/manojthapaa/CogniGraph",
+            linkText: "open:demo",
+            date: "June 2025 - July 2025",
             status: "Deployed"
-        },
+        }
     ]
 };

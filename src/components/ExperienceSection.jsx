@@ -39,7 +39,7 @@ const ExperienceSection = () => {
                                 )}
                                 {exp.company}
                             </div>
-                            <div className="duration">{exp.duration} • {exp.location}</div>
+                            <div className="duration" style={{ color: '#c9d1d9' }}>{exp.duration} • {exp.location}</div>
                             <p className="description">{exp.description}</p>
                             {exp.skills && (
                                 <div className="command-tags" style={{ marginTop: '1rem' }}>

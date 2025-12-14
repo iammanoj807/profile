@@ -38,7 +38,7 @@ const ProjectsSection = () => {
                                     <div className="output-line highlight">Accuracy: {project.accuracy}</div>
                                 )}
                                 {project.date && (
-                                    <div className="output-line">Timeline: {project.date}</div>
+                                    <div className="output-line" style={{ color: '#c9d1d9' }}>Timeline: {project.date}</div>
                                 )}
                                 {project.status === 'In Progress' ? (
                                     <div className="output-line" style={{ color: '#ffbe0b' }}>Status: ⏳ {project.status}</div>

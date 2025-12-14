@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { portfolioData } from '../data/portfolioData';
 import FloatingCodeSnippets from './FloatingCodeSnippets';
-import ImportAnimation from './ImportAnimation';
 import DeveloperCharacter from './DeveloperCharacter';
 import profileImg from '../assets/profile.png';
 
@@ -31,7 +30,7 @@ const HeroSection = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
                     >
-                        <ImportAnimation text={portfolioData.name} />
+                        {portfolioData.name}
                     </motion.h1>
                     <motion.div
                         className="title"

@@ -847,7 +847,7 @@ pre,
   width: 100%;
   background: rgba(13, 17, 23, 0.98);
   backdrop-filter: blur(10px);
-  padding: 0.8rem 2rem;
+  padding: 1rem 2rem;
   z-index: 1000;
   border-bottom: 1px solid var(--border-color);
   font-family: 'Fira Code', monospace;
@@ -889,8 +889,9 @@ pre,
 
 .nav-links {
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
   list-style: none;
+  margin-left: auto;
 }
 
 @media (max-width: 768px) {
@@ -969,23 +970,9 @@ pre,
   position: relative;
 }
 
-/* Green accent bar on mobile */
+/* Green accent bar on mobile - Removed */
 .mobile-menu-toggle::after {
-  content: '';
-  position: absolute;
-  right: -1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 4px;
-  height: 30px;
-  background: #00FF00;
-  border-radius: 2px;
-}
-
-@media (max-width: 768px) {
-  .mobile-menu-toggle::after {
-    right: -0.5rem;
-  }
+  display: none;
 }
 
 .mobile-menu-toggle:hover {
@@ -1332,7 +1319,7 @@ body::after {
 
 .widget-bubble {
   position: absolute;
-  bottom: 145px;
+  bottom: 110px;
   right: -10px;
   background: var(--bg-card);
   border: 3px solid var(--accent-green);
@@ -2160,7 +2147,7 @@ body::after {
 
 .console-title {
   margin-left: 1rem;
-  color: var(--text-dim);
+  color: #c9d1d9;
   font-size: 0.9rem;
 }
 
@@ -2178,7 +2165,65 @@ body::after {
 
 @media (max-width: 768px) {
   .console-line {
-    gap: 0.8rem;
+    gap: 0.3rem;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+
+  .console-body {
+    padding: 1.2rem 0.8rem;
+    overflow-x: hidden;
+    word-break: break-word;
+    font-size: 0.85rem;
+  }
+
+  .console-line .value,
+  .console-line .key {
+    word-break: break-all;
+    font-size: 0.85rem;
+  }
+
+  .console-line .key {
+    font-weight: 600;
+  }
+
+  .debug-console {
+    margin: 1rem auto;
+    border-radius: 8px;
+  }
+
+  .console-header {
+    padding: 0.6rem 0.8rem;
+  }
+
+  .console-dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .console-title {
+    font-size: 0.8rem;
+  }
+
+  .footer {
+    padding: 2rem 1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .social-links {
+    gap: 1rem;
+    margin-top: 2rem !important;
+  }
+
+  .social-link {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
   }
 }
 
