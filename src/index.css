@@ -2350,8 +2350,8 @@ body::after {
   }
 
   .hero-text h1 {
-    font-size: 3.5rem;
-    white-space: nowrap;
+    font-size: 3rem;
+    white-space: normal;
     overflow: visible;
   }
 
@@ -2471,8 +2471,8 @@ body::after {
   }
 
   .hero-text h1 {
-    font-size: 1.8rem;
-    white-space: nowrap;
+    font-size: 2.5rem;
+    white-space: normal;
     overflow: visible;
   }
 
