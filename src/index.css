@@ -889,7 +889,7 @@ pre,
 
 .nav-links {
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
   list-style: none;
   margin-left: auto;
 }
@@ -1074,7 +1074,7 @@ pre,
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 4rem;
+  gap: 8rem;
   position: relative;
   z-index: 2;
 }
@@ -1157,9 +1157,10 @@ pre,
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 25px rgba(57, 255, 20, 0.4);
-  background: var(--accent-cyan);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 4px 8px rgba(0, 0, 0, 0.3);
+  background: #45ff2a;
+  color: #000;
 }
 
 .btn-secondary {
@@ -1170,10 +1171,11 @@ pre,
 }
 
 .btn-secondary:hover {
-  background: rgba(57, 255, 20, 0.1);
-  border-color: var(--accent-cyan);
-  color: var(--accent-cyan);
-  transform: translateY(-2px);
+  background: rgba(57, 255, 20, 0.15);
+  border-color: #45ff2a;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Animated Developer Character */
@@ -1185,20 +1187,26 @@ pre,
 }
 
 .developer-character {
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
 }
 
 @media (max-width: 1024px) {
   .developer-character {
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
   }
 }
 
 @media (max-width: 768px) {
   .hero-animation {
-    display: none;
+    display: flex;
+    margin-top: 0;
+  }
+
+  .developer-character {
+    width: 380px;
+    height: 380px;
   }
 }
 
@@ -2364,8 +2372,8 @@ body::after {
   }
 
   .developer-character {
-    width: 280px;
-    height: 280px;
+    width: 380px;
+    height: 380px;
   }
 
   .terminal-window {
@@ -2473,8 +2481,8 @@ body::after {
   }
 
   .developer-character {
-    width: 220px;
-    height: 220px;
+    width: 380px;
+    height: 380px;
   }
 
   .terminal-body {

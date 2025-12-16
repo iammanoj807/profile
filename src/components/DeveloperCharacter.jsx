@@ -1,7 +1,22 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const DeveloperCharacter = () => {
+    const activities = [
+        "Doing leetcode",
+        "Learning AI",
+        "Acing interviews"
+    ];
+
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prev) => (prev + 1) % activities.length);
+        }, 3000);
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <motion.svg
             className="developer-character"
@@ -36,46 +51,56 @@ const DeveloperCharacter = () => {
                 transition={{ duration: 2, repeat: Infinity }}
             />
 
-            {/* Code Lines on Monitor */}
+            {/* Activity Title inside Monitor - Left aligned */}
+            <AnimatePresence mode="wait">
+                <motion.text
+                    key={currentIndex}
+                    x="160"
+                    y="205"
+                    textAnchor="start"
+                    fill="#00ff88"
+                    fontSize="10"
+                    fontFamily="'Fira Code', monospace"
+                    fontWeight="600"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.4 }}
+                >
+                    {activities[currentIndex]}
+                </motion.text>
+            </AnimatePresence>
+
+            {/* Animated Code Lines below title with gap */}
             <motion.line
                 x1="160"
-                y1="200"
-                x2="230"
-                y2="200"
-                stroke="#00ff88"
+                y1="225"
+                x2="240"
+                y2="225"
+                stroke="#00d4ff"
                 strokeWidth="2"
-                animate={{ opacity: [0.5, 1, 0.5] }}
+                animate={{ opacity: [0.4, 1, 0.4] }}
                 transition={{ duration: 1.5, repeat: Infinity, delay: 0 }}
             />
             <motion.line
                 x1="160"
-                y1="215"
+                y1="243"
                 x2="270"
-                y2="215"
-                stroke="#00d4ff"
+                y2="243"
+                stroke="#ffbe0b"
                 strokeWidth="2"
-                animate={{ opacity: [0.5, 1, 0.5] }}
+                animate={{ opacity: [0.4, 1, 0.4] }}
                 transition={{ duration: 1.5, repeat: Infinity, delay: 0.3 }}
             />
             <motion.line
                 x1="160"
-                y1="230"
-                x2="250"
-                y2="230"
-                stroke="#ffbe0b"
-                strokeWidth="2"
-                animate={{ opacity: [0.5, 1, 0.5] }}
-                transition={{ duration: 1.5, repeat: Infinity, delay: 0.6 }}
-            />
-            <motion.line
-                x1="160"
-                y1="245"
-                x2="220"
-                y2="245"
+                y1="261"
+                x2="255"
+                y2="261"
                 stroke="#ff006e"
                 strokeWidth="2"
-                animate={{ opacity: [0.5, 1, 0.5] }}
-                transition={{ duration: 1.5, repeat: Infinity, delay: 0.9 }}
+                animate={{ opacity: [0.4, 1, 0.4] }}
+                transition={{ duration: 1.5, repeat: Infinity, delay: 0.6 }}
             />
 
             {/* Monitor Stand */}
@@ -174,3 +199,4 @@ const DeveloperCharacter = () => {
 };
 
 export default DeveloperCharacter;
+
