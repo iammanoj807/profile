@@ -69,6 +69,7 @@ export const portfolioData = {
             category: "Databases",
             skills: [
                 { name: "MySQL", icon: "fa-solid fa-database", color: "#00758F" },
+                { name: "PostgreSQL", icon: "fa-solid fa-server", color: "#336791" },
                 { name: "Firebase", icon: "fa-solid fa-fire", color: "#FF9800" }
             ]
         }
