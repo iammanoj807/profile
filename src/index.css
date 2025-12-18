@@ -1710,7 +1710,8 @@ body::after {
 .skill-card:hover {
   border-color: var(--accent-green);
   transform: translateY(-3px);
-  background: rgba(57, 255, 20, 0.05);
+  background: transparent;
+  box-shadow: none;
 }
 
 .skill-card-icon {
@@ -1848,7 +1849,7 @@ body::after {
 .timeline-card:hover {
   border-color: var(--accent-green);
   transform: translateX(5px);
-  box-shadow: 0 4px 12px rgba(57, 255, 20, 0.1);
+  box-shadow: none;
 }
 
 .timeline-card h3 {
@@ -1905,7 +1906,7 @@ body::after {
 
 .project-terminal:hover {
   border-color: var(--accent-green);
-  box-shadow: 0 8px 25px rgba(57, 255, 20, 0.15);
+  box-shadow: none;
   transform: translateY(-3px);
 }
 
@@ -1915,7 +1916,7 @@ body::after {
 
 .project-terminal.in-progress:hover {
   border-color: #ffbe0b;
-  box-shadow: 0 8px 25px rgba(255, 190, 11, 0.15);
+  box-shadow: none;
 }
 
 .terminal-header-bar {
@@ -2017,7 +2018,7 @@ body::after {
 .footer {
   background: var(--bg-darker);
   padding: 3rem 2rem;
-  border-top: 1px solid var(--border-color);
+  border-top: none;
   position: relative;
   overflow: hidden;
 }
@@ -2081,11 +2082,16 @@ body::after {
 }
 
 .social-link:hover {
-  background: var(--accent-green);
-  color: var(--bg-dark);
+  background: transparent;
+  color: var(--accent-green);
   transform: translateY(-3px);
   border-color: var(--accent-green);
-  box-shadow: 0 4px 12px rgba(57, 255, 20, 0.3);
+  box-shadow: none;
+}
+
+.social-link:hover i,
+.social-link:hover iconify-icon {
+  color: var(--accent-green) !important;
 }
 
 .footer-text {
@@ -2703,7 +2709,7 @@ body::after {
 .stack-frame:hover {
   transform: translateX(10px);
   border-left-color: var(--accent-cyan);
-  box-shadow: -5px 5px 20px rgba(57, 255, 20, 0.1);
+  box-shadow: none;
 }
 
 .stack-frame::before {

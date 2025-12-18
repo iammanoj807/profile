@@ -54,7 +54,6 @@ const SkillsSection = () => {
                                             animate={isExpanded ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
                                             whileHover={{
                                                 scale: 1.1,
-                                                boxShadow: "0 0 15px rgba(57, 255, 20, 0.3)",
                                                 borderColor: "var(--accent-green)",
                                                 y: -5
                                             }}

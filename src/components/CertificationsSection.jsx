@@ -30,7 +30,9 @@ const CertificationsSection = () => {
                         style={{ textDecoration: 'none', display: 'block' }}
                     >
                         <div className="achievement-icon">
-                            {cert.icon && cert.icon.includes(':') && cert.icon.startsWith('fa-') ? (
+                            {cert.icon && cert.icon.startsWith('logos:') ? (
+                                <iconify-icon icon={cert.icon} style={{ fontSize: '3.5rem', marginBottom: '1rem' }}></iconify-icon>
+                            ) : cert.icon && cert.icon.includes(':') && cert.icon.startsWith('fa-') ? (
                                 <i className={cert.icon.split(':')[0] + ' fa-' + cert.icon.split(':')[1]} style={{ fontSize: '3.5rem', color: cert.iconColor || 'var(--accent-green)', marginBottom: '1rem' }}></i>
                             ) : cert.icon && cert.icon.startsWith('simple-icons:') ? (
                                 <iconify-icon icon={cert.icon} style={{ fontSize: '3.5rem', color: cert.iconColor || 'var(--accent-green)', marginBottom: '1rem' }}></iconify-icon>

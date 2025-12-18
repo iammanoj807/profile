@@ -47,20 +47,6 @@ const Footer = () => {
                             </div>
 
                             <div className="console-line" style={{ paddingLeft: '20px' }}>
-                                <span className="key" style={{ color: '#8be9fd' }}>blog:</span>
-                                <span className="value" style={{ color: '#e6edf3' }}>
-                                    <a href={portfolioData.blog_link} target="_blank" rel="noopener noreferrer" style={{ color: '#e6edf3', textDecoration: 'none' }}>
-                                        "hamropedia.com"
-                                    </a>,
-                                </span>
-                            </div>
-
-                            <div className="console-line" style={{ paddingLeft: '20px' }}>
-                                <span className="key" style={{ color: '#8be9fd' }}>status:</span>
-                                <span className="value" style={{ color: '#e6edf3' }}> "Available for 2026 Graduate Roles",</span>
-                            </div>
-
-                            <div className="console-line" style={{ paddingLeft: '20px' }}>
                                 <span className="key" style={{ color: '#8be9fd' }}>phone:</span>
                                 <span className="value" style={{ color: '#f1fa8c', fontWeight: 'normal' }}>
                                     <a href={portfolioData.phoneLink || "tel:+447438029689"} target="_blank" rel="noopener noreferrer" style={{ color: '#e6edf3', textDecoration: 'none', fontWeight: 'normal' }}>
@@ -75,12 +61,8 @@ const Footer = () => {
                             </div>
 
                             <div className="console-line" style={{ paddingLeft: '20px' }}>
-                                <span className="key" style={{ color: '#8be9fd' }}>leetcode:</span>
-                                <span className="value" style={{ color: '#e6edf3' }}>
-                                    <a href="https://leetcode.com/u/manojthapa/" target="_blank" rel="noopener noreferrer" style={{ color: '#e6edf3', textDecoration: 'none' }}>
-                                        "leetcode.com/u/manojthapa"
-                                    </a>
-                                </span>
+                                <span className="key" style={{ color: '#8be9fd' }}>status:</span>
+                                <span className="value" style={{ color: '#e6edf3' }}> "Available for 2026 Graduate Roles"</span>
                             </div>
 
                             <div className="console-line">
@@ -104,7 +86,11 @@ const Footer = () => {
                                 viewport={{ once: true }}
                                 title={link.name}
                             >
-                                <i className={link.icon} style={{ color: link.color || 'var(--text-secondary)' }}></i>
+                                {link.icon.startsWith('fa-') ? (
+                                    <i className={link.icon} style={{ color: link.color || 'var(--text-secondary)' }}></i>
+                                ) : (
+                                    <iconify-icon icon={link.icon} style={{ color: link.color || 'var(--text-secondary)', fontSize: '1.5rem' }}></iconify-icon>
+                                )}
                             </motion.a>
                         ))}
                     </div>
