@@ -16,32 +16,47 @@ const EducationSection = () => {
             >
                 Knowledge Stack
             </motion.h2>
-            <div className="education-stack">
-                {portfolioData.education.slice(0, 2).map((edu, index) => (
+            <div className="timeline" ref={ref}>
+                {portfolioData.education.map((edu, index) => (
                     <motion.div
                         key={index}
-                        className="stack-frame"
-                        data-index={index}
+                        className="timeline-item"
                         initial={{ opacity: 0, x: -50 }}
                         animate={inView ? { opacity: 1, x: 0 } : {}}
-                        transition={{ duration: 0.6, delay: index * 0.15 }}
+                        transition={{ duration: 0.6, delay: index * 0.2 }}
                     >
-                        <h3>
-                            {edu.title}
-                            {edu.expected_distinction && (
-                                <span className="distinction-badge">⭐ Expected Distinction</span>
-                            )}
-                            {edu.cgpa && (
-                                <span className="distinction-badge">⭐ {edu.cgpa} CGPA</span>
-                            )}
-                        </h3>
-                        <div className="stack-subtitle">{edu.subtitle}</div>
-                        <div className="stack-duration" style={{ color: '#c9d1d9' }}>{edu.duration}</div>
-                        <ul className="stack-description">
-                            {edu.descriptions.map((desc, i) => (
-                                <li key={i}>{desc}</li>
-                            ))}
-                        </ul>
+                        <motion.div
+                            className="timeline-dot"
+                            initial={{ scale: 0 }}
+                            animate={inView ? { scale: 1 } : {}}
+                            transition={{ duration: 0.4, delay: index * 0.2 }}
+                        />
+                        <div className="timeline-card">
+                            <h3>
+                                {edu.title}
+                                {edu.expected_distinction && (
+                                    <span className="distinction-badge" style={{ marginLeft: '10px', fontSize: '0.8rem', verticalAlign: 'middle' }}>
+                                        ⭐ Expected Distinction
+                                    </span>
+                                )}
+                                {edu.cgpa && (
+                                    <span className="distinction-badge" style={{ marginLeft: '10px', fontSize: '0.8rem', verticalAlign: 'middle' }}>
+                                        ⭐ {edu.cgpa}
+                                    </span>
+                                )}
+                            </h3>
+                            <div className="stack-subtitle" style={{ color: 'var(--accent-green)', marginBottom: '0.5rem', fontWeight: 500 }}>
+                                {edu.subtitle}
+                            </div>
+                            <div className="duration" style={{ color: '#c9d1d9', marginBottom: '1rem', fontSize: '0.85rem' }}>
+                                {edu.duration}
+                            </div>
+                            <ul className="stack-description" style={{ paddingLeft: '1.2rem', margin: 0 }}>
+                                {edu.descriptions.map((desc, i) => (
+                                    <li key={i} style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>{desc}</li>
+                                ))}
+                            </ul>
+                        </div>
                     </motion.div>
                 ))}
             </div>

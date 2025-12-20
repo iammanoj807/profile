@@ -91,14 +91,16 @@ export const portfolioData = {
             company_logo: "https://upload.wikimedia.org/wikipedia/commons/c/cd/Accenture.svg",
             duration: "October 2021 - October 2023",
             location: "Bengaluru, Karnataka, India",
-            description: "Developed full-stack enterprise applications in an Agile team and optimized a key API, achieving a 40% reduction in response time for a high-traffic service."
+            description: "Developed full-stack enterprise applications in an Agile team and optimized a key API, achieving a 40% reduction in response time for a high-traffic service.",
+            skills: ["Java", "Spring Boot", "Microservices", "React", "AWS"]
         },
         {
             title: "Web Development Intern",
             company: "The Sparks Foundation",
             duration: "October 2020 - November 2020",
             location: "Remote",
-            description: "Engineered secure authentication modules and improved application performance by 30% through strategic code splitting and caching."
+            description: "Engineered secure authentication modules and improved application performance by 30% through strategic code splitting and caching.",
+            skills: ["Web Development", "JavaScript", "Security", "Performance Optimization"]
         }
     ],
 
@@ -109,8 +111,7 @@ export const portfolioData = {
             duration: "January 2025 - January 2026 (Expected)",
             expected_distinction: true,
             descriptions: [
-                "Specializing in advanced AI, including Deep Learning, Natural Language Processing (NLP), and Computer Vision.",
-                "Applying theoretical knowledge to practical projects involving complex model architectures and MLOps principles."
+                "Specializing in advanced AI (Deep Learning, NLP, Computer Vision) and applying theoretical knowledge to practical projects involving complex model architectures and MLOps."
             ]
         },
         {
@@ -119,23 +120,7 @@ export const portfolioData = {
             duration: "August 2017 – September 2021",
             cgpa: "9.45/10",
             descriptions: [
-                "Specialized in Machine Learning, Deep Learning, and Full Stack Development."
-            ]
-        },
-        {
-            title: "Manimukunda College/HSS",
-            subtitle: "Higher Secondary Education (+2)",
-            duration: "2015 - 2017",
-            descriptions: [
-                "Awarded the Mahatma Gandhi Scholarship for academic excellence."
-            ]
-        },
-        {
-            title: "New Horizon Institute",
-            subtitle: "Secondary Education Examination (Class 10)",
-            duration: "2014 - 2015",
-            descriptions: [
-                "Achieved a Distinction with 85.63%."
+                "Built a strong foundation in core CS subjects (DSA, OS, DBMS) and completed specialized coursework in Machine Learning and Full Stack Development."
             ]
         }
     ],
