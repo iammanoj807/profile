@@ -18,19 +18,46 @@ const FloatingCodeSnippets = () => {
         { top: '75%', left: '60%' },  // Git (Bottom Right near widget)
         { top: '35%', left: '55%' },  // SQL (Mid Right)
         { top: '30%', left: '28%' },  // Visa (Upper Center-Left)
-        { top: '20%', left: '80%' },  // Await (Moved to Top Right - filling blank space)
+        { top: '20%', left: '80%' },  // Await (Top Right)
         { top: '35%', left: '75%' }   // Innovation (Mid Right)
     ];
 
+    const [isMobile, setIsMobile] = React.useState(window.innerWidth < 768);
+
+    React.useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    // Filter snippets for mobile: Java Grad (0), Python (1), Innovation (6)
+    const displaySnippets = isMobile
+        ? [codeSnippets[0], codeSnippets[1], codeSnippets[6]]
+        : codeSnippets;
+
+    const mobilePositions = [
+        { top: '60%', left: '5%' },   // Mobile 1 (Lower Left)
+        { top: '70%', left: '40%' },  // Mobile 2 (Lower Center)
+        { top: '80%', left: '10%' }   // Mobile 3 (Bottom Left)
+    ];
+
+    // Map mobile snippets to valid positions
+    const displayPositions = isMobile
+        ? mobilePositions
+        : positions;
+
     return (
         <>
-            {codeSnippets.map((snippet, index) => (
+            {displaySnippets.map((snippet, index) => (
                 <motion.div
                     key={index}
                     className="code-snippet"
                     style={{
-                        top: positions[index] ? positions[index].top : `${Math.random() * 80}%`,
-                        left: positions[index] ? positions[index].left : `${Math.random() * 80}%`
+                        top: displayPositions[index] ? displayPositions[index].top : `${Math.random() * 80}%`,
+                        left: displayPositions[index] ? displayPositions[index].left : `${Math.random() * 80}%`
                     }}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{
