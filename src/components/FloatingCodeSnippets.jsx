@@ -41,7 +41,7 @@ const FloatingCodeSnippets = () => {
     const mobilePositions = [
         { top: '60%', left: '5%' },   // Mobile 1 (Lower Left)
         { top: '70%', left: '40%' },  // Mobile 2 (Lower Center)
-        { top: '80%', left: '10%' }   // Mobile 3 (Bottom Left)
+        { top: '75%', left: '10%' }   // Mobile 3 (Bottom Left)
     ];
 
     // Map mobile snippets to valid positions
