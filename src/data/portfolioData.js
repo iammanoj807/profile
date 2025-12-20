@@ -131,7 +131,6 @@ export const portfolioData = {
             subtitle: "Google | Kaggle",
             link: "https://www.kaggle.com/certification/badges/manojkumarthapa/105",
             icon: "logos:google-icon",
-            // iconColor: "#4285F4" // Color not needed for logos:
         },
         {
             title: "AI Masterclass: How AI Thinks",
