@@ -119,8 +119,7 @@ export const portfolioData = {
             duration: "August 2017 – September 2021",
             cgpa: "9.45/10",
             descriptions: [
-                "Built a strong foundation in Data Structures, Algorithms, DBMS, Operating Systems, and Computer Architecture.",
-                "Completed specialized coursework in Machine Learning, Deep Learning, and Full Stack Development."
+                "Specialized in Machine Learning, Deep Learning, and Full Stack Development."
             ]
         },
         {
@@ -128,9 +127,7 @@ export const portfolioData = {
             subtitle: "Higher Secondary Education (+2)",
             duration: "2015 - 2017",
             descriptions: [
-                "Developed strong analytical and problem-solving skills through a rigorous science and mathematics curriculum.",
-                "Awarded the Mahatma Gandhi Scholarship for academic excellence.",
-                "Achieved a final score of 75.8%."
+                "Awarded the Mahatma Gandhi Scholarship for academic excellence."
             ]
         },
         {
@@ -138,8 +135,7 @@ export const portfolioData = {
             subtitle: "Secondary Education Examination (Class 10)",
             duration: "2014 - 2015",
             descriptions: [
-                "Established an early foundation in STEM subjects with a focus on Computer Science and Mathematics.",
-                "Achieved a final score of 85.63%."
+                "Achieved a Distinction with 85.63%."
             ]
         }
     ],
