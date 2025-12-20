@@ -3,22 +3,18 @@ import { motion } from 'framer-motion';
 import profileImg from '../assets/profile.png';
 
 const AvailabilityWidget = () => {
-    const [showModal, setShowModal] = useState(false);
     const [showConfetti, setShowConfetti] = useState(false);
     const [buttonText, setButtonText] = useState('Hire Me');
     const [isWaving, setIsWaving] = useState(false);
-    const modalRef = useRef(null);
 
     const handleClick = (e) => {
         e.stopPropagation();
         setIsWaving(true);
 
-        if (!showModal) {
-            setShowModal(true);
+        if (buttonText === 'Hire Me') {
             setButtonText('Hired ✨');
             setShowConfetti(true);
         } else {
-            setShowModal(false);
             setButtonText('Hire Me');
             setShowConfetti(false);
         }
@@ -27,41 +23,28 @@ const AvailabilityWidget = () => {
         setTimeout(() => setShowConfetti(false), 3000);
     };
 
-    const handleCloseModal = (e) => {
-        e.stopPropagation();
-        setShowModal(false);
-        setShowConfetti(false);
-        setButtonText('Hire Me');
-    };
+    const widgetRef = useRef(null);
 
     useEffect(() => {
         const handleClickOutside = (event) => {
-            if (modalRef.current && !modalRef.current.contains(event.target) && showModal) {
-                setShowModal(false);
-                setShowConfetti(false);
-                setButtonText('Hire Me');
-            }
-        };
-
-        const handleEscKey = (event) => {
-            if (event.key === 'Escape' && showModal) {
-                setShowModal(false);
-                setShowConfetti(false);
-                setButtonText('Hire Me');
+            if (widgetRef.current && !widgetRef.current.contains(event.target)) {
+                if (buttonText === 'Hired ✨') {
+                    setButtonText('Hire Me');
+                    setShowConfetti(false);
+                }
             }
         };
 
         document.addEventListener('mousedown', handleClickOutside);
-        document.addEventListener('keydown', handleEscKey);
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
-            document.removeEventListener('keydown', handleEscKey);
         };
-    }, [showModal]);
+    }, [buttonText]);
 
     return (
         <>
             <motion.div
+                ref={widgetRef}
                 className="availability-widget"
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -122,30 +105,6 @@ const AvailabilityWidget = () => {
                     </div>
                 )}
             </motion.div>
-
-            {showModal && (
-                <motion.div
-                    className="availability-modal"
-                    ref={modalRef}
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3 }}
-                >
-                    <button className="modal-close-btn" onClick={handleCloseModal} aria-label="Close modal">
-                        ✕
-                    </button>
-                    <div className="modal-header">
-                        <div className="modal-title">Open for Opportunities</div>
-                    </div>
-                    <div className="modal-detail"><strong>Position:</strong> 2026 Graduate Software Engineer</div>
-                    <div className="modal-detail"><strong>Graduating:</strong> Jan 2026</div>
-                    <div className="modal-detail"><strong>University:</strong> Aston University</div>
-                    <div className="modal-detail"><strong>Location:</strong> Birmingham, UK</div>
-                    <div className="modal-detail"><strong>Visa:</strong> UK Graduate Route (2026-2028)</div>
-                    <div className="modal-detail"><strong>Sponsorship:</strong> Not Required</div>
-                    <div className="modal-detail"><strong>Experience:</strong> 2+ years professional experience</div>
-                </motion.div>
-            )}
         </>
     );
 };
