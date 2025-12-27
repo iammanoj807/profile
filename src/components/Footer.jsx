@@ -62,7 +62,12 @@ const Footer = () => {
 
                             <div className="console-line" style={{ paddingLeft: '20px' }}>
                                 <span className="key" style={{ color: '#8be9fd' }}>status:</span>
-                                <span className="value" style={{ color: '#e6edf3' }}> "Available for 2026 Graduate Roles"</span>
+                                <span className="value" style={{ color: '#e6edf3' }}> "Available for 2026 Graduate Roles",</span>
+                            </div>
+
+                            <div className="console-line" style={{ paddingLeft: '20px' }}>
+                                <span className="key" style={{ color: '#8be9fd' }}>visa:</span>
+                                <span className="value" style={{ color: '#e6edf3' }}> "UK Graduate Route (2026–2028) – No sponsorship required"</span>
                             </div>
 
                             <div className="console-line">

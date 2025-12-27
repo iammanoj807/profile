@@ -33,7 +33,18 @@ const ProjectsSection = () => {
                         <div className="project-command-line">
                             <div className="command-prompt">project.execute("{project.title}")</div>
                             <div className="command-output">
-                                <div className="output-line">{project.description}</div>
+                                {Array.isArray(project.description) ? (
+                                    <ul className="stack-description" style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+                                        {project.description.map((desc, i) => (
+                                            <li key={i} style={{ display: 'flex', gap: '0.5rem', color: 'inherit', lineHeight: 1.6 }}>
+                                                <span>•</span>
+                                                <span>{desc}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                ) : (
+                                    <div className="output-line">{project.description}</div>
+                                )}
                                 {project.accuracy && (
                                     <div className="output-line highlight">Accuracy: {project.accuracy}</div>
                                 )}

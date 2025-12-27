@@ -1,8 +1,8 @@
 export const portfolioData = {
     name: "Manoj Kumar Thapa",
     title: "Software Engineer",
-    description: "MSc Artificial Intelligence (Computer Science) student with a strong foundation in software development. Seeking a challenging software developer role to contribute to impactful projects and apply academic knowledge to real-world, data-driven solutions.",
-    resume_link: "https://drive.google.com/file/d/10PoGlBeAiIJfOACCaiXiPo3cR5DvgInp/view?usp=sharing",
+    description: "Software Engineer and MSc AI candidate with 2 years of enterprise experience at Accenture, specializing in Agentic AI and full-stack development. Combines industrial software discipline with advanced research in LLMs and RAG.",
+    resume_link: "https://drive.google.com/file/d/1OIVr19Q9hefwvkLsmyV7TBpuw5VILfhs/view?usp=sharing",
     leetcode: "https://leetcode.com/u/manojthapa/",
     blog_link: "https://hamropedia.com",
     address: "Birmingham, UK",
@@ -82,7 +82,10 @@ export const portfolioData = {
             company_logo: "https://www.aston.ac.uk/themes/custom/aston_university/logo.svg",
             duration: "August 2025 - Present",
             location: "Birmingham, England, United Kingdom · On-site",
-            description: "Guiding new MSc AI students in their academic transition, supporting coursework, projects, and skill development.",
+            description: [
+                "Mentoring MSc AI students through their academic transition, providing guidance on coursework, project strategies, and career development.",
+                "Conducting weekly one-on-one sessions to support skill development in machine learning, Python, and research methodologies."
+            ],
             skills: ["Leadership", "Communication", "Teaching", "Mentoring"]
         },
         {
@@ -90,17 +93,13 @@ export const portfolioData = {
             company: "Accenture",
             company_logo: "https://upload.wikimedia.org/wikipedia/commons/c/cd/Accenture.svg",
             duration: "October 2021 - October 2023",
-            location: "Bengaluru, Karnataka, India",
-            description: "Developed full-stack enterprise applications in an Agile team and optimized a key API, achieving a 40% reduction in response time for a high-traffic service.",
-            skills: ["Java", "Spring Boot", "Microservices", "React", "AWS"]
-        },
-        {
-            title: "Web Development Intern",
-            company: "The Sparks Foundation",
-            duration: "October 2020 - November 2020",
-            location: "Remote",
-            description: "Engineered secure authentication modules and improved application performance by 30% through strategic code splitting and caching.",
-            skills: ["Web Development", "JavaScript", "Security", "Performance Optimization"]
+            location: "Bangalore, India",
+            description: [
+                "Developed scalable full-stack modules using Java Spring Boot and React for a high-traffic client application, strictly adhering to Agile workflows.",
+                "Optimized slow-performing SQL queries and API endpoints, reducing response latency by 40% and improving user experience.",
+                "Integrated automated unit testing (JUnit) into CI/CD pipelines, reducing regression bugs and accelerating deployment cycles."
+            ],
+            skills: ["Java", "Spring Boot", "React", "SQL", "JUnit", "CI/CD", "Agile"]
         }
     ],
 
@@ -171,29 +170,50 @@ export const portfolioData = {
 
     projects: [
         {
-            title: "Planck AI",
-            description: "Created agentic AI system with multi-step reasoning combining GPT-4o with real-time web search and document analysis capabilities.",
-            tags: ["Python", "FastAPI", "React", "LangGraph", "GPT-4o"],
-            link: "https://huggingface.co/spaces/manojthapaa/planck-ai",
-            linkText: "open:demo",
-            date: "October 2025 - November 2025",
+            title: "NeuroArc",
+            description: [
+                "Built an AI-powered job application assistant that parses resumes and generates ATS-optimized tailored versions using prompt engineering.",
+                "Implemented an intelligent scoring system that uses LLM reasoning to rank job relevance, performing standard keyword matching algorithms."
+            ],
+            tags: ["Python", "FastAPI", "React", "OpenAI API"],
+            link: "https://huggingface.co/spaces/manojthapaa/NeuroArc",
+            linkText: "Deployed Link",
+            date: "November 2025 - December 2025",
             status: "Deployed"
         },
         {
-            title: "Online Bookstore",
-            description: "Developed full-stack e-commerce application with JWT authentication, shopping cart, order tracking, and responsive React frontend with dark mode.",
-            tags: ["Java", "Spring Boot", "React", "PostgreSQL"],
-            link: "https://bookstore-g9ob.onrender.com/",
-            linkText: "open:demo",
+            title: "Planck AI",
+            description: [
+                "Engineered an autonomous agentic system capable of multi-step reasoning by orchestrating LLM tool-calling for real-time web search.",
+                "Designed a stateful graph workflow using LangGraph to manage conversation history and context retention across complex user queries."
+            ],
+            tags: ["Python", "LangGraph", "GPT-4o", "React"],
+            link: "https://huggingface.co/spaces/manojthapaa/planck-ai",
+            linkText: "Deployed Link",
+            date: "September 2025 - November 2025",
+            status: "Deployed"
+        },
+        {
+            title: "Full-Stack E-Commerce Platform",
+            description: [
+                "Engineered a complete e-commerce solution with a secure Spring Boot API (JWT) and a responsive React frontend.",
+                "Implemented complex state management and database relationships (PostgreSQL/JPA) to handle inventory, orders, and cart synchronization."
+            ],
+            tags: ["Java", "Spring Boot", "React", "Docker"],
+            link: "https://novela-app.onrender.com/",
+            linkText: "Deployed Link",
             date: "August 2025 - September 2025",
             status: "Deployed"
         },
         {
             title: "CogniGraph",
-            description: "Built AI-powered knowledge graph explorer that transforms PDFs into interactive visualizations with entity extraction and RAG-based document chat.",
-            tags: ["Python", "FastAPI", "React", "ChromaDB", "RAG"],
+            description: [
+                "Developed a RAG-based document explorer that extracts entities and relationships from unstructured PDFs to build interactive knowledge graphs.",
+                "Integrated ChromaDB for vector storage and retrieval, reducing hallucination rates by grounding LLM responses in document data."
+            ],
+            tags: ["Python", "ChromaDB", "RAG"],
             link: "https://huggingface.co/spaces/manojthapaa/CogniGraph",
-            linkText: "open:demo",
+            linkText: "Deployed Link",
             date: "June 2025 - July 2025",
             status: "Deployed"
         }

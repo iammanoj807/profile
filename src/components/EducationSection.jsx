@@ -51,9 +51,12 @@ const EducationSection = () => {
                             <div className="duration" style={{ color: '#c9d1d9', marginBottom: '1rem', fontSize: '0.85rem' }}>
                                 {edu.duration}
                             </div>
-                            <ul className="stack-description" style={{ paddingLeft: '1.2rem', margin: 0 }}>
+                            <ul className="stack-description" style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
                                 {edu.descriptions.map((desc, i) => (
-                                    <li key={i} style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>{desc}</li>
+                                    <li key={i} style={{ display: 'flex', gap: '0.5rem', color: 'inherit', lineHeight: 1.6 }}>
+                                        <span>•</span>
+                                        <span>{desc}</span>
+                                    </li>
                                 ))}
                             </ul>
                         </div>

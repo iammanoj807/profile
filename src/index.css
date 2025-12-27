@@ -894,9 +894,20 @@ pre,
   margin-left: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .nav-links {
     display: none;
+  }
+}
+
+/* Tablet breakpoint - reduce spacing to prevent overlap */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
   }
 }
 
@@ -1884,8 +1895,8 @@ body::after {
 
 .output-line {
   color: var(--text-secondary);
-  font-size: 1rem;
-  line-height: 1.8;
+  font-size: 1.18rem;
+  line-height: 1.6;
   margin-bottom: 0.5rem;
 }
 
@@ -2361,7 +2372,7 @@ body::after {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 
   /* Show mobile menu toggle */
   .mobile-menu-toggle {
@@ -2700,12 +2711,7 @@ body::after {
   position: relative;
 }
 
-.stack-description li::before {
-  content: '▸';
-  position: absolute;
-  left: 0;
-  color: var(--accent-green);
-}
+
 
 /* Education & Certifications */
 .education-grid,
@@ -3165,6 +3171,33 @@ body::after {
   filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.2));
 }
 
+/* Tablet Layout: Stacked but Left Aligned */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: left;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+
+  .hero-text {
+    align-items: flex-start;
+    max-width: 100%;
+  }
+
+  .hero-animation {
+    width: 100%;
+    margin-top: 0;
+    justify-content: center;
+  }
+
+  /* Ensure the title doesn't overflow on narrower tablets */
+  .hero-text h1 {
+    white-space: normal;
+  }
+}
+
+/* Mobile Layout: Stacked and Centered */
 @media (max-width: 768px) {
   .hero-content {
     flex-direction: column;

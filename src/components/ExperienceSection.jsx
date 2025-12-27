@@ -40,7 +40,18 @@ const ExperienceSection = () => {
                                 {exp.company}
                             </div>
                             <div className="duration" style={{ color: '#c9d1d9' }}>{exp.duration} • {exp.location}</div>
-                            <p className="description">{exp.description}</p>
+                            {Array.isArray(exp.description) ? (
+                                <ul style={{ listStyleType: 'none', padding: 0, margin: 0, marginTop: '0.5rem', color: 'var(--text-secondary)', fontSize: '1.18rem' }}>
+                                    {exp.description.map((desc, i) => (
+                                        <li key={i} style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.3rem', color: 'inherit', lineHeight: 1.6 }}>
+                                            <span>•</span>
+                                            <span>{desc}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            ) : (
+                                <p className="description">{exp.description}</p>
+                            )}
                             {exp.skills && (
                                 <div className="command-tags" style={{ marginTop: '1rem' }}>
                                     {exp.skills.map((skill, i) => (
