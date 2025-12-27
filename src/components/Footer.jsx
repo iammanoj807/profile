@@ -102,6 +102,11 @@ const Footer = () => {
                     <p className="footer-text" style={{ marginTop: '2rem' }}>
                         Made with <span className="heart">❤️</span> by {portfolioData.name}
                     </p>
+                    <p className="footer-text" style={{ marginTop: '0.5rem', fontSize: '0.85rem', opacity: 0.7 }}>
+                        <a href="https://iammanoj807.github.io/portfolio" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-secondary)', textDecoration: 'none', borderBottom: '1px dotted var(--text-secondary)' }}>
+                            Looking for v1.0? View Legacy Portfolio
+                        </a>
+                    </p>
                 </motion.div>
             </div>
         </footer>
