@@ -21,8 +21,8 @@ const App = () => {
             <HeroSection />
             <SkillsSection />
             <EducationSection />
-            <ProjectsSection />
             <ExperienceSection />
+            <ProjectsSection />
             <CertificationsSection />
             <Footer />
         </div>

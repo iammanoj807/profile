@@ -2,7 +2,7 @@ export const portfolioData = {
     name: "Manoj Kumar Thapa",
     title: "Software Engineer",
     description: "Software Engineer and MSc AI candidate with 2 years of enterprise experience at Accenture, specializing in Agentic AI and full-stack development. Combines industrial software discipline with advanced research in LLMs and RAG.",
-    resume_link: "https://drive.google.com/file/d/1OIVr19Q9hefwvkLsmyV7TBpuw5VILfhs/view?usp=sharing",
+    resume_link: "https://drive.google.com/file/d/1QEYOuWuWnXZvOKoSZWres5RpJIji9jYl/view?usp=sharing",
     leetcode: "https://leetcode.com/u/manojthapa/",
     blog_link: "https://hamropedia.com",
     address: "Birmingham, UK",
@@ -89,7 +89,7 @@ export const portfolioData = {
             skills: ["Leadership", "Communication", "Teaching", "Mentoring"]
         },
         {
-            title: "Associate Software Engineer",
+            title: "Software Engineer",
             company: "Accenture",
             company_logo: "https://upload.wikimedia.org/wikipedia/commons/c/cd/Accenture.svg",
             duration: "October 2021 - October 2023",
