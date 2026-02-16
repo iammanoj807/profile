@@ -80,7 +80,7 @@ export const portfolioData = {
             title: "Mentor",
             company: "Aston University",
             company_logo: "https://www.aston.ac.uk/themes/custom/aston_university/logo.svg",
-            duration: "August 2025 - Present",
+            duration: "August 2025 - January 2026",
             location: "Birmingham, England, United Kingdom · On-site",
             description: [
                 "Mentoring MSc AI students through their academic transition, providing guidance on coursework, project strategies, and career development.",
