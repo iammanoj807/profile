@@ -1385,8 +1385,8 @@ body::after {
 
 /* Profile Photo - Circular Display without border */
 .profile-photo {
-  width: 180px;
-  height: 180px;
+  width: 220px;
+  height: 280px;
   border-radius: 12px;
   object-fit: cover;
   object-position: top;
@@ -2265,8 +2265,8 @@ body::after {
   }
 
   .profile-photo {
-    width: 140px;
-    height: 140px;
+    width: 160px;
+    height: 200px;
   }
 
   .nav-links {
@@ -2445,8 +2445,8 @@ body::after {
   }
 
   .profile-photo {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 180px;
   }
 
   .coding-profiles {

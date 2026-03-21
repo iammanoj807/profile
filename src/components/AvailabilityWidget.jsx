@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import profileImg from '../assets/profile.png';
+import profileImg from '../assets/Manoj Kumar Thapa.png';
 
 const AvailabilityWidget = () => {
     const [showConfetti, setShowConfetti] = useState(false);
