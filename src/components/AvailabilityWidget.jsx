@@ -78,6 +78,8 @@ const AvailabilityWidget = () => {
                                 objectFit: 'cover',
                                 objectPosition: 'top'
                             }}
+                            draggable="false"
+                            onContextMenu={(e) => e.preventDefault()}
                         />
                     </motion.div>
                 </div>
