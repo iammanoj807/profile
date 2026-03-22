@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { portfolioData } from '../data/portfolioData';
 import FloatingCodeSnippets from './FloatingCodeSnippets';
 import DeveloperCharacter from './DeveloperCharacter';
-import profileImg from '../assets/Manoj Kumar Thapa.png';
+import profileImg from '../assets/Manoj Thapa Professional.png';
 
 const HeroSection = () => {
 
