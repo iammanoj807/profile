@@ -1132,7 +1132,7 @@ pre,
 
 .hero-text .description {
   font-size: 1.35rem;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   margin-bottom: 2rem;
   line-height: 1.8;
   max-width: 650px;
@@ -1422,7 +1422,7 @@ body::after {
   object-fit: cover;
   object-position: center 30%;
   display: block;
-  opacity: 0.25;
+  opacity: 0.30;
   mask-image: linear-gradient(to bottom, black 0%, black 40%, transparent 75%);
   -webkit-mask-image: linear-gradient(to bottom, black 0%, black 40%, transparent 75%);
 }
