@@ -2445,15 +2445,13 @@ body::after {
     padding: 1rem;
   }
 
-  /* Nav links already hidden globally */
-
   /* Mobile dots - HIDDEN */
   .mobile-dots-nav {
     display: none !important;
   }
 
   .hero {
-    padding: 5rem 1rem 1rem;
+    padding: 7rem 1rem 1rem;
   }
 
   .hero-text h1 {
