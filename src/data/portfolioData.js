@@ -2,7 +2,7 @@ export const portfolioData = {
     name: "Manoj Kumar Thapa",
     title: "Software Engineer",
     description: "Software Engineer with **2 years of production experience** building Java Spring Boot backends and REST APIs at Accenture, and a **recently completed MSc in Artificial Intelligence** (Aston University). Comfortable working in multi-person codebases, writing tested reviewable code, and picking up unfamiliar systems quickly. Eligible to work in the UK without sponsorship (Graduate Route Visa, 2026–2028).",
-    resume_link: "https://drive.google.com/file/d/1J22Fp2VencW6tyEEosXEfQvjmStL2iOr/view?usp=sharing",
+    resume_link: "https://drive.google.com/file/d/1ZURnm5vjGUQ6OIzd5KBarIFh3oXGdGYa/view?usp=sharing",
     leetcode: "https://leetcode.com/u/manojthapa/",
     blog_link: "https://hamropedia.com",
     address: "Birmingham, UK",
@@ -128,7 +128,7 @@ export const portfolioData = {
         {
             title: "Aston University, Birmingham",
             subtitle: "MSc Artificial Intelligence (Computer Science)",
-            duration: "January 2025 - April 2026",
+            duration: "August 2025 - April 2026",
             percentage: "70.37%",
             descriptions: [
                 "Specialized in advanced AI (Deep Learning, NLP, Computer Vision) and applied theoretical knowledge to practical projects involving complex model architectures and MLOps."
@@ -200,7 +200,19 @@ export const portfolioData = {
             tags: ["Python", "YOLOv8", "PyTorch", "ONNX"],
             link: "https://huggingface.co/spaces/manojthapaa/fruit-guard-ai",
             linkText: "Live Demo",
-            date: "January 2025 - April 2026",
+            date: "August 2025 - April 2026",
+            status: "Deployed"
+        },
+        {
+            title: "NeuroArc",
+            description: [
+                "Built an AI-powered tool that processes CVs and job descriptions and generates tailored outputs using LLMs, separating concerns cleanly between frontend, FastAPI backend, and external APIs.",
+                "Improved robustness by adding **schema-level input validation, structured error responses, and request logging**, significantly reducing unhandled exceptions compared to the initial prototype."
+            ],
+            tags: ["Python", "FastAPI", "React", "OpenAI API"],
+            link: "https://huggingface.co/spaces/manojthapaa/NeuroArc",
+            linkText: "Live Demo",
+            date: "November 2025 - December 2025",
             status: "Deployed"
         },
         {
@@ -227,18 +239,6 @@ export const portfolioData = {
             link: "https://novela-app.onrender.com",
             linkText: "Live Demo",
             date: "August 2025 - September 2025",
-            status: "Deployed"
-        },
-        {
-            title: "NeuroArc",
-            description: [
-                "Built an AI-powered tool that processes CVs and job descriptions and generates tailored outputs using LLMs, separating concerns cleanly between frontend, FastAPI backend, and external APIs.",
-                "Improved robustness by adding **schema-level input validation, structured error responses, and request logging**, significantly reducing unhandled exceptions compared to the initial prototype."
-            ],
-            tags: ["Python", "FastAPI", "React", "OpenAI API"],
-            link: "https://huggingface.co/spaces/manojthapaa/NeuroArc",
-            linkText: "Live Demo",
-            date: "November 2025 - December 2025",
             status: "Deployed"
         },
         {
