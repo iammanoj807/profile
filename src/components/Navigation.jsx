@@ -6,7 +6,7 @@ const Navigation = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            const sections = ['home', 'skills', 'education', 'projects', 'experience', 'certifications', 'contact'];
+            const sections = ['home', 'skills', 'experience', 'projects', 'education', 'certifications', 'contact'];
             const scrollPosition = window.scrollY + 100;
 
             for (const section of sections) {
@@ -54,9 +54,9 @@ const Navigation = () => {
                     <ul className="nav-links">
                         <li><a onClick={() => scrollToSection('home')} className={activeSection === 'home' ? 'active' : ''}>Home</a></li>
                         <li><a onClick={() => scrollToSection('skills')} className={activeSection === 'skills' ? 'active' : ''}>Skills</a></li>
-                        <li><a onClick={() => scrollToSection('education')} className={activeSection === 'education' ? 'active' : ''}>Education</a></li>
                         <li><a onClick={() => scrollToSection('experience')} className={activeSection === 'experience' ? 'active' : ''}>Experience</a></li>
                         <li><a onClick={() => scrollToSection('projects')} className={activeSection === 'projects' ? 'active' : ''}>Projects</a></li>
+                        <li><a onClick={() => scrollToSection('education')} className={activeSection === 'education' ? 'active' : ''}>Education</a></li>
                         <li><a onClick={() => scrollToSection('certifications')} className={activeSection === 'certifications' ? 'active' : ''}>Achievements</a></li>
                         <li><a onClick={() => scrollToSection('contact')} className={activeSection === 'contact' ? 'active' : ''}>Contact</a></li>
                     </ul>
@@ -76,9 +76,9 @@ const Navigation = () => {
                 <ul className="mobile-nav-links">
                     <li><a onClick={() => handleMobileNavigation('home')} className={activeSection === 'home' ? 'active' : ''}>Home</a></li>
                     <li><a onClick={() => handleMobileNavigation('skills')} className={activeSection === 'skills' ? 'active' : ''}>Skills</a></li>
-                    <li><a onClick={() => handleMobileNavigation('education')} className={activeSection === 'education' ? 'active' : ''}>Education</a></li>
-                    <li><a onClick={() => handleMobileNavigation('projects')} className={activeSection === 'projects' ? 'active' : ''}>Projects</a></li>
                     <li><a onClick={() => handleMobileNavigation('experience')} className={activeSection === 'experience' ? 'active' : ''}>Experience</a></li>
+                    <li><a onClick={() => handleMobileNavigation('projects')} className={activeSection === 'projects' ? 'active' : ''}>Projects</a></li>
+                    <li><a onClick={() => handleMobileNavigation('education')} className={activeSection === 'education' ? 'active' : ''}>Education</a></li>
                     <li><a onClick={() => handleMobileNavigation('certifications')} className={activeSection === 'certifications' ? 'active' : ''}>Achievements</a></li>
                     <li><a onClick={() => handleMobileNavigation('contact')} className={activeSection === 'contact' ? 'active' : ''}>Contact</a></li>
                 </ul>

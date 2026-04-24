@@ -34,9 +34,9 @@ const EducationSection = () => {
                         <div className="timeline-card">
                             <h3>
                                 {edu.title}
-                                {edu.expected_distinction && (
+                                {edu.percentage && (
                                     <span className="distinction-badge" style={{ marginLeft: '10px', fontSize: '0.8rem', verticalAlign: 'middle' }}>
-                                        ⭐ Expected Distinction
+                                        ⭐ {edu.percentage}
                                     </span>
                                 )}
                                 {edu.cgpa && (

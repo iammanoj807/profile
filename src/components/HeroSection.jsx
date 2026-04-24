@@ -1,14 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { portfolioData } from '../data/portfolioData';
+import { renderBoldText } from '../utils/renderBoldText';
 import FloatingCodeSnippets from './FloatingCodeSnippets';
 import DeveloperCharacter from './DeveloperCharacter';
 import profileImg from '../assets/Manoj Thapa Professional.png';
+import londonSkyline from '../assets/london-tech-city.png';
 
 const HeroSection = () => {
 
     return (
         <section id="home" className="hero">
+            <div className="london-skyline-bg">
+                <img src={londonSkyline} alt="London Tech City" draggable="false" />
+            </div>
             <FloatingCodeSnippets />
             <motion.div
                 className="hero-content"
@@ -48,7 +53,7 @@ const HeroSection = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.6 }}
                     >
-                        {portfolioData.description}
+                        {renderBoldText(portfolioData.description)}
                     </motion.div>
 
                     <motion.div

@@ -1404,6 +1404,29 @@ body::after {
   }
 }
 
+/* London Tech City Skyline Background */
+.london-skyline-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.london-skyline-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+  opacity: 0.25;
+  mask-image: linear-gradient(to bottom, black 0%, black 40%, transparent 75%);
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 40%, transparent 75%);
+}
+
 /* Coding Profiles Section */
 .coding-profiles {
   display: flex;

@@ -1,6 +1,5 @@
 import React from 'react';
 import BackgroundCodeRain from './components/BackgroundCodeRain';
-import MouseTrail from './components/MouseTrail';
 import Navigation from './components/Navigation';
 import AvailabilityWidget from './components/AvailabilityWidget';
 import HeroSection from './components/HeroSection';
@@ -15,14 +14,13 @@ const App = () => {
     return (
         <div>
             <BackgroundCodeRain />
-            <MouseTrail />
             <Navigation />
             <AvailabilityWidget />
             <HeroSection />
             <SkillsSection />
-            <EducationSection />
             <ExperienceSection />
             <ProjectsSection />
+            <EducationSection />
             <CertificationsSection />
             <Footer />
         </div>

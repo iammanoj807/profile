@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { portfolioData } from '../data/portfolioData';
+import { renderBoldText } from '../utils/renderBoldText';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
 
 const ProjectsSection = () => {
@@ -38,7 +39,7 @@ const ProjectsSection = () => {
                                         {project.description.map((desc, i) => (
                                             <li key={i} style={{ display: 'flex', gap: '0.5rem', color: 'inherit', lineHeight: 1.6 }}>
                                                 <span>•</span>
-                                                <span>{desc}</span>
+                                                <span>{renderBoldText(desc)}</span>
                                             </li>
                                         ))}
                                     </ul>
