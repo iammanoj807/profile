@@ -2,7 +2,7 @@ export const portfolioData = {
     name: "Manoj Kumar Thapa",
     title: "Software Engineer",
     description: "Software Engineer with **2 years of production experience** building Java Spring Boot backends and REST APIs at Accenture, and a **recently completed MSc in Artificial Intelligence** (Aston University). Comfortable working in multi-person codebases, writing tested reviewable code, and picking up unfamiliar systems quickly. Eligible to work in the UK without sponsorship (Graduate Route Visa, 2026–2028).",
-    resume_link: "https://drive.google.com/file/d/1ZURnm5vjGUQ6OIzd5KBarIFh3oXGdGYa/view?usp=sharing",
+    resume_link: "https://drive.google.com/file/d/1TZEJB-oa2n3vR-QtRK9yBt-Dm6pknPR_/view?usp=sharing",
     leetcode: "https://leetcode.com/u/manojthapa/",
     blog_link: "https://hamropedia.com",
     address: "Birmingham, UK",
