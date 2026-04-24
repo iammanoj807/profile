@@ -11,7 +11,7 @@ export const portfolioData = {
     phoneLink: "tel:+447438029689",
 
     social_links: [
-        { name: "GitHub", url: "https://github.com/manojthapaa", icon: "fa-brands fa-github", color: "#FFFFFF" },
+        { name: "GitHub", url: "https://github.com/iammanoj807", icon: "fa-brands fa-github", color: "#FFFFFF" },
         { name: "LinkedIn", url: "https://www.linkedin.com/in/manoj-kumar-thapa-7595a5168", icon: "fa-brands fa-linkedin-in", color: "#0077B5" },
         { name: "LeetCode", url: "https://leetcode.com/u/manojthapa/", icon: "simple-icons:leetcode", color: "#FFA116" },
         { name: "Blog", url: "https://hamropedia.com", icon: "fa-solid fa-blog", color: "#FFA500" },
