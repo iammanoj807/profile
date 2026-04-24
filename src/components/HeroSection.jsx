@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { portfolioData } from '../data/portfolioData';
 import { renderBoldText } from '../utils/renderBoldText';
@@ -8,6 +8,7 @@ import profileImg from '../assets/Manoj Thapa Professional.png';
 import londonSkyline from '../assets/london-tech-city.png';
 
 const HeroSection = () => {
+    const [descExpanded, setDescExpanded] = useState(false);
 
     return (
         <section id="home" className="hero">
@@ -48,13 +49,20 @@ const HeroSection = () => {
                         {portfolioData.title}
                     </motion.div>
                     <motion.div
-                        className="description"
+                        className={`description ${descExpanded ? 'expanded' : ''}`}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.6 }}
+                        onClick={() => setDescExpanded(!descExpanded)}
                     >
                         {renderBoldText(portfolioData.description)}
                     </motion.div>
+                    <span
+                        className="description-toggle"
+                        onClick={() => setDescExpanded(!descExpanded)}
+                    >
+                        {descExpanded ? '← show less' : '→ read more...'}
+                    </span>
 
                     <motion.div
                         className="hero-buttons"

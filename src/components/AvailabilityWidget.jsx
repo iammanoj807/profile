@@ -76,7 +76,10 @@ const AvailabilityWidget = () => {
                                 height: '60px',
                                 borderRadius: '50%',
                                 objectFit: 'cover',
-                                objectPosition: 'top'
+                                objectPosition: 'top',
+                                background: 'transparent',
+                                border: 'none',
+                                boxShadow: 'none'
                             }}
                             draggable="false"
                             onContextMenu={(e) => e.preventDefault()}

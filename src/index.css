@@ -1396,10 +1396,10 @@ body::after {
   display: block;
 }
 
-/* Center profile photo on mobile */
+/* Profile photo on mobile */
 @media (max-width: 768px) {
   .profile-photo {
-    margin-left: auto;
+    margin-left: 0;
     margin-right: auto;
   }
 }
@@ -1425,6 +1425,39 @@ body::after {
   opacity: 0.25;
   mask-image: linear-gradient(to bottom, black 0%, black 40%, transparent 75%);
   -webkit-mask-image: linear-gradient(to bottom, black 0%, black 40%, transparent 75%);
+}
+
+/* Mobile: Truncate hero description so skyline is visible */
+@media (max-width: 768px) {
+  .hero-text .description {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .hero-text .description.expanded {
+    -webkit-line-clamp: unset;
+    overflow: visible;
+  }
+
+  .description-toggle {
+    display: inline-block;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-top: 0.3rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Fira Code', monospace;
+  }
+}
+
+@media (min-width: 769px) {
+  .description-toggle {
+    display: none;
+  }
 }
 
 /* Coding Profiles Section */
@@ -2299,7 +2332,7 @@ body::after {
 
   .hero-content {
     flex-direction: column;
-    text-align: center;
+    text-align: left;
   }
 
   .hero-text h1 {
@@ -3224,7 +3257,7 @@ body::after {
 @media (max-width: 768px) {
   .hero-content {
     flex-direction: column;
-    text-align: center;
+    text-align: left;
     gap: 0rem;
   }
 
