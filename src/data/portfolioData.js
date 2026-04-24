@@ -97,6 +97,18 @@ export const portfolioData = {
     ],
     experience: [
         {
+            title: "Mentor",
+            company: "Aston University",
+            company_logo: "https://www.aston.ac.uk/themes/custom/aston_university/logo.svg",
+            duration: "August 2025 - January 2026",
+            location: "Birmingham, England, United Kingdom · On-site",
+            description: [
+                "Mentored **10+ MSc AI students** through their academic transition, providing guidance on coursework, project strategies, and career development.",
+                "Conducted **weekly one-on-one sessions** to support skill development in machine learning, Python, and research methodologies, helping students improve project outcomes."
+            ],
+            skills: ["Leadership", "Communication", "Teaching", "Mentoring"]
+        },
+        {
             title: "Software Engineer",
             company: "Accenture",
             company_logo: "https://upload.wikimedia.org/wikipedia/commons/c/cd/Accenture.svg",
