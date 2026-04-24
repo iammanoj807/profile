@@ -131,7 +131,7 @@ export const portfolioData = {
             duration: "January 2025 - April 2026",
             percentage: "70.37%",
             descriptions: [
-                "Specializing in advanced AI (Deep Learning, NLP, Computer Vision) and applying theoretical knowledge to practical projects involving complex model architectures and MLOps."
+                "Specialized in advanced AI (Deep Learning, NLP, Computer Vision) and applied theoretical knowledge to practical projects involving complex model architectures and MLOps."
             ]
         },
         {
