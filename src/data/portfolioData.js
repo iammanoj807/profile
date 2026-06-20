@@ -142,7 +142,7 @@ export const portfolioData = {
         {
             title: "Aston University, Birmingham",
             subtitle: "MSc Artificial Intelligence (Computer Science)",
-            duration: "August 2025 - April 2026",
+            duration: "January 2025 - April 2026",
             percentage: "70.37%",
             descriptions: [
                 "Specialized in advanced AI (Deep Learning, NLP, Computer Vision) and applied theoretical knowledge to practical projects involving complex model architectures and MLOps."
