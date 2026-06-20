@@ -1854,8 +1854,6 @@ body::after {
   height: 28px;
   object-fit: contain;
   border-radius: 4px;
-  background: white;
-  padding: 2px;
 }
 
 .timeline-card .duration {

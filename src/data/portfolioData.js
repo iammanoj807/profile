@@ -1,8 +1,10 @@
+import flyrankLogo from '/flyrank-logo.jpeg';
+
 export const portfolioData = {
     name: "Manoj Kumar Thapa",
     title: "Software Engineer",
-    description: "Software Engineer with **2 years of production experience** building Java Spring Boot backends and REST APIs at Accenture, and a **recently completed MSc in Artificial Intelligence** (Aston University). Comfortable working in multi-person codebases, writing tested reviewable code, and picking up unfamiliar systems quickly. Eligible to work in the UK without sponsorship (Graduate Route Visa, 2026–2028).",
-    resume_link: "https://drive.google.com/file/d/1TZEJB-oa2n3vR-QtRK9yBt-Dm6pknPR_/view?usp=sharing",
+    description: "Software Engineer with **industry experience** building Java Spring Boot backends and REST APIs at Accenture, and a **recently completed MSc in Artificial Intelligence** (Aston University). Comfortable working in multi-person codebases, writing tested reviewable code, and picking up unfamiliar systems quickly. Eligible to work in the UK without sponsorship (Graduate Route Visa, 2026–2028).",
+    resume_link: "https://drive.google.com/file/d/1J5veUz64FEJD6loJzzJbXwsrGmLEOsMK/view?usp=sharing",
     leetcode: "https://leetcode.com/u/manojthapa/",
     blog_link: "https://hamropedia.com",
     address: "Birmingham, UK",
@@ -97,6 +99,18 @@ export const portfolioData = {
     ],
     experience: [
         {
+            title: "AI Intern",
+            company: "FlyRank AI",
+            company_logo: flyrankLogo,
+            duration: "June 2026 - Present",
+            location: "London Area, United Kingdom · Remote",
+            description: [
+                "Building **RAG pipelines**, structured output systems, and evaluation harnesses as part of FlyRank AI's Backend AI Engineering track.",
+                "Working with **Python, FastAPI, and LLM APIs** to design and ship real backend AI products."
+            ],
+            skills: ["Python", "FastAPI", "LLM APIs", "RAG", "Backend AI Engineering"]
+        },
+        {
             title: "Mentor",
             company: "Aston University",
             company_logo: "https://www.aston.ac.uk/themes/custom/aston_university/logo.svg",
@@ -112,7 +126,7 @@ export const portfolioData = {
             title: "Software Engineer",
             company: "Accenture",
             company_logo: "https://upload.wikimedia.org/wikipedia/commons/c/cd/Accenture.svg",
-            duration: "October 2021 - October 2023",
+            duration: "October 2021 - October 2022",
             location: "Bangalore, India",
             description: [
                 "Built and maintained production features in **Java Spring Boot** and **React** for a large-scale enterprise application, working in a team of 6 engineers across the full SDLC from design through deployment.",
