@@ -106,14 +106,6 @@ Proficient in **Python and SQL**, with practical experience across LLM integrati
 
 ---
 
-### 📊 GitHub Stats
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=iammanoj807&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117" alt="Manoj's GitHub Stats" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=iammanoj807&theme=tokyonight&hide_border=true&background=0d1117" alt="Manoj's GitHub Streak" />
-</div>
-
----
 
 ### 🤝 Connect
 
