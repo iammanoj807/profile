@@ -96,7 +96,7 @@ const AvailabilityWidget = () => {
                                 className="small-confetti-piece"
                                 style={{
                                     left: `${-50 + Math.random() * 100}px`,
-                                    backgroundColor: ['#FFD700', '#00ff88', '#FF6B6B', '#4ECDC4'][Math.floor(Math.random() * 4)]
+                                    backgroundColor: ['#FFD700', '#3b82f6', '#FF6B6B', '#4ECDC4'][Math.floor(Math.random() * 4)]
                                 }}
                                 initial={{ y: 0, opacity: 1, scale: 1 }}
                                 animate={{ y: 150, opacity: 0, scale: 0.3 }}

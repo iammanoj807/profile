@@ -783,14 +783,14 @@ select.form-control {
   --bg-dark: #0d1117;
   --bg-darker: #0a0e1a;
   --bg-card: #161b22;
-  --accent-green: #39ff14;
-  --accent-cyan: #00e5ff;
+  --accent-green: #3b82f6;
+  --accent-cyan: #60a5fa;
   --text-primary: #c9d1d9;
   --text-secondary: #8b949e;
   --text-dim: #484f58;
   --border-color: #30363d;
   --code-bg: #0d1117;
-  --terminal-green: #39ff14;
+  --terminal-green: #3b82f6;
 }
 
 html {
@@ -877,7 +877,7 @@ pre,
 .nav-active-section {
   font-size: 1rem;
   font-weight: 500;
-  color: #00FF00;
+  color: #3b82f6;
   font-family: 'Fira Code', monospace;
   letter-spacing: 0.05em;
   display: none;
@@ -946,9 +946,9 @@ pre,
   width: 0;
 }
 
-/* Active navigation item - GREEN highlighting */
+/* Active navigation item - BLUE highlighting */
 .nav-links a.active {
-  color: #00FF00;
+  color: #3b82f6;
   position: relative;
 }
 
@@ -973,7 +973,7 @@ pre,
   /* Hidden on desktop, shown on mobile */
   background: none;
   border: none;
-  color: #00FF00;
+  color: #3b82f6;
   font-size: 1.8rem;
   cursor: pointer;
   padding: 0.5rem;
@@ -1058,13 +1058,13 @@ pre,
 
 .mobile-nav-links a:hover {
   color: var(--accent-green);
-  background: rgba(57, 255, 20, 0.05);
+  background: rgba(59, 130, 246, 0.05);
   border-left-color: var(--accent-green);
 }
 
 .mobile-nav-links a.active {
   color: var(--accent-green);
-  background: rgba(57, 255, 20, 0.1);
+  background: rgba(59, 130, 246, 0.1);
   border-left-color: var(--accent-green);
 }
 
@@ -1095,7 +1095,7 @@ pre,
 }
 
 .hero-text h1 {
-  font-size: 4.2rem;
+  font-size: 3.2rem;
   margin-bottom: 0.3rem;
   color: var(--text-primary);
   font-weight: 700;
@@ -1111,10 +1111,11 @@ pre,
 }
 
 .hero-text .title {
-  font-size: 1.85rem;
+  font-size: 2.1rem;
   color: var(--accent-green);
-  margin-bottom: 1rem;
-  font-weight: 500;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 .hero-text .title::before {
@@ -1131,11 +1132,12 @@ pre,
 }
 
 .hero-text .description {
-  font-size: 1.35rem;
+  font-size: 1.2rem;
   color: var(--text-primary);
-  margin-bottom: 2rem;
-  line-height: 1.8;
-  max-width: 650px;
+  margin-bottom: 1.5rem;
+  line-height: 1.75;
+  max-width: 680px;
+  opacity: 0.9;
 }
 
 .hero-buttons {
@@ -1161,8 +1163,8 @@ pre,
 
 .btn-primary {
   background: var(--accent-green);
-  color: var(--bg-dark);
-  box-shadow: 0 0 15px rgba(57, 255, 20, 0.2);
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
   font-family: 'Fira Code', monospace;
   font-weight: 600;
 }
@@ -1170,8 +1172,8 @@ pre,
 .btn-primary:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 4px 8px rgba(0, 0, 0, 0.3);
-  background: #45ff2a;
-  color: #000;
+  background: #60a5fa;
+  color: #fff;
 }
 
 .btn-secondary {
@@ -1182,11 +1184,35 @@ pre,
 }
 
 .btn-secondary:hover {
-  background: rgba(57, 255, 20, 0.15);
-  border-color: #45ff2a;
+  background: rgba(59, 130, 246, 0.15);
+  border-color: #60a5fa;
   color: #fff;
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 4px 8px rgba(59, 130, 246, 0.2);
+}
+
+.btn-github {
+  background: #24292e;
+  color: #ffffff;
+  border: 1px solid #444d56;
+  font-family: 'Fira Code', monospace;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.08);
+}
+
+.btn-github i {
+  font-size: 1.15em;
+}
+
+.btn-github:hover {
+  background: #2f363d;
+  border-color: #e1e4e8;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 255, 255, 0.1);
 }
 
 /* Animated Developer Character */
@@ -1296,7 +1322,7 @@ body::after {
   width: 100%;
   height: 100%;
   background-image:
-    radial-gradient(circle, rgba(57, 255, 20, 0.08) 1px, transparent 1px),
+    radial-gradient(circle, rgba(59, 130, 246, 0.08) 1px, transparent 1px),
     radial-gradient(circle, rgba(0, 229, 255, 0.06) 1px, transparent 1px);
   background-size: 30px 30px, 50px 50px;
   background-position: 0 0, 25px 25px;
@@ -1501,9 +1527,9 @@ body::after {
 }
 
 .profile-badge:hover {
-  background: rgba(57, 255, 20, 0.1);
+  background: rgba(59, 130, 246, 0.1);
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(57, 255, 20, 0.3);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
 }
 
 .profile-badge:active {
@@ -1579,11 +1605,11 @@ body::after {
 }
 
 .folder-header:hover {
-  background: rgba(57, 255, 20, 0.05);
+  background: rgba(59, 130, 246, 0.05);
 }
 
 .folder-header:active {
-  background: rgba(57, 255, 20, 0.08);
+  background: rgba(59, 130, 246, 0.08);
 }
 
 .folder-icon {
@@ -1738,7 +1764,7 @@ body::after {
 
 .file-item:hover {
   transform: translateX(5px);
-  background: rgba(57, 255, 20, 0.05);
+  background: rgba(59, 130, 246, 0.05);
 }
 
 .file-name {
@@ -1966,12 +1992,12 @@ body::after {
 }
 
 .command-tag {
-  background: rgba(57, 255, 20, 0.1);
+  background: rgba(59, 130, 246, 0.1);
   color: var(--accent-green);
   padding: 0.3rem 0.8rem;
   border-radius: 4px;
   font-size: 0.75rem;
-  border: 1px solid rgba(57, 255, 20, 0.3);
+  border: 1px solid rgba(59, 130, 246, 0.3);
 }
 
 .command-link {
@@ -2009,7 +2035,7 @@ body::after {
   width: 100%;
   height: 100%;
   background-image:
-    radial-gradient(circle, rgba(57, 255, 20, 0.05) 1px, transparent 1px),
+    radial-gradient(circle, rgba(59, 130, 246, 0.05) 1px, transparent 1px),
     radial-gradient(circle, rgba(0, 229, 255, 0.04) 1px, transparent 1px);
   background-size: 30px 30px, 50px 50px;
   background-position: 0 0, 25px 25px;
@@ -2722,7 +2748,7 @@ body::after {
 
 .distinction-badge {
   display: inline-block;
-  background: rgba(57, 255, 20, 0.15);
+  background: rgba(59, 130, 246, 0.15);
   color: #ffffff;
   padding: 0.3rem 0.6rem;
   border-radius: 4px;
@@ -2829,7 +2855,7 @@ body::after {
 /* Certification icon colors - original brand colors - ALL VISIBLE */
 .achievement-badge iconify-icon[icon*="brain"],
 .achievement-badge i.fa-brain {
-  color: #00FF00 !important;
+  color: #3b82f6 !important;
   filter: brightness(1.2) !important;
 }
 
@@ -2877,7 +2903,7 @@ body::after {
 }
 
 .achievement-badge .subtitle {
-  color: #00FF00;
+  color: #3b82f6;
   font-size: 0.9rem;
   margin-bottom: 1rem;
   font-weight: 500;
@@ -2885,7 +2911,7 @@ body::after {
 
 .achievement-link {
   display: inline-block;
-  color: #00e5ff;
+  color: #60a5fa;
   text-decoration: none;
   font-size: 0.85rem;
   font-weight: 500;
@@ -2941,8 +2967,8 @@ body::after {
   width: 100%;
   text-align: center;
   position: relative;
-  border: 3px solid #00ff88;
-  box-shadow: 0 0 60px rgba(0, 255, 136, 0.4),
+  border: 3px solid #3b82f6;
+  box-shadow: 0 0 60px rgba(59, 130, 246, 0.4),
     0 0 100px rgba(255, 215, 0, 0.2);
 }
 
@@ -2951,8 +2977,8 @@ body::after {
   top: 15px;
   right: 15px;
   background: rgba(255, 255, 255, 0.1);
-  border: 2px solid #00ff88;
-  color: #00ff88;
+  border: 2px solid #3b82f6;
+  color: #3b82f6;
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -2967,7 +2993,7 @@ body::after {
 }
 
 .celebration-close-btn:hover {
-  background: #00ff88;
+  background: #3b82f6;
   color: #1a1a2e;
   transform: rotate(90deg);
 }
@@ -2981,13 +3007,13 @@ body::after {
 .robot-svg {
   width: 100%;
   height: 100%;
-  filter: drop-shadow(0 0 20px rgba(0, 255, 136, 0.5));
+  filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.5));
 }
 
 .celebration-title {
   font-size: 2.5rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #00ff88, #FFD700, #00ff88);
+  background: linear-gradient(135deg, #3b82f6, #FFD700, #3b82f6);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -3036,27 +3062,27 @@ body::after {
 }
 
 .celebration-btn.primary {
-  background: linear-gradient(135deg, #00ff88, #00cc6f);
-  color: #1a1a2e;
-  border-color: #00ff88;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: #ffffff;
+  border-color: #3b82f6;
 }
 
 .celebration-btn.primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(0, 255, 136, 0.4);
-  background: linear-gradient(135deg, #00ffaa, #00dd7f);
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+  background: linear-gradient(135deg, #60a5fa, #3b82f6);
 }
 
 .celebration-btn.secondary {
   background: transparent;
-  color: #00ff88;
-  border-color: #00ff88;
+  color: #3b82f6;
+  border-color: #3b82f6;
 }
 
 .celebration-btn.secondary:hover {
-  background: rgba(0, 255, 136, 0.1);
+  background: rgba(59, 130, 246, 0.1);
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
 }
 
 /* Mobile Responsive */

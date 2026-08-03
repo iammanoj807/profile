@@ -33,12 +33,12 @@ const Footer = () => {
                             </div>
 
                             <div className="console-line" style={{ paddingLeft: '20px' }}>
-                                <span className="key" style={{ color: '#8be9fd' }}>location:</span>
+                                <span className="key" style={{ color: '#3b82f6' }}>location:</span>
                                 <span className="value" style={{ color: '#e6edf3' }}> "{portfolioData.address}",</span>
                             </div>
 
                             <div className="console-line" style={{ paddingLeft: '20px' }}>
-                                <span className="key" style={{ color: '#8be9fd' }}>email:</span>
+                                <span className="key" style={{ color: '#3b82f6' }}>email:</span>
                                 <span className="value" style={{ color: '#e6edf3' }}>
                                     <a href="mailto:thapam807@gmail.com" target="_blank" rel="noopener noreferrer" style={{ color: '#e6edf3', textDecoration: 'none' }}>
                                         "thapam807@gmail.com"
@@ -47,7 +47,7 @@ const Footer = () => {
                             </div>
 
                             <div className="console-line" style={{ paddingLeft: '20px' }}>
-                                <span className="key" style={{ color: '#8be9fd' }}>phone:</span>
+                                <span className="key" style={{ color: '#3b82f6' }}>phone:</span>
                                 <span className="value" style={{ color: '#f1fa8c', fontWeight: 'normal' }}>
                                     <a href={portfolioData.phoneLink || "tel:+447438029689"} target="_blank" rel="noopener noreferrer" style={{ color: '#e6edf3', textDecoration: 'none', fontWeight: 'normal' }}>
                                         "{portfolioData.phoneDisplay || "+44 7438 029689"}"
@@ -56,17 +56,17 @@ const Footer = () => {
                             </div>
 
                             <div className="console-line" style={{ paddingLeft: '20px' }}>
-                                <span className="key" style={{ color: '#8be9fd' }}>graduation:</span>
-                                <span className="value" style={{ color: '#e6edf3' }}> "January 2026",</span>
+                                <span className="key" style={{ color: '#3b82f6' }}>graduation:</span>
+                                <span className="value" style={{ color: '#e6edf3' }}> "July 2026",</span>
                             </div>
 
                             <div className="console-line" style={{ paddingLeft: '20px' }}>
-                                <span className="key" style={{ color: '#8be9fd' }}>status:</span>
+                                <span className="key" style={{ color: '#3b82f6' }}>status:</span>
                                 <span className="value" style={{ color: '#e6edf3' }}> "Available for 2026 Graduate Roles",</span>
                             </div>
 
                             <div className="console-line" style={{ paddingLeft: '20px' }}>
-                                <span className="key" style={{ color: '#8be9fd' }}>visa:</span>
+                                <span className="key" style={{ color: '#3b82f6' }}>visa:</span>
                                 <span className="value" style={{ color: '#e6edf3' }}> "UK Graduate Route (2026–2028) – No sponsorship required"</span>
                             </div>
 

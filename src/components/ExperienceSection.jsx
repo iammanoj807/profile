@@ -36,7 +36,12 @@ const ExperienceSection = () => {
                             <h3>{exp.title}</h3>
                             <div className="company">
                                 {exp.company_logo && (
-                                    <img src={exp.company_logo} alt={`${exp.company} logo`} className="company-logo" />
+                                    <img
+                                        src={exp.company_logo}
+                                        alt={`${exp.company} logo`}
+                                        className="company-logo"
+                                        style={typeof exp.company_logo === 'string' && exp.company_logo.endsWith('.svg') ? { background: '#fff', padding: '3px' } : {}}
+                                    />
                                 )}
                                 {exp.company}
                             </div>

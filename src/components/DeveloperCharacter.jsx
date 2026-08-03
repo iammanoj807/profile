@@ -31,7 +31,7 @@ const DeveloperCharacter = () => {
                 y="280"
                 width="300"
                 height="20"
-                fill="#00d4ff"
+                fill="#60a5fa"
                 rx="5"
                 animate={{ opacity: [0.7, 1, 0.7] }}
                 transition={{ duration: 3, repeat: Infinity }}
@@ -44,7 +44,7 @@ const DeveloperCharacter = () => {
                 width="140"
                 height="100"
                 fill="#0a0e27"
-                stroke="#00ff88"
+                stroke="#3b82f6"
                 strokeWidth="3"
                 rx="5"
                 animate={{ scale: [1, 1.02, 1] }}
@@ -58,7 +58,7 @@ const DeveloperCharacter = () => {
                     x="160"
                     y="205"
                     textAnchor="start"
-                    fill="#00ff88"
+                    fill="#3b82f6"
                     fontSize="10"
                     fontFamily="'Fira Code', monospace"
                     fontWeight="600"
@@ -77,7 +77,7 @@ const DeveloperCharacter = () => {
                 y1="225"
                 x2="240"
                 y2="225"
-                stroke="#00d4ff"
+                stroke="#60a5fa"
                 strokeWidth="2"
                 animate={{ opacity: [0.4, 1, 0.4] }}
                 transition={{ duration: 1.5, repeat: Infinity, delay: 0 }}
@@ -104,7 +104,7 @@ const DeveloperCharacter = () => {
             />
 
             {/* Monitor Stand */}
-            <rect x="210" y="280" width="20" height="30" fill="#00d4ff" />
+            <rect x="210" y="280" width="20" height="30" fill="#60a5fa" />
 
             {/* Person Head */}
             <motion.circle
@@ -145,12 +145,12 @@ const DeveloperCharacter = () => {
                 animate={{ y: [0, -5, 0] }}
                 transition={{ duration: 3, repeat: Infinity }}
             >
-                <rect x="320" y="260" width="30" height="35" fill="#0a0e27" stroke="#00ff88" strokeWidth="2" rx="3" />
-                <ellipse cx="335" cy="260" rx="15" ry="5" fill="#0a0e27" stroke="#00ff88" strokeWidth="2" />
+                <rect x="320" y="260" width="30" height="35" fill="#0a0e27" stroke="#3b82f6" strokeWidth="2" rx="3" />
+                <ellipse cx="335" cy="260" rx="15" ry="5" fill="#0a0e27" stroke="#3b82f6" strokeWidth="2" />
                 {/* Steam */}
                 <motion.path
                     d="M 330 245 Q 325 235 330 225"
-                    stroke="#00d4ff"
+                    stroke="#60a5fa"
                     strokeWidth="2"
                     fill="none"
                     animate={{ opacity: [0.3, 0.7, 0.3] }}
@@ -158,7 +158,7 @@ const DeveloperCharacter = () => {
                 />
                 <motion.path
                     d="M 340 245 Q 345 235 340 225"
-                    stroke="#00d4ff"
+                    stroke="#60a5fa"
                     strokeWidth="2"
                     fill="none"
                     animate={{ opacity: [0.3, 0.7, 0.3] }}
@@ -167,14 +167,14 @@ const DeveloperCharacter = () => {
             </motion.g>
 
             {/* Keyboard */}
-            <rect x="140" y="295" width="80" height="5" fill="#00ff88" rx="2" />
+            <rect x="140" y="295" width="80" height="5" fill="#3b82f6" rx="2" />
 
             {/* Floating Particles */}
             <motion.circle
                 cx="50"
                 cy="100"
                 r="3"
-                fill="#00ff88"
+                fill="#3b82f6"
                 animate={{ y: [0, -20, 0], opacity: [0, 1, 0] }}
                 transition={{ duration: 3, repeat: Infinity }}
             />
@@ -182,7 +182,7 @@ const DeveloperCharacter = () => {
                 cx="350"
                 cy="150"
                 r="3"
-                fill="#00d4ff"
+                fill="#60a5fa"
                 animate={{ y: [0, -20, 0], opacity: [0, 1, 0] }}
                 transition={{ duration: 3, repeat: Infinity, delay: 1 }}
             />

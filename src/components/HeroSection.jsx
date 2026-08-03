@@ -70,6 +70,9 @@ const HeroSection = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.8 }}
                     >
+                        <a href={portfolioData.social_links.find(l => l.name === 'GitHub')?.url} target="_blank" rel="noopener noreferrer" className="btn btn-github">
+                            <i className="fa-brands fa-github"></i> GitHub
+                        </a>
                         <a href={portfolioData.resume_link} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
                             View CV
                         </a>

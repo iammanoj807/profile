@@ -2,9 +2,9 @@ import flyrankLogo from '/flyrank-logo.jpeg';
 
 export const portfolioData = {
     name: "Manoj Kumar Thapa",
-    title: "Software Engineer",
-    description: "Software Engineer with **industry experience** building Java Spring Boot backends and REST APIs at Accenture, and a **recently completed MSc in Artificial Intelligence** (Aston University). Comfortable working in multi-person codebases, writing tested reviewable code, and picking up unfamiliar systems quickly. Eligible to work in the UK without sponsorship (Graduate Route Visa, 2026–2028).",
-    resume_link: "https://drive.google.com/file/d/1J5veUz64FEJD6loJzzJbXwsrGmLEOsMK/view?usp=sharing",
+    title: "AI Software Engineer",
+    description: "AI Engineer with hands-on experience designing and building **backend services, APIs, and orchestration layers** that support AI and GenAI use cases, including an autonomous agent built with **LangGraph** that integrates multiple tools and data sources to solve complex tasks end to end. Proficient in **Python and SQL**, with practical experience across LLM integration, prompt orchestration, **retrieval-augmented generation (RAG)**, and productionising AI systems from prototype through to deployed service. Strong software engineering discipline covering **clean code, automated testing, version control, and CI/CD**, with a track record of taking ambiguous problems through to practical, working solutions. Comfortable collaborating across technical and business stakeholders to ensure AI use cases are usable, reliable, and safely deployed.",
+    resume_link: "https://drive.google.com/file/d/1Aii15zd24aH2Nk5N0Haep__T2807aKDE/view?usp=sharing",
     leetcode: "https://leetcode.com/u/manojthapa/",
     blog_link: "https://hamropedia.com",
     address: "Birmingham, UK",
@@ -126,7 +126,7 @@ export const portfolioData = {
             title: "Software Engineer",
             company: "Accenture",
             company_logo: "https://upload.wikimedia.org/wikipedia/commons/c/cd/Accenture.svg",
-            duration: "October 2021 - October 2022",
+            duration: "October 2021 - May 2022",
             location: "Bangalore, India",
             description: [
                 "Built and maintained production features in **Java Spring Boot** and **React** for a large-scale enterprise application, working in a team of 6 engineers across the full SDLC from design through deployment.",
@@ -142,7 +142,7 @@ export const portfolioData = {
         {
             title: "Aston University, Birmingham",
             subtitle: "MSc Artificial Intelligence (Computer Science)",
-            duration: "January 2025 - April 2026",
+            duration: "January 2025 - July 2026",
             percentage: "70.37%",
             descriptions: [
                 "Specialized in advanced AI (Deep Learning, NLP, Computer Vision) and applied theoretical knowledge to practical projects involving complex model architectures and MLOps."
