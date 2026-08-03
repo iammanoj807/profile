@@ -4,7 +4,7 @@ export const portfolioData = {
     name: "Manoj Kumar Thapa",
     title: "AI Software Engineer",
     description: "AI Engineer with hands-on experience designing and building **backend services, APIs, and orchestration layers** that support AI and GenAI use cases, including an autonomous agent built with **LangGraph** that integrates multiple tools and data sources to solve complex tasks end to end. Proficient in **Python and SQL**, with practical experience across LLM integration, prompt orchestration, **retrieval-augmented generation (RAG)**, and productionising AI systems from prototype through to deployed service. Strong software engineering discipline covering **clean code, automated testing, version control, and CI/CD**, with a track record of taking ambiguous problems through to practical, working solutions. Comfortable collaborating across technical and business stakeholders to ensure AI use cases are usable, reliable, and safely deployed.",
-    resume_link: "https://drive.google.com/file/d/1Aii15zd24aH2Nk5N0Haep__T2807aKDE/view?usp=sharing",
+    resume_link: "https://drive.google.com/file/d/1k-3Oht998eb2H3E8dncWgOXQLIOrQXxz/view?usp=sharing",
     leetcode: "https://leetcode.com/u/manojthapa/",
     blog_link: "https://hamropedia.com",
     address: "Birmingham, UK",
