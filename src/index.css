@@ -2559,6 +2559,38 @@ body::after {
     width: 24px;
     height: 24px;
   }
+
+  /* Fix Experience timeline left gap on small mobile */
+  .timeline {
+    padding-left: 1.2rem;
+  }
+
+  .timeline-item {
+    padding-left: 0.5rem;
+  }
+
+  .timeline-dot {
+    left: -1.2rem;
+  }
+
+  .timeline-card {
+    padding: 1.2rem;
+  }
+}
+
+/* Fix Experience timeline left gap between 481px and 546px */
+@media (min-width: 481px) and (max-width: 546px) {
+  .timeline {
+    padding-left: 1.5rem;
+  }
+
+  .timeline-item {
+    padding-left: 0.7rem;
+  }
+
+  .timeline-dot {
+    left: -1.5rem;
+  }
 }
 
 /* Loading Animation */
