@@ -3,8 +3,8 @@ import flyrankLogo from '/flyrank-logo.jpeg';
 export const portfolioData = {
     name: "Manoj Kumar Thapa",
     title: "AI Software Engineer",
-    description: "AI Engineer with hands-on experience designing and building **backend services, APIs, and orchestration layers** that support AI and GenAI use cases, including an autonomous agent built with **LangGraph** that integrates multiple tools and data sources to solve complex tasks end to end. Proficient in **Python and SQL**, with practical experience across LLM integration, prompt orchestration, **retrieval-augmented generation (RAG)**, and productionising AI systems from prototype through to deployed service. Strong software engineering discipline covering **clean code, automated testing, version control, and CI/CD**, with a track record of taking ambiguous problems through to practical, working solutions. Comfortable collaborating across technical and business stakeholders to ensure AI use cases are usable, reliable, and safely deployed.",
-    resume_link: "https://drive.google.com/file/d/1k-3Oht998eb2H3E8dncWgOXQLIOrQXxz/view?usp=sharing",
+    description: "AI Software Engineer with an MSc in Artificial Intelligence, building production-facing AI features across the stack: **LLM-powered applications, retrieval-augmented generation pipelines, and agentic tool orchestration**. Shipped three distinct AI products end to end, from backend service (**FastAPI, Python**) through frontend (**TypeScript, React**), including an agent orchestrating 5 tool integrations via **LangGraph** and a RAG pipeline grounding LLM output in source documents via **ChromaDB**. Backed by professional backend engineering experience at **Accenture**, owning production REST APIs and improving response time by 40%. Strong **Python** fundamentals combined with a fast-execution, first-principles approach to building and shipping AI capabilities.",
+    resume_link: "https://drive.google.com/file/d/116HbwjFVXO7FxjX_J9PAP-VlotntZTYL/view?usp=sharing",
     leetcode: "https://leetcode.com/u/manojthapa/",
     blog_link: "https://hamropedia.com",
     address: "Birmingham, UK",
