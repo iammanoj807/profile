@@ -1,29 +1,32 @@
 import React from 'react';
-import BackgroundCodeRain from './components/BackgroundCodeRain';
+import { MotionConfig } from 'framer-motion';
+import BackgroundFX from './components/BackgroundFX';
 import Navigation from './components/Navigation';
-import AvailabilityWidget from './components/AvailabilityWidget';
 import HeroSection from './components/HeroSection';
-import SkillsSection from './components/SkillsSection';
+import StatsSection from './components/StatsSection';
+import ProjectsSection from './components/ProjectsSection';
 import ExperienceSection from './components/ExperienceSection';
+import SkillsSection from './components/SkillsSection';
 import EducationSection from './components/EducationSection';
 import CertificationsSection from './components/CertificationsSection';
-import ProjectsSection from './components/ProjectsSection';
 import Footer from './components/Footer';
 
 const App = () => {
     return (
-        <div>
-            <BackgroundCodeRain />
+        <MotionConfig reducedMotion="user">
+            <BackgroundFX />
             <Navigation />
-            <AvailabilityWidget />
-            <HeroSection />
-            <SkillsSection />
-            <ExperienceSection />
-            <ProjectsSection />
-            <EducationSection />
-            <CertificationsSection />
+            <main>
+                <HeroSection />
+                <StatsSection />
+                <ProjectsSection />
+                <ExperienceSection />
+                <SkillsSection />
+                <EducationSection />
+                <CertificationsSection />
+            </main>
             <Footer />
-        </div>
+        </MotionConfig>
     );
 };
 

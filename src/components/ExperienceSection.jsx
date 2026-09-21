@@ -1,76 +1,55 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { portfolioData } from '../data/portfolioData';
 import { renderBoldText } from '../utils/renderBoldText';
-import useIntersectionObserver from '../hooks/useIntersectionObserver';
+import { Reveal, SectionHeader, handleSpotlight } from './ui';
 
-const ExperienceSection = () => {
-    const [ref, inView] = useIntersectionObserver();
+const ExperienceSection = () => (
+    <section id="experience" className="section">
+        <div className="container">
+            <SectionHeader
+                index="02"
+                eyebrow="Experience"
+                title="Where I've"
+                accent="shipped."
+            />
 
-    return (
-        <section id="experience" className="section">
-            <motion.h2
-                className="section-title"
-                initial={{ opacity: 0, y: 30 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6 }}
-            >
-                Experience
-            </motion.h2>
-            <div className="timeline" ref={ref}>
+            <ol className="timeline">
                 {portfolioData.experience.map((exp, index) => (
-                    <motion.div
-                        key={index}
-                        className="timeline-item"
-                        initial={{ opacity: 0, x: -50 }}
-                        animate={inView ? { opacity: 1, x: 0 } : {}}
-                        transition={{ duration: 0.6, delay: index * 0.2 }}
-                    >
-                        <motion.div
-                            className="timeline-dot"
-                            initial={{ scale: 0 }}
-                            animate={inView ? { scale: 1 } : {}}
-                            transition={{ duration: 0.4, delay: index * 0.2 }}
-                        />
-                        <div className="timeline-card">
-                            <h3>{exp.title}</h3>
-                            <div className="company">
+                    <Reveal as="li" key={exp.company} delay={index * 0.08} className={`timeline-item ${exp.current ? 'current' : ''}`}>
+                        <span className="timeline-dot" aria-hidden="true" />
+                        <div className="timeline-meta">
+                            <span className="timeline-date">{exp.duration}</span>
+                            <span className="timeline-location">{exp.location}</span>
+                        </div>
+                        <div className="timeline-card" onMouseMove={handleSpotlight}>
+                            <div className="timeline-head">
                                 {exp.company_logo && (
-                                    <img
-                                        src={exp.company_logo}
-                                        alt={`${exp.company} logo`}
-                                        className="company-logo"
-                                        style={typeof exp.company_logo === 'string' && exp.company_logo.endsWith('.svg') ? { background: '#fff', padding: '3px' } : {}}
-                                    />
+                                    <span className={`company-logo ${String(exp.company_logo).endsWith('.svg') ? 'on-light' : ''}`}>
+                                        <img src={exp.company_logo} alt="" loading="lazy" />
+                                    </span>
                                 )}
-                                {exp.company}
+                                <div>
+                                    <h3 className="timeline-role">{exp.title}</h3>
+                                    <p className="timeline-company">
+                                        {exp.company}
+                                        {exp.current && <span className="now-badge">Now</span>}
+                                    </p>
+                                </div>
                             </div>
-                            <div className="duration" style={{ color: '#c9d1d9' }}>{exp.duration} • {exp.location}</div>
-                            {Array.isArray(exp.description) ? (
-                                <ul style={{ listStyleType: 'none', padding: 0, margin: 0, marginTop: '0.5rem', color: 'var(--text-secondary)', fontSize: '1.18rem' }}>
-                                    {exp.description.map((desc, i) => (
-                                        <li key={i} style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.3rem', color: 'inherit', lineHeight: 1.6 }}>
-                                            <span>•</span>
-                                            <span>{renderBoldText(desc)}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                            ) : (
-                                <p className="description">{exp.description}</p>
-                            )}
+                            <ul className="timeline-points">
+                                {exp.description.map((desc, i) => <li key={i}>{renderBoldText(desc)}</li>)}
+                            </ul>
                             {exp.skills && (
-                                <div className="command-tags" style={{ marginTop: '1rem' }}>
-                                    {exp.skills.map((skill, i) => (
-                                        <span key={i} className="command-tag">{skill}</span>
-                                    ))}
+                                <div className="tag-list">
+                                    {exp.skills.map(skill => <span key={skill} className="tag">{skill}</span>)}
                                 </div>
                             )}
                         </div>
-                    </motion.div>
+                    </Reveal>
                 ))}
-            </div>
-        </section>
-    );
-};
+            </ol>
+        </div>
+    </section>
+);
 
 export default ExperienceSection;

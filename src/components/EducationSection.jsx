@@ -1,70 +1,36 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { portfolioData } from '../data/portfolioData';
-import useIntersectionObserver from '../hooks/useIntersectionObserver';
+import { Reveal, SectionHeader, handleSpotlight } from './ui';
 
-const EducationSection = () => {
-    const [ref, inView] = useIntersectionObserver();
+const EducationSection = () => (
+    <section id="education" className="section">
+        <div className="container">
+            <SectionHeader
+                index="04"
+                eyebrow="Education"
+                title="Foundations,"
+                accent="with the grades to show."
+            />
 
-    return (
-        <section id="education" className="section" ref={ref}>
-            <motion.h2
-                className="section-title"
-                initial={{ opacity: 0, y: 30 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6 }}
-            >
-                Knowledge Stack
-            </motion.h2>
-            <div className="timeline" ref={ref}>
-                {portfolioData.education.map((edu, index) => (
-                    <motion.div
-                        key={index}
-                        className="timeline-item"
-                        initial={{ opacity: 0, x: -50 }}
-                        animate={inView ? { opacity: 1, x: 0 } : {}}
-                        transition={{ duration: 0.6, delay: index * 0.2 }}
-                    >
-                        <motion.div
-                            className="timeline-dot"
-                            initial={{ scale: 0 }}
-                            animate={inView ? { scale: 1 } : {}}
-                            transition={{ duration: 0.4, delay: index * 0.2 }}
-                        />
-                        <div className="timeline-card">
-                            <h3>
-                                {edu.title}
-                                {edu.percentage && (
-                                    <span className="distinction-badge" style={{ marginLeft: '10px', fontSize: '0.8rem', verticalAlign: 'middle' }}>
-                                        ⭐ {edu.percentage}
-                                    </span>
-                                )}
-                                {edu.cgpa && (
-                                    <span className="distinction-badge" style={{ marginLeft: '10px', fontSize: '0.8rem', verticalAlign: 'middle' }}>
-                                        ⭐ {edu.cgpa}
-                                    </span>
-                                )}
-                            </h3>
-                            <div className="stack-subtitle" style={{ color: 'var(--accent-green)', marginBottom: '0.5rem', fontWeight: 500 }}>
-                                {edu.subtitle}
-                            </div>
-                            <div className="duration" style={{ color: '#c9d1d9', marginBottom: '1rem', fontSize: '0.85rem' }}>
-                                {edu.duration}
-                            </div>
-                            <ul className="stack-description" style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
-                                {edu.descriptions.map((desc, i) => (
-                                    <li key={i} style={{ display: 'flex', gap: '0.5rem', color: 'inherit', lineHeight: 1.6 }}>
-                                        <span>•</span>
-                                        <span>{desc}</span>
-                                    </li>
-                                ))}
-                            </ul>
+            <div className="edu-grid">
+                {portfolioData.education.map((edu, i) => (
+                    <Reveal key={edu.degree} delay={i * 0.1} className="edu-card" onMouseMove={handleSpotlight}>
+                        <div className="edu-top">
+                            <span className="edu-icon"><i className="fa-solid fa-graduation-cap" aria-hidden="true"></i></span>
+                            <span className="edu-date">{edu.duration}</span>
                         </div>
-                    </motion.div>
+                        <h3 className="edu-degree">{edu.degree}</h3>
+                        <p className="edu-school">{edu.school} · {edu.location}</p>
+                        <p className="edu-desc">{edu.description}</p>
+                        <div className="edu-grade">
+                            <span className="edu-grade-value">{edu.grade}</span>
+                            <span className="edu-grade-label">{edu.gradeLabel}</span>
+                        </div>
+                    </Reveal>
                 ))}
             </div>
-        </section>
-    );
-};
+        </div>
+    </section>
+);
 
 export default EducationSection;

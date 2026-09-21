@@ -1,113 +1,86 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
 import { portfolioData } from '../data/portfolioData';
+import { Icon, Reveal } from './ui';
 
 const Footer = () => {
+    const { name, email, phoneDisplay, phoneLink, address, relocation, visa, visaNote, resume_link, social_links } = portfolioData;
+    const [copied, setCopied] = useState(false);
+
+    const copyEmail = async () => {
+        try {
+            await navigator.clipboard.writeText(email);
+            setCopied(true);
+            setTimeout(() => setCopied(false), 2000);
+        } catch {
+            window.location.href = `mailto:${email}`;
+        }
+    };
+
     return (
-        <footer id="contact" className="footer">
-            <div className="footer-content">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
-                >
-                    <h2 className="section-title">Connection Port</h2>
+        <footer id="contact" className="contact">
+            <div className="container">
+                <Reveal className="contact-card">
+                    <div className="contact-glow" aria-hidden="true" />
+                    <div className="eyebrow">
+                        <span className="eyebrow-index">05</span>
+                        <span className="eyebrow-line" />
+                        <span>Contact</span>
+                    </div>
+                    <h2 className="contact-title">
+                        Let's build AI that <em>holds up</em> in production.
+                    </h2>
+                    <p className="contact-text">
+                        I'm open to AI engineer, ML engineer and software engineer roles across the UK: on-site, hybrid or remote.
+                        {' '}{visa}, <strong>{visaNote.toLowerCase()}</strong>.
+                    </p>
 
-                    <motion.div
-                        className="debug-console"
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
-                        viewport={{ once: true }}
-                    >
-                        <div className="console-header">
-                            <div className="console-dot red"></div>
-                            <div className="console-dot yellow"></div>
-                            <div className="console-dot green"></div>
-                            <div className="console-title">contact_info.json</div>
+                    <div className="contact-actions">
+                        <a href={`mailto:${email}`} className="btn btn-primary btn-lg">
+                            <i className="fa-solid fa-paper-plane" aria-hidden="true"></i> Say hello
+                        </a>
+                        <button type="button" className={`btn btn-ghost btn-lg copy-btn ${copied ? 'copied' : ''}`} onClick={copyEmail}>
+                            <i className={copied ? 'fa-solid fa-check' : 'fa-regular fa-copy'} aria-hidden="true"></i>
+                            {copied ? 'Copied!' : email}
+                        </button>
+                        <a href={resume_link} target="_blank" rel="noopener noreferrer" className="btn btn-ghost btn-lg">
+                            <i className="fa-regular fa-file-lines" aria-hidden="true"></i> Resume
+                        </a>
+                    </div>
+
+                    <dl className="contact-info">
+                        <div>
+                            <dt>Phone</dt>
+                            <dd><a href={phoneLink}>{phoneDisplay}</a></dd>
                         </div>
-                        <div className="console-body" style={{ fontFamily: 'monospace' }}>
-                            <div className="console-line">
-                                <span className="keyword" style={{ color: '#ff79c6' }}>{"{"}</span>
-                            </div>
-
-                            <div className="console-line" style={{ paddingLeft: '20px' }}>
-                                <span className="key" style={{ color: '#3b82f6' }}>location:</span>
-                                <span className="value" style={{ color: '#e6edf3' }}> "{portfolioData.address}",</span>
-                            </div>
-
-                            <div className="console-line" style={{ paddingLeft: '20px' }}>
-                                <span className="key" style={{ color: '#3b82f6' }}>email:</span>
-                                <span className="value" style={{ color: '#e6edf3' }}>
-                                    <a href="mailto:thapam807@gmail.com" target="_blank" rel="noopener noreferrer" style={{ color: '#e6edf3', textDecoration: 'none' }}>
-                                        "thapam807@gmail.com"
-                                    </a>,
-                                </span>
-                            </div>
-
-                            <div className="console-line" style={{ paddingLeft: '20px' }}>
-                                <span className="key" style={{ color: '#3b82f6' }}>phone:</span>
-                                <span className="value" style={{ color: '#f1fa8c', fontWeight: 'normal' }}>
-                                    <a href={portfolioData.phoneLink || "tel:+447438029689"} target="_blank" rel="noopener noreferrer" style={{ color: '#e6edf3', textDecoration: 'none', fontWeight: 'normal' }}>
-                                        "{portfolioData.phoneDisplay || "+44 7438 029689"}"
-                                    </a>,
-                                </span>
-                            </div>
-
-                            <div className="console-line" style={{ paddingLeft: '20px' }}>
-                                <span className="key" style={{ color: '#3b82f6' }}>graduation:</span>
-                                <span className="value" style={{ color: '#e6edf3' }}> "July 2026",</span>
-                            </div>
-
-                            <div className="console-line" style={{ paddingLeft: '20px' }}>
-                                <span className="key" style={{ color: '#3b82f6' }}>status:</span>
-                                <span className="value" style={{ color: '#e6edf3' }}> "Available for 2026 Graduate Roles",</span>
-                            </div>
-
-                            <div className="console-line" style={{ paddingLeft: '20px' }}>
-                                <span className="key" style={{ color: '#3b82f6' }}>visa:</span>
-                                <span className="value" style={{ color: '#e6edf3' }}> "UK Graduate Route (2026–2028) – No sponsorship required"</span>
-                            </div>
-
-                            <div className="console-line">
-                                <span className="keyword" style={{ color: '#ff79c6' }}>{"}"}</span>
-                            </div>
+                        <div>
+                            <dt>Location</dt>
+                            <dd>{address} · {relocation.toLowerCase()}</dd>
                         </div>
-                    </motion.div>
+                        <div>
+                            <dt>Right to work</dt>
+                            <dd>Graduate Route to 2028 · no sponsorship</dd>
+                        </div>
+                    </dl>
+                </Reveal>
 
-                    <div className="social-links" style={{ marginTop: '3rem' }}>
-                        {portfolioData.social_links.map((link, index) => (
-                            <motion.a
-                                key={index}
+                <div className="footer-bar">
+                    <p>© {new Date().getFullYear()} {name}. Designed & built with React.</p>
+                    <div className="footer-socials">
+                        {social_links.map(link => (
+                            <a
+                                key={link.name}
                                 href={link.url}
-                                target="_blank"
+                                target={link.url.startsWith('mailto') ? undefined : '_blank'}
                                 rel="noopener noreferrer"
-                                className="social-link"
-                                initial={{ opacity: 0, scale: 0 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 0.4, delay: index * 0.1 }}
-                                whileHover={{ scale: 1.1 }}
-                                viewport={{ once: true }}
+                                className="icon-btn icon-btn-sm"
+                                aria-label={link.name}
                                 title={link.name}
                             >
-                                {link.icon.startsWith('fa-') ? (
-                                    <i className={link.icon} style={{ color: link.color || 'var(--text-secondary)' }}></i>
-                                ) : (
-                                    <iconify-icon icon={link.icon} style={{ color: link.color || 'var(--text-secondary)', fontSize: '1.5rem' }}></iconify-icon>
-                                )}
-                            </motion.a>
+                                <Icon name={link.icon} />
+                            </a>
                         ))}
                     </div>
-                    <p className="footer-text" style={{ marginTop: '2rem' }}>
-                        Made with <span className="heart">❤️</span> by {portfolioData.name}
-                    </p>
-                    <p className="footer-text" style={{ marginTop: '0.5rem', fontSize: '0.85rem', opacity: 0.7 }}>
-                        <a href="https://iammanoj807.github.io/portfolio" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-secondary)', textDecoration: 'none', borderBottom: '1px dotted var(--text-secondary)' }}>
-                            Looking for v1.0? View Legacy Portfolio
-                        </a>
-                    </p>
-                </motion.div>
+                </div>
             </div>
         </footer>
     );

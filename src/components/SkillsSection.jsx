@@ -1,77 +1,54 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React from 'react';
 import { portfolioData } from '../data/portfolioData';
-import useIntersectionObserver from '../hooks/useIntersectionObserver';
-import { playHoverSound } from '../utils/audio';
+import { Icon, Reveal, SectionHeader, handleSpotlight } from './ui';
 
 const SkillsSection = () => {
-    const [ref, inView] = useIntersectionObserver();
-    const [expandedFolders, setExpandedFolders] = useState([]);
-
-    const toggleFolder = (index) => {
-        setExpandedFolders(prev =>
-            prev.includes(index) ? prev.filter(i => i !== index) : [...prev, index]
-        );
-    };
+    const { skills, extraSkills } = portfolioData;
 
     return (
-        <section id="skills" className="section" ref={ref}>
-            <motion.h2
-                className="section-title"
-                initial={{ opacity: 0, y: 30 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6 }}
-            >
-                {"Skills"}
-            </motion.h2>
+        <section id="skills" className="section">
+            <div className="container">
+                <SectionHeader
+                    index="03"
+                    eyebrow="Toolkit"
+                    title="The stack behind"
+                    accent="the numbers."
+                />
 
-            <div className="skills-container">
-                {portfolioData.skills.map((category, catIndex) => {
-                    const isExpanded = expandedFolders.includes(catIndex);
-                    return (
-                        <motion.div
-                            key={catIndex}
-                            className="skill-folder"
-                            initial={{ opacity: 0, y: 50 }}
-                            animate={inView ? { opacity: 1, y: 0 } : {}}
-                            transition={{ duration: 0.6, delay: catIndex * 0.15 }}
+                <div className="skills-grid">
+                    {skills.map((group, i) => (
+                        <Reveal
+                            key={group.category}
+                            delay={(i % 3) * 0.06}
+                            className={`skill-card ${group.wide ? 'wide' : ''} ${group.highlight ? 'highlight' : ''}`}
+                            onMouseMove={handleSpotlight}
                         >
-                            <div
-                                className="folder-header"
-                                onClick={() => toggleFolder(catIndex)}
-                            >
-                                <div className={`folder-icon ${isExpanded ? 'expanded' : ''}`}>{isExpanded ? '−' : '+'}</div>
-                                <div className="folder-name">{category.category}</div>
+                            <div className="skill-card-head">
+                                <span className="skill-card-icon"><Icon name={group.icon} /></span>
+                                <h3>{group.category}</h3>
+                                {group.note && <span className="skill-note">{group.note}</span>}
                             </div>
-                            <div className={`folder-contents ${isExpanded ? 'expanded' : ''}`}>
-                                <div className="skills-grid-layout">
-                                    {category.skills.map((skill, skillIndex) => (
-                                        <motion.div
-                                            key={skillIndex}
-                                            className="skill-card"
-                                            onMouseEnter={playHoverSound}
-                                            initial={{ opacity: 0, scale: 0.8 }}
-                                            animate={isExpanded ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-                                            whileHover={{
-                                                scale: 1.1,
-                                                borderColor: "var(--accent-green)",
-                                                y: -5
-                                            }}
-                                            transition={{ duration: 0.3, delay: skillIndex * 0.05 }}
-                                        >
-                                            {skill.icon && skill.icon.startsWith('fa-') ? (
-                                                <i className={`${skill.icon} skill-card-icon`} style={{ color: skill.color || 'var(--accent-green)' }}></i>
-                                            ) : skill.icon ? (
-                                                <iconify-icon icon={skill.icon} className="skill-card-icon" style={{ color: skill.color || 'var(--accent-green)' }}></iconify-icon>
-                                            ) : null}
-                                            <div className="skill-card-name">{skill.name}</div>
-                                        </motion.div>
-                                    ))}
-                                </div>
-                            </div>
-                        </motion.div>
-                    );
-                })}
+                            <ul className="chip-list">
+                                {group.skills.map(skill => (
+                                    <li key={skill.name} className="chip">
+                                        {skill.icon && <Icon name={skill.icon} className="chip-icon" />}
+                                        {skill.name}
+                                    </li>
+                                ))}
+                            </ul>
+                            {group.description && <p className="skill-card-desc">{group.description}</p>}
+                        </Reveal>
+                    ))}
+
+                    {extraSkills?.length > 0 && (
+                        <Reveal delay={0.12} className="extra-skills">
+                            <span className="extra-label">Also familiar with</span>
+                            <ul>
+                                {extraSkills.map(s => <li key={s}>{s}</li>)}
+                            </ul>
+                        </Reveal>
+                    )}
+                </div>
             </div>
         </section>
     );
