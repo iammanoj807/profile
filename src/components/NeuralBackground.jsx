@@ -314,10 +314,10 @@ const NeuralBackground = () => {
             const stop = px => Math.min(1, Math.max(0, px / W));
             const fade = g.createLinearGradient(0, 0, W, 0);
             fade.addColorStop(0, 'rgba(0,0,0,1)');
-            fade.addColorStop(stop(edge + 10), 'rgba(0,0,0,1)');
-            fade.addColorStop(stop(edge + 120), 'rgba(0,0,0,0.12)');
-            fade.addColorStop(stop(W - edge - 120), 'rgba(0,0,0,0.12)');
-            fade.addColorStop(stop(W - edge - 10), 'rgba(0,0,0,1)');
+            fade.addColorStop(stop(edge - 10), 'rgba(0,0,0,1)');
+            fade.addColorStop(stop(edge + 60), 'rgba(0,0,0,0.04)');
+            fade.addColorStop(stop(W - edge - 60), 'rgba(0,0,0,0.04)');
+            fade.addColorStop(stop(W - edge + 10), 'rgba(0,0,0,1)');
             fade.addColorStop(1, 'rgba(0,0,0,1)');
             g.globalCompositeOperation = 'destination-in';
             g.fillStyle = fade;

@@ -6,7 +6,7 @@
   </a>
 
   <p>
-    <strong>AI Software Engineer &nbsp;|&nbsp; MSc Artificial Intelligence (Aston University, 2026) &nbsp;|&nbsp; UK Graduate Route visa to 2028, no sponsorship required</strong>
+    <strong>AI Software Engineer &nbsp;|&nbsp; MSc Artificial Intelligence, Distinction (Aston University, 2026) &nbsp;|&nbsp; UK Graduate Route visa to 2028, no sponsorship required</strong>
   </p>
 
   <p>
@@ -18,7 +18,7 @@
 
 ### 👨‍💻 About Me
 
-AI Software Engineer with an MSc in Artificial Intelligence from Aston University. I build AI systems end to end, with **Python and FastAPI** on the back and **React** on the front, and I measure them with **golden sets, fault injection and baselines** before I trust them. Before my MSc I was a software engineer at **Accenture**, where I cut REST API latency by **40%** in Java Spring Boot services.
+AI Software Engineer with an MSc in Artificial Intelligence (Distinction) from Aston University. I build AI systems end to end, with **Python and FastAPI** on the back and **React** on the front, and I measure them with **golden sets, fault injection and baselines** before I trust them. Before my MSc I was a software engineer at **Accenture**, where I cut REST API latency by **40%** in Java Spring Boot services.
 
 - 🏗️ **Building:** LLM agents, graph RAG and computer-vision systems
 - 🧪 **How I work:** golden-set evaluation, fault injection, baseline controls
@@ -106,10 +106,6 @@ Golden-set design · fault injection · baseline controls · latency benchmarkin
 
 ### 💼 Work Experience
 
-**AI Intern — FlyRank AI** *(Jun 2026 – Aug 2026, London · Remote)*
-
-- Built RAG pipelines, structured output systems and evaluation harnesses in FlyRank AI's Backend AI Engineering track, using Python, FastAPI and LLM APIs
-
 **Mentor, MSc Artificial Intelligence — Aston University** *(Aug 2025 – Jan 2026, Birmingham)*
 
 - Mentored **10+ MSc AI students** in Python and machine learning through weekly one-to-one sessions
@@ -125,7 +121,7 @@ Golden-set design · fault injection · baseline controls · latency benchmarkin
 
 | Degree | Institution | Year | Result |
 |--------|-------------|------|--------|
-| **MSc Artificial Intelligence** | Aston University, UK | Jan 2025 – Jul 2026 | **70.37%** |
+| **MSc Artificial Intelligence** | Aston University, UK | Jan 2025 – Jul 2026 | **Distinction** (70.37%) |
 | **BE Computer Science** | Dr. Ambedkar Institute of Technology, Bangalore | Aug 2017 – Sep 2021 | **9.45/10** |
 
 ---

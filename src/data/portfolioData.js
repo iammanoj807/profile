@@ -1,10 +1,13 @@
-import flyrankLogo from '/flyrank-logo.jpeg';
+import planckShot from '../assets/projects/planck.webp';
+import cognigraphShot from '../assets/projects/cognigraph.webp';
+import fruitguardShot from '../assets/projects/fruitguard.webp';
+import neuroarcShot from '../assets/projects/neuroarc.webp';
 
 export const portfolioData = {
     name: "Manoj Kumar Thapa",
     title: "AI Software Engineer",
     headlineWords: ["LLM agents", "graph-RAG systems", "vision models", "production APIs"],
-    description: "MSc Artificial Intelligence graduate from Aston University. I build AI systems end to end: **Python and FastAPI** on the back, **React** on the front, and **golden sets, fault injection and baselines** to show they work. Before my MSc I was a software engineer at **Accenture**, where I cut REST API latency by **40%** in Java Spring Boot services.",
+    description: "MSc Artificial Intelligence graduate (**Distinction**) from Aston University. I build AI systems end to end: **Python and FastAPI** on the back, **React** on the front, and **golden sets, fault injection and baselines** to show they work. Before my MSc I was a software engineer at **Accenture**, where I cut REST API latency by **40%** in Java Spring Boot services.",
     resume_link: `${import.meta.env.BASE_URL}CV.pdf`,
     address: "Birmingham, UK",
     relocation: "Open to relocation",
@@ -53,6 +56,7 @@ export const portfolioData = {
     projects: [
         {
             title: "Planck AI",
+            screenshot: planckShot,
             kicker: "Agentic research assistant",
             accent: "var(--p1)",
             date: "Sep 2025 – Nov 2025",
@@ -73,6 +77,7 @@ export const portfolioData = {
         },
         {
             title: "CogniGraph",
+            screenshot: cognigraphShot,
             kicker: "Graph RAG explorer",
             accent: "var(--p2)",
             date: "Jun 2025 – Jul 2025",
@@ -92,6 +97,7 @@ export const portfolioData = {
         },
         {
             title: "FruitGuard AI",
+            screenshot: fruitguardShot,
             kicker: "MSc dissertation · computer vision",
             accent: "var(--p3)",
             date: "Aug 2025 – Apr 2026",
@@ -111,6 +117,7 @@ export const portfolioData = {
         },
         {
             title: "NeuroArc",
+            screenshot: neuroarcShot,
             kicker: "AI job application assistant",
             accent: "var(--p4)",
             date: "Nov 2025 – Dec 2025",
@@ -130,18 +137,6 @@ export const portfolioData = {
     ],
 
     experience: [
-        {
-            title: "AI Intern",
-            company: "FlyRank AI",
-            company_logo: flyrankLogo,
-            duration: "Jun 2026 – Aug 2026",
-            location: "London, UK · Remote",
-            description: [
-                "Built **RAG pipelines**, structured output systems and evaluation harnesses as part of FlyRank AI's Backend AI Engineering track.",
-                "Worked with **Python, FastAPI and LLM APIs** to design and ship backend AI products."
-            ],
-            skills: ["Python", "FastAPI", "LLM APIs", "RAG"]
-        },
         {
             title: "Mentor, MSc Artificial Intelligence",
             company: "Aston University",
@@ -265,8 +260,8 @@ export const portfolioData = {
             school: "Aston University",
             location: "Birmingham, UK",
             duration: "Jan 2025 – Jul 2026",
-            grade: "70.37%",
-            gradeLabel: "Overall",
+            grade: "Distinction",
+            gradeLabel: "70.37% overall",
             description: "Deep learning, NLP and computer vision. Dissertation: FruitGuard AI, few-shot fruit detection with YOLOv8 (96.3% accuracy from 207 labelled images)."
         },
         {

@@ -61,7 +61,7 @@ const Navigation = () => {
                     </ul>
                     <div className="nav-actions">
                         <a href={portfolioData.resume_link} target="_blank" rel="noopener noreferrer" className="nav-cta">
-                            Resume <i className="fa-solid fa-arrow-down" aria-hidden="true"></i>
+                            Resume <i className="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                         </a>
                         <button
                             className={`mobile-menu-toggle ${mobileMenuOpen ? 'open' : ''}`}
@@ -97,7 +97,7 @@ const Navigation = () => {
                     className="btn btn-primary mobile-nav-cta"
                     tabIndex={mobileMenuOpen ? 0 : -1}
                 >
-                    Download resume <i className="fa-solid fa-arrow-down" aria-hidden="true"></i>
+                    View resume <i className="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                 </a>
             </div>
         </>

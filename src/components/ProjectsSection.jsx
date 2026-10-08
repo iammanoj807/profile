@@ -64,6 +64,25 @@ const ProjectsSection = () => {
                                     <span className={`metric-hero-value ${Number.isNaN(parseFloat(project.metric.value)) ? 'is-word' : ''}`}>{project.metric.value}</span>
                                     <span className="metric-hero-label">{project.metric.label}</span>
                                 </div>
+                                {project.screenshot && (
+                                    <a
+                                        href={project.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="project-shot"
+                                        aria-label={`Open the ${project.title} live demo`}
+                                    >
+                                        <span className="project-shot-bar" aria-hidden="true"><i /><i /><i /></span>
+                                        <img
+                                            src={project.screenshot}
+                                            alt={`${project.title} live demo interface`}
+                                            width="800"
+                                            height="500"
+                                            loading="lazy"
+                                            decoding="async"
+                                        />
+                                    </a>
+                                )}
                                 <dl className="metric-list">
                                     {project.subMetrics.map(m => (
                                         <div key={m.label} className="metric-row">

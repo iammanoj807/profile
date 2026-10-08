@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { portfolioData } from '../data/portfolioData';
 import { renderBoldText } from '../utils/renderBoldText';
 import { Icon } from './ui';
@@ -14,18 +14,22 @@ const rise = (delay) => ({
 
 const RotatingWord = ({ words }) => {
     const [index, setIndex] = useState(0);
+    const reduceMotion = useReducedMotion();
 
     useEffect(() => {
+        if (reduceMotion) return;
         const timer = setInterval(() => setIndex(i => (i + 1) % words.length), 2600);
         return () => clearInterval(timer);
-    }, [words.length]);
+    }, [words.length, reduceMotion]);
 
     return (
-        <span className="rotator" aria-live="polite">
+        <span className="rotator">
+            <span className="sr-only">{words.join(', ')}</span>
             <AnimatePresence mode="wait">
                 <motion.span
                     key={words[index]}
                     className="rotator-word"
+                    aria-hidden="true"
                     initial={{ opacity: 0, y: '0.5em', filter: 'blur(6px)' }}
                     animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
                     exit={{ opacity: 0, y: '-0.5em', filter: 'blur(6px)', transition: { duration: 0.2, ease } }}
