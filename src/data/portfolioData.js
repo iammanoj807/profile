@@ -76,30 +76,10 @@ export const portfolioData = {
             link: "https://huggingface.co/spaces/manojthapaa/fruit-guard-ai"
         },
         {
-            title: "NeuroArc",
-            screenshot: neuroarcShot,
-            kicker: "AI job application assistant",
-            accent: "var(--p2)",
-            date: "Nov 2025 – Dec 2025",
-            metric: { value: "Verified", label: "fit scores built only from evidence found in the CV text" },
-            subMetrics: [
-                { value: "PDF · DOCX", label: "CV parsing with OCR fallback" },
-                { value: "Live", label: "UK jobs from the Reed API" }
-            ],
-            description: [
-                "An assistant that parses a CV (**PDF or DOCX**, with an OCR fallback), pulls live UK jobs from the **Reed API**, scores CV-to-job fit and exports a tailored CV as a PDF.",
-                "The design problem here is evidence: an LLM asked whether a candidate fits will cheerfully invent the proof. So the model does not score. It returns requirement–evidence pairs as **structured JSON**, the evidence has to be an exact phrase from the CV, and code drops any requirement whose phrase is not in the document before the weighted score is computed.",
-                "It is not airtight, and the README says so: the check proves the evidence came from the CV, not that it is about the skill being claimed. I built a stricter rule and reverted it, because it dropped real skills whenever the CV and the advert used different words for the same thing, like Postgres and PostgreSQL."
-            ],
-            tags: ["FastAPI", "React", "Groq API", "OCR"],
-            github: "https://github.com/iammanoj807/NeuroArc",
-            link: "https://huggingface.co/spaces/manojthapaa/NeuroArc"
-        },
-        {
             title: "Planck AI",
             screenshot: planckShot,
             kicker: "Agentic research assistant",
-            accent: "var(--p3)",
+            accent: "var(--p2)",
             date: "Sep 2025 – Nov 2025",
             metric: { value: "30/30", label: "tasks completed under fault injection" },
             subMetrics: [
@@ -120,7 +100,7 @@ export const portfolioData = {
             title: "CogniGraph",
             screenshot: cognigraphShot,
             kicker: "Graph RAG explorer",
-            accent: "var(--p4)",
+            accent: "var(--p3)",
             date: "Jun 2025 – Jul 2025",
             metric: { value: "95%", label: "retrieval hit@3 on the rebuilt set, against 80% for a keyword baseline" },
             subMetrics: [
@@ -136,6 +116,26 @@ export const portfolioData = {
             tags: ["Python", "ChromaDB", "NetworkX", "OCR"],
             github: "https://github.com/iammanoj807/CogniGraph",
             link: "https://huggingface.co/spaces/manojthapaa/CogniGraph"
+        },
+        {
+            title: "NeuroArc",
+            screenshot: neuroarcShot,
+            kicker: "AI job application assistant",
+            accent: "var(--p4)",
+            date: "Nov 2025 – Dec 2025",
+            metric: { value: "Verified", label: "fit scores built only from evidence found in the CV text" },
+            subMetrics: [
+                { value: "PDF · DOCX", label: "CV parsing with OCR fallback" },
+                { value: "Live", label: "UK jobs from the Reed API" }
+            ],
+            description: [
+                "An assistant that parses a CV (**PDF or DOCX**, with an OCR fallback), pulls live UK jobs from the **Reed API**, scores CV-to-job fit and exports a tailored CV as a PDF.",
+                "The design problem here is evidence: an LLM asked whether a candidate fits will cheerfully invent the proof. So the model does not score. It returns requirement–evidence pairs as **structured JSON**, the evidence has to be an exact phrase from the CV, and code drops any requirement whose phrase is not in the document before the weighted score is computed.",
+                "It is not airtight, and the README says so: the check proves the evidence came from the CV, not that it is about the skill being claimed. I built a stricter rule and reverted it, because it dropped real skills whenever the CV and the advert used different words for the same thing, like Postgres and PostgreSQL."
+            ],
+            tags: ["FastAPI", "React", "Groq API", "OCR"],
+            github: "https://github.com/iammanoj807/NeuroArc",
+            link: "https://huggingface.co/spaces/manojthapaa/NeuroArc"
         }
     ],
 
@@ -147,7 +147,7 @@ export const portfolioData = {
             duration: "Aug 2025 \u2013 Jan 2026",
             location: "Birmingham, UK",
             description: [
-                "Mentored **12 MSc Artificial Intelligence students** in Python and machine learning, one-to-one, every week.",
+                "Mentored **5 MSc Artificial Intelligence students** in Python and machine learning, one-to-one, every week.",
                 "The same questions came back week after week, so I built the sessions around the three that blocked people most: getting a working Python environment, debugging a training loop whose loss would not come down, and picking a baseline before picking a model."
             ],
             skills: ["Leadership", "Teaching", "Mentoring", "Python", "Machine Learning", "Technical Communication"]
