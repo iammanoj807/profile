@@ -67,9 +67,9 @@ export const portfolioData = {
                 { value: "20/20", label: "graded tasks correct" }
             ],
             description: [
-                "Built an LLM agent in Python **without an agent framework**, orchestrating **4 tools** (web search, code execution in 7 languages, PDF/URL reading, image analysis) across up to **8 planning steps**.",
-                "Designed mid-run failover across **Groq, Gemini and NVIDIA** behind one OpenAI-compatible interface, sustaining **30/30** task completion under fault injection with the primary provider disabled on every call.",
-                "Built an evaluation harness with a **30-question golden set** and a rubric committed to Git before the first run, measuring **80%** correct tool selection, **2.7 s** median latency and no incorrect answer among the **20** tasks the rubric could grade."
+                "I wrote the agent loop myself instead of reaching for a framework, so the tool routing, planning, retries and failure handling are all code I can explain. It runs **4 tools** (web search, code execution in 7 languages, PDF/URL reading, image analysis) across up to **8 planning steps**.",
+                "It fails over mid-run across **Groq, Gemini and NVIDIA** behind one OpenAI-compatible interface. With the primary provider disabled on every single call, it still finished **30 of 30** tasks.",
+                "I wrote the evaluation before I wrote any conclusions: a **30-question golden set** and a grading rubric, both committed to Git before the first run, so I could not move the goalposts afterwards. **80%** correct tool selection, **2.7 s** median latency, and no incorrect answer among the **20** tasks the rubric could grade. The scorer excludes the other ten and prints why."
             ],
             tags: ["Python", "FastAPI", "React", "Docker"],
             github: "https://github.com/iammanoj807/planck-ai",
@@ -81,15 +81,16 @@ export const portfolioData = {
             kicker: "Graph RAG explorer",
             accent: "var(--p2)",
             date: "Jun 2025 – Jul 2025",
-            metric: { value: "95%", label: "retrieval hit@3" },
+            metric: { value: "95%", label: "retrieval hit@3 on the rebuilt set, against 80% for a keyword baseline" },
             subMetrics: [
                 { value: "35 pt", label: "test-set bias found and removed" },
                 { value: "~1,400", label: "char silent-truncation limit found" }
             ],
             description: [
-                "Built a knowledge-graph RAG app that turns documents, including **scanned PDFs via OCR**, into an interactive **3D graph** and answers only from passages retrieved from a **ChromaDB** vector database.",
-                "Found self-written test questions overstated accuracy by **35 points** (90% to 55% hit@1), rebuilt the set in natural user phrasing, then benchmarked the corrected set at **95% hit@3** against **80%** for a keyword baseline on the same questions.",
-                "Diagnosed silent truncation in the embedding model past **~1,400 characters**, dropping text from larger chunks with no error raised, and showed the sweep favouring 2,000-char chunks was confounded by corpus size; set chunk size to **1,000**, the largest that fits the window."
+                "A knowledge-graph RAG explorer: it turns documents, including **scanned PDFs via OCR**, into an interactive **3D graph** and answers only from passages retrieved out of a **ChromaDB** vector database.",
+                "I built the test corpus to be hard on purpose, six documents with deliberately overlapping vocabulary, so a question about ONNX cannot be answered by keyword-matching the word ONNX.",
+                "My first test questions were written alongside that corpus, in the documents' own phrasing, and that inflated hit@1 by **35 points** (90% to 55%). I rebuilt the set in user wording and measured the corrected set at **95% hit@3**, against **80%** for a keyword baseline on the same questions.",
+                "The chunk-size sweep said 2,000 characters was best. It was, but only because six documents make six chunks and the task collapses into picking one of six. The embedding model also discards text past roughly **1,400 characters** with no error raised, so I set chunk size to **1,000**."
             ],
             tags: ["Python", "ChromaDB", "NetworkX", "OCR"],
             github: "https://github.com/iammanoj807/CogniGraph",
@@ -108,9 +109,10 @@ export const portfolioData = {
                 { value: "73 FPS", label: "real-time inference" }
             ],
             description: [
-                "Fine-tuned a **YOLOv8** computer-vision model with a two-phase transfer-learning pipeline to **96.3%** classification accuracy (52 of 54) from only **207** labelled images, a **34x** reduction against the **7,108** used for pre-training.",
-                "Outperformed the COCO-pretrained baseline by **+6.03 pp mAP@0.5:0.95** (0.5854 to 0.6457) and **+3.12 pp precision**.",
-                "Optimized inference with **ONNX Runtime** to real-time **73 FPS**, deployed as a live Hugging Face demo."
+                "A **YOLOv8** model fine-tuned through a two-phase transfer-learning pipeline, pre-train on a large fruit dataset then fine-tune on a small one: **96.3%** classification accuracy, 52 of 54, from only **207** labelled images.",
+                "The constraint was the whole point. Labelling is the expensive part of a vision project, so what I was really measuring was how little labelled data the pipeline could survive on — 207 images against the **7,108** used for pre-training is a **34x** reduction.",
+                "It beat the COCO-pretrained baseline by **+6.03 pp mAP@0.5:0.95** (0.5854 to 0.6457) and **+3.12 pp precision**.",
+                "Optimized inference with **ONNX Runtime** to a real-time **73 FPS**, deployed as a live Hugging Face demo you can try in a browser."
             ],
             tags: ["PyTorch", "YOLOv8", "ONNX Runtime"],
             link: "https://huggingface.co/spaces/manojthapaa/fruit-guard-ai"
@@ -127,8 +129,9 @@ export const portfolioData = {
                 { value: "Live", label: "UK jobs from the Reed API" }
             ],
             description: [
-                "Built an end-to-end assistant that parses CVs (**PDF/DOCX, OCR fallback**), pulls live UK jobs from the **Reed API**, scores CV–job fit and exports a tailored CV as PDF.",
-                "Stopped the model inventing its own evidence: it returns requirement\u2013evidence pairs as **structured JSON**, and code drops any requirement whose quoted evidence is not in the CV before computing the weighted score. The check proves the evidence came from the CV, not that it is about the skill claimed \u2014 a known limit, documented in the README."
+                "An assistant that parses a CV (**PDF or DOCX**, with an OCR fallback), pulls live UK jobs from the **Reed API**, scores CV-to-job fit and exports a tailored CV as a PDF.",
+                "The design problem here is evidence: an LLM asked whether a candidate fits will cheerfully invent the proof. So the model does not score. It returns requirement–evidence pairs as **structured JSON**, the evidence has to be an exact phrase from the CV, and code drops any requirement whose phrase is not in the document before the weighted score is computed.",
+                "It is not airtight, and the README says so: the check proves the evidence came from the CV, not that it is about the skill being claimed. I built a stricter rule and reverted it, because it dropped real skills whenever the CV and the advert used different words for the same thing, like Postgres and PostgreSQL."
             ],
             tags: ["FastAPI", "React", "Groq API", "OCR"],
             github: "https://github.com/iammanoj807/NeuroArc",
