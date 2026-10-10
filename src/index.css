@@ -13,21 +13,21 @@
   --text-2: #a4aabb;
   --text-3: #7d8499;
 
-  --a1: #8b7bff;
-  --a1-rgb: 139, 123, 255;
-  --a2: #3ee0ff;
-  --a2-rgb: 62, 224, 255;
-  --a3: #b4f25a;
-  --a3-rgb: 180, 242, 90;
-  --a4: #ffb547;
-  --grad: linear-gradient(100deg, #a597ff 0%, #5fe3ff 50%, #c2f56e 100%);
-  --ring-colors: #8b7bff, #3ee0ff, #b4f25a, #ffb547, #8b7bff;
+  --a1: #3ee0ff;
+  --a1-rgb: 62, 224, 255;
+  --a2: #8fe9ff;
+  --a2-rgb: 143, 233, 255;
+  --a3: #22bcd9;
+  --a3-rgb: 34, 188, 217;
+  --a4: #a5eeff;
+  --grad: linear-gradient(100deg, #a5eeff 0%, #3ee0ff 52%, #22bcd9 100%);
+  --ring-colors: #22bcd9, #3ee0ff, #a5eeff, #3ee0ff, #22bcd9;
 
   /* Per-project accents */
-  --p1: #8b7bff;
-  --p2: #3ee0ff;
-  --p3: #b4f25a;
-  --p4: #ffb547;
+  --p1: #a5eeff;
+  --p2: #6ce5ff;
+  --p3: #3ee0ff;
+  --p4: #22bcd9;
 
   --on-accent: #07080c;
   --nav-bg: rgba(11, 12, 18, 0.72);
@@ -38,13 +38,13 @@
   --card-bottom: #0a0b11;
   --hl-top: #11121b;
   --hl-bottom: #0c0d14;
-  --portrait-1: #23264a;
+  --portrait-1: #11384a;
   --portrait-2: #10121d;
   --portrait-3: #0a0b11;
-  --pill-text: #d4f5a4;
-  --soft-text: #cfc8ff;
+  --pill-text: #b7ecf7;
+  --soft-text: #cfeaf5;
   --stat-end: #a9aec2;
-  --rotator-grad: linear-gradient(100deg, #fff 0%, #cfd3ff 60%, #9ff0ff 100%);
+  --rotator-grad: linear-gradient(100deg, #fff 0%, #d6f6ff 58%, #8fe9ff 100%);
 
   --font-sans: 'Geist', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-mono: 'Geist Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
