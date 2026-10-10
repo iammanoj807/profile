@@ -3,7 +3,7 @@ import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { portfolioData } from '../data/portfolioData';
 import { renderBoldText } from '../utils/renderBoldText';
 import { Icon } from './ui';
-import profileImg from '../assets/Manoj Thapa Professional.png';
+import profileImg from '../assets/manoj-portrait.webp';
 
 const ease = [0.2, 0.7, 0.2, 1];
 const rise = (delay) => ({

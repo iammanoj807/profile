@@ -28,7 +28,7 @@ export const portfolioData = {
 
     stats: [
         { value: 30, suffix: "/30", label: "tasks completed with the primary LLM provider disabled", source: "Planck AI" },
-        { value: 95, suffix: "%", label: "retrieval hit@3 against a keyword baseline", source: "CogniGraph" },
+        { value: 95, suffix: "%", label: "retrieval hit@3, against 80% for a keyword baseline", source: "CogniGraph" },
         { value: 96.3, decimals: 1, suffix: "%", label: "accuracy from only 207 labelled images", source: "FruitGuard AI" },
         { value: 73, suffix: " FPS", label: "real-time inference with ONNX Runtime", source: "FruitGuard AI" },
         { value: 40, suffix: "%", label: "REST API latency cut in Spring Boot services", source: "Accenture" }
@@ -64,12 +64,12 @@ export const portfolioData = {
             subMetrics: [
                 { value: "80%", label: "correct tool selection" },
                 { value: "2.7 s", label: "median latency" },
-                { value: "0", label: "incorrect answers" }
+                { value: "20/20", label: "graded tasks correct" }
             ],
             description: [
                 "Built an LLM agent in Python **without an agent framework**, orchestrating **4 tools** (web search, code execution in 7 languages, PDF/URL reading, image analysis) across up to **8 planning steps**.",
                 "Designed mid-run failover across **Groq, Gemini and NVIDIA** behind one OpenAI-compatible interface, sustaining **30/30** task completion under fault injection with the primary provider disabled on every call.",
-                "Built an evaluation harness with a **30-question golden set** and a rubric committed to git before the first run, measuring **80%** correct tool selection, **2.7 s** median latency and **zero** incorrect answers."
+                "Built an evaluation harness with a **30-question golden set** and a rubric committed to Git before the first run, measuring **80%** correct tool selection, **2.7 s** median latency and no incorrect answer among the **20** tasks the rubric could grade."
             ],
             tags: ["Python", "FastAPI", "React", "Docker"],
             github: "https://github.com/iammanoj807/planck-ai",
@@ -88,8 +88,8 @@ export const portfolioData = {
             ],
             description: [
                 "Built a knowledge-graph RAG app that turns documents, including **scanned PDFs via OCR**, into an interactive **3D graph** and answers only from passages retrieved from a **ChromaDB** vector database.",
-                "Benchmarked retrieval at **95% hit@3** against a keyword baseline; found self-written test questions overstated accuracy by **35 points** and rebuilt the set in natural user phrasing to remove the bias.",
-                "Diagnosed silent truncation in the embedding model past **~1,400 characters**, which dropped text from larger chunks with no error raised, and set chunk size from that measurement."
+                "Found self-written test questions overstated accuracy by **35 points** (90% to 55% hit@1), rebuilt the set in natural user phrasing, then benchmarked the corrected set at **95% hit@3** against **80%** for a keyword baseline on the same questions.",
+                "Diagnosed silent truncation in the embedding model past **~1,400 characters**, dropping text from larger chunks with no error raised, and showed the sweep favouring 2,000-char chunks was confounded by corpus size; set chunk size to **1,000**, the largest that fits the window."
             ],
             tags: ["Python", "ChromaDB", "NetworkX", "OCR"],
             github: "https://github.com/iammanoj807/CogniGraph",
@@ -104,12 +104,12 @@ export const portfolioData = {
             metric: { value: "96.3%", label: "classification accuracy" },
             subMetrics: [
                 { value: "207", label: "labelled images" },
-                { value: "95%", label: "less annotation data" },
+                { value: "34x", label: "less labelled data than pre-training" },
                 { value: "73 FPS", label: "real-time inference" }
             ],
             description: [
-                "Fine-tuned a **YOLOv8** computer-vision model with a two-phase transfer-learning pipeline to **96.3%** classification accuracy from only **207** labelled images, a **95%** reduction in annotation data.",
-                "Outperformed the COCO-pretrained baseline by **+6.03% mAP@0.5:0.95** and **+3.12% precision**.",
+                "Fine-tuned a **YOLOv8** computer-vision model with a two-phase transfer-learning pipeline to **96.3%** classification accuracy (52 of 54) from only **207** labelled images, a **34x** reduction against the **7,108** used for pre-training.",
+                "Outperformed the COCO-pretrained baseline by **+6.03 pp mAP@0.5:0.95** (0.5854 to 0.6457) and **+3.12 pp precision**.",
                 "Optimized inference with **ONNX Runtime** to real-time **73 FPS**, deployed as a live Hugging Face demo."
             ],
             tags: ["PyTorch", "YOLOv8", "ONNX Runtime"],
@@ -121,14 +121,14 @@ export const portfolioData = {
             kicker: "AI job application assistant",
             accent: "var(--p4)",
             date: "Nov 2025 – Dec 2025",
-            metric: { value: "Verified", label: "fit scores built only from evidence found in the CV" },
+            metric: { value: "Verified", label: "fit scores built only from evidence found in the CV text" },
             subMetrics: [
                 { value: "PDF · DOCX", label: "CV parsing with OCR fallback" },
                 { value: "Live", label: "UK jobs from the Reed API" }
             ],
             description: [
                 "Built an end-to-end assistant that parses CVs (**PDF/DOCX, OCR fallback**), pulls live UK jobs from the **Reed API**, scores CV–job fit and exports a tailored CV as PDF.",
-                "Prevented hallucinated matches: the LLM returns requirement–evidence pairs as **structured JSON**, and code computes the weighted score **only from evidence verified against the CV text**."
+                "Stopped the model inventing its own evidence: it returns requirement\u2013evidence pairs as **structured JSON**, and code drops any requirement whose quoted evidence is not in the CV before computing the weighted score. The check proves the evidence came from the CV, not that it is about the skill claimed \u2014 a known limit, documented in the README."
             ],
             tags: ["FastAPI", "React", "Groq API", "OCR"],
             github: "https://github.com/iammanoj807/NeuroArc",
