@@ -21,7 +21,6 @@
   --a3-rgb: 34, 188, 217;
   --a4: #a5eeff;
   --grad: linear-gradient(100deg, #a5eeff 0%, #3ee0ff 52%, #22bcd9 100%);
-  --ring-colors: #22bcd9, #3ee0ff, #a5eeff, #3ee0ff, #22bcd9;
 
   /* Per-project accents */
   --p1: #a5eeff;
@@ -55,12 +54,6 @@
   --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
 
   color-scheme: dark;
-}
-
-@property --angle {
-  syntax: '<angle>';
-  initial-value: 0deg;
-  inherits: false;
 }
 
 /* ==========================================================================
@@ -807,19 +800,7 @@ footer {
   position: absolute;
   inset: -1.5px;
   border-radius: 34px;
-  background: conic-gradient(from var(--angle), var(--ring-colors));
-  animation: spin 8s linear infinite;
-}
-
-.portrait-ring::after {
-  content: '';
-  position: absolute;
-  inset: 10%;
-  border-radius: inherit;
-  background: inherit;
-  filter: blur(48px);
-  opacity: 0.45;
-  z-index: -1;
+  background: var(--border-strong);
 }
 
 .portrait-card {
@@ -1966,12 +1947,6 @@ footer {
 /* ==========================================================================
    Keyframes
    ========================================================================== */
-@keyframes spin {
-  to {
-    --angle: 360deg;
-  }
-}
-
 @keyframes float {
   0%,
   100% {
