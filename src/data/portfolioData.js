@@ -156,7 +156,7 @@ export const portfolioData = {
             title: "Software Engineer",
             company: "Accenture",
             company_logo: "https://upload.wikimedia.org/wikipedia/commons/c/cd/Accenture.svg",
-            duration: "Oct 2021 \u2013 Oct 2022",
+            duration: "Oct 2021 \u2013 May 2022",
             location: "Bengaluru, India",
             description: [
                 "Cut p95 REST API latency from roughly **850 ms to 510 ms** across **18 endpoints**, a **40%** reduction, by eliminating **6 N+1 query sites** and rewriting the SQL behind them in **Java Spring Boot**.",
