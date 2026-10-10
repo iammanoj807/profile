@@ -2,7 +2,7 @@
   <h1>Hi, I'm Manoj Kumar Thapa 👋</h1>
 
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&pause=1000&color=8B7BFF&center=true&vCenter=true&width=640&lines=AI+Software+Engineer;LLM+Agents+%C2%B7+RAG+%C2%B7+Computer+Vision;Measured+Before+It+Ships" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&pause=1000&color=3EE0FF&center=true&vCenter=true&width=640&lines=AI+Software+Engineer;LLM+Agents+%C2%B7+RAG+%C2%B7+Computer+Vision;Measured+Before+It+Ships" alt="Typing SVG" />
   </a>
 
   <p>
@@ -10,7 +10,14 @@
   </p>
 
   <p>
-    <strong>Birmingham, UK · open to relocation · open to AI & software engineering roles</strong>
+    <strong>Open to AI & software engineering roles · available now · Birmingham, UK (open to relocation)</strong>
+  </p>
+
+  <p>
+    <a href="https://iammanoj807.github.io/profile"><img src="https://img.shields.io/badge/Portfolio-3EE0FF?style=for-the-badge&logo=react&logoColor=black" /></a>
+    <a href="https://iammanoj807.github.io/profile/CV.pdf"><img src="https://img.shields.io/badge/Resume-000000?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" /></a>
+    <a href="https://www.linkedin.com/in/manoj-kumar-thapa-7595a5168"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+    <a href="mailto:thapam807@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" /></a>
   </p>
 </div>
 
@@ -18,14 +25,42 @@
 
 ### 👨‍💻 About Me
 
-AI Software Engineer with an MSc in Artificial Intelligence (Distinction) from Aston University. I build AI systems end to end, with **Python and FastAPI** on the back and **React** on the front, and I measure them with **golden sets, fault injection and baselines** before I trust them. Before my MSc I was a software engineer at **Accenture**, where I cut REST API latency by **40%** in Java Spring Boot services.
+AI Software Engineer with an MSc in Artificial Intelligence from Aston University, awarded with **Distinction**. I build AI systems end to end, with **Python and FastAPI** on the back and **React** on the front, and I measure them with **golden sets, fault injection and baselines** before I trust them. Before my MSc I was a software engineer at **Accenture**, where I cut p95 REST API latency from roughly **850 ms to 510 ms**.
 
 - 🏗️ **Building:** LLM agents, graph RAG and computer-vision systems
 - 🧪 **How I work:** golden-set evaluation, fault injection, baseline controls
 - 🌍 **Based in:** Birmingham, UK (open to relocation)
 - 🛂 **Visa:** UK Graduate Route, valid to 2028, no sponsorship required
 - 📧 **Contact:** thapam807@gmail.com
-- 🌐 **Portfolio:** [iammanoj807.github.io/profile](https://iammanoj807.github.io/profile)
+
+---
+
+### 🚀 Featured Projects
+
+| Project | What it does | Key results | Stack | Links |
+|---------|--------------|-------------|-------|-------|
+| **FruitGuard AI** ⭐<br>MSc dissertation | Two-phase transfer-learning pipeline for real-time fruit detection with YOLOv8 | **96.3%** accuracy (52 of 54) from **207** labelled images, a **34x** reduction against the **7,108** used for pre-training · **+6.03 pp** mAP@0.5:0.95 over the COCO baseline · **73 FPS** with ONNX Runtime | PyTorch, YOLOv8, ONNX Runtime | [Demo](https://huggingface.co/spaces/manojthapaa/fruit-guard-ai) |
+| **Planck AI**<br>Agentic research assistant | LLM agent built without an agent framework: 4 tools (web search, code execution in 7 languages, PDF/URL reading, image analysis), up to 8 planning steps, mid-run failover across Groq, Gemini and NVIDIA | **30/30** tasks under fault injection · **80%** correct tool selection · **2.7 s** median latency · no incorrect answer among the **20** tasks the rubric could grade | Python, FastAPI, React, Docker | [Code](https://github.com/iammanoj807/planck-ai) · [Demo](https://huggingface.co/spaces/manojthapaa/planck-ai) |
+| **CogniGraph**<br>Graph RAG explorer | Turns documents, including scanned PDFs via OCR, into an interactive 3D knowledge graph and answers only from retrieved passages | found my own test set inflated hit@1 by **35 points**, rebuilt it, then measured **95% hit@3** against **80%** for a keyword baseline · diagnosed silent embedding truncation at **~1,400 chars** | Python, ChromaDB, NetworkX, OCR | [Code](https://github.com/iammanoj807/CogniGraph) · [Demo](https://huggingface.co/spaces/manojthapaa/CogniGraph) |
+| **NeuroArc**<br>AI job application assistant | Parses CVs (PDF/DOCX, OCR fallback), pulls live UK jobs from the Reed API, scores fit and exports a tailored CV | The model returns requirement–evidence pairs and code drops any requirement whose quoted phrase is not in the CV, so it cannot supply its own proof. A known limit remains, documented in the repo | FastAPI, React, Groq API, OCR | [Code](https://github.com/iammanoj807/NeuroArc) · [Demo](https://huggingface.co/spaces/manojthapaa/NeuroArc) |
+
+---
+
+### 📄 Publication
+
+Vinutha H., **M. K. Thapa**, P. Pandey, N. Pun, N. Paudel. *Indian Currency Recognition for Visually Impaired using Deep Learning Technique*. IJIRCCE, 9(7), July 2021. DOI: 10.15680/IJIRCCE.2021.0907159 · [PDF](https://iammanoj807.github.io/profile/indian-currency-recognition-ijircce-2021.pdf)
+
+---
+
+### 💼 Experience
+
+**Mentor, MSc Artificial Intelligence — Aston University** *(Aug 2025 – Jan 2026, Birmingham)*
+- Mentored **5 MSc AI students** in Python and machine learning, one-to-one, every week
+- Focused sessions on the three blockers that recurred most: setting up Python environments, debugging training loops that would not converge, and choosing a simple baseline before a complex model
+
+**Software Engineer — Accenture** *(Oct 2021 – May 2022, Bengaluru)*
+- Cut p95 REST API latency from roughly **850 ms to 510 ms** across **18 endpoints**, a **40%** reduction, by eliminating **6** N+1 query sites and rewriting the SQL behind them in Java Spring Boot
+- Owned the business logic and the **PostgreSQL/MySQL** data-access layer for that service, shipping production REST APIs in a **7-engineer** delivery team on 2-week sprints
 
 ---
 
@@ -93,36 +128,12 @@ Golden-set design · fault injection · baseline controls · latency benchmarkin
 
 ---
 
-### 🚀 Featured Projects
-
-| Project | What it does | Key results | Stack | Links |
-|---------|--------------|-------------|-------|-------|
-| **FruitGuard AI** ⭐<br>MSc dissertation | Two-phase transfer-learning pipeline for real-time fruit detection with YOLOv8 | **96.3%** accuracy (52 of 54) from **207** labelled images, a **34x** reduction against the **7,108** used for pre-training · **73 FPS** with ONNX Runtime | PyTorch, YOLOv8, ONNX Runtime | [Demo](https://huggingface.co/spaces/manojthapaa/fruit-guard-ai) |
-| **NeuroArc**<br>AI job application assistant | Parses CVs (PDF/DOCX, OCR fallback), pulls live UK jobs from the Reed API, scores fit and exports a tailored CV | The model returns requirement–evidence pairs and code drops any requirement whose quoted phrase is not in the CV, so it cannot supply its own proof. A known limit remains, documented in the repo README | FastAPI, React, Groq API, OCR | [Code](https://github.com/iammanoj807/NeuroArc) · [Demo](https://huggingface.co/spaces/manojthapaa/NeuroArc) |
-| **Planck AI**<br>Agentic research assistant | LLM agent built without an agent framework: 4 tools (web search, code execution in 7 languages, PDF/URL reading, image analysis), up to 8 planning steps, mid-run failover across Groq, Gemini and NVIDIA | **30/30** tasks under fault injection · **80%** correct tool selection · **2.7 s** median latency · no incorrect answer among the **20** tasks the rubric could grade | Python, FastAPI, React, Docker | [Code](https://github.com/iammanoj807/planck-ai) · [Demo](https://huggingface.co/spaces/manojthapaa/planck-ai) |
-| **CogniGraph**<br>Graph RAG explorer | Turns documents, including scanned PDFs via OCR, into an interactive 3D knowledge graph and answers only from retrieved passages | found my own test set inflated hit@1 by **35 points**, rebuilt it, then measured **95% hit@3** against **80%** for a keyword baseline · diagnosed silent embedding truncation at **~1,400 chars** | Python, ChromaDB, NetworkX, OCR | [Code](https://github.com/iammanoj807/CogniGraph) · [Demo](https://huggingface.co/spaces/manojthapaa/CogniGraph) |
-
----
-
-### 💼 Work Experience
-
-**Mentor, MSc Artificial Intelligence — Aston University** *(Aug 2025 – Jan 2026, Birmingham)*
-
-- Mentored **10+ MSc AI students** in Python and machine learning through weekly one-to-one sessions
-
-**Software Engineer — Accenture** *(Oct 2021 – May 2022, Bangalore)*
-
-- Cut REST API latency **40%** by eliminating N+1 queries and optimizing SQL in Java Spring Boot services
-- Built and maintained production REST API services for a large-scale enterprise application, implementing business logic and PostgreSQL/MySQL data-access layers
-
----
-
 ### 🎓 Education
 
 | Degree | Institution | Year | Result |
 |--------|-------------|------|--------|
-| **MSc Artificial Intelligence** | Aston University, UK | Jan 2025 – Jul 2026 | **Distinction** (70.37%) |
-| **BE Computer Science** | Dr. Ambedkar Institute of Technology, Bangalore | Aug 2017 – Sep 2021 | **9.45/10** |
+| **MSc Artificial Intelligence** | Aston University, UK | Jan 2025 – Jul 2026 | **Distinction (70.37%)** |
+| **BE Computer Science** | Dr. Ambedkar Institute of Technology, Bengaluru | Aug 2017 – Sep 2021 | **9.45/10** |
 
 ---
 
@@ -134,37 +145,3 @@ Golden-set design · fault injection · baseline controls · latency benchmarkin
 - [AI Masterclass](https://credsverse.com/credentials/3f44c319-2b85-4345-824f-191da7fdbef2) — SARAS AI Institute
 - [Data Visualization using Python](https://olympus1.greatlearning.in/course_certificate/ZMICNLYY) — Great Learning
 - [Data Visualization using Tableau](https://olympus1.greatlearning.in/course_certificate/DLEKCAPR) — Great Learning
-
----
-
-### 🤝 Connect
-
-<div align="center">
-  <a href="https://www.linkedin.com/in/manoj-kumar-thapa-7595a5168">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
-  </a>
-  <a href="https://github.com/iammanoj807">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
-  </a>
-  <a href="mailto:thapam807@gmail.com">
-    <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
-  </a>
-  <a href="https://iammanoj807.github.io/profile">
-    <img src="https://img.shields.io/badge/Portfolio-8B7BFF?style=for-the-badge&logo=react&logoColor=white" />
-  </a>
-  <a href="https://iammanoj807.github.io/profile/CV.pdf">
-    <img src="https://img.shields.io/badge/Resume-000000?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" />
-  </a>
-</div>
-
----
-
-### 🧰 About This Site
-
-Source for [iammanoj807.github.io/profile](https://iammanoj807.github.io/profile), built with React, Vite and Framer Motion, with a hand-drawn canvas background (neural graph, gradient descent, activation functions). Deployed to GitHub Pages.
-
-```bash
-npm install
-npm run dev      # local preview at http://localhost:5173/profile/
-npm run deploy   # build and publish to GitHub Pages
-```
