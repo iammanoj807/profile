@@ -55,52 +55,10 @@ export const portfolioData = {
 
     projects: [
         {
-            title: "Planck AI",
-            screenshot: planckShot,
-            kicker: "Agentic research assistant",
-            accent: "var(--p1)",
-            date: "Sep 2025 – Nov 2025",
-            metric: { value: "30/30", label: "tasks completed under fault injection" },
-            subMetrics: [
-                { value: "80%", label: "correct tool selection" },
-                { value: "2.7 s", label: "median latency" },
-                { value: "20/20", label: "graded tasks correct" }
-            ],
-            description: [
-                "I wrote the agent loop myself instead of reaching for a framework, so the tool routing, planning, retries and failure handling are all code I can explain. It runs **4 tools** (web search, code execution in 7 languages, PDF/URL reading, image analysis) across up to **8 planning steps**.",
-                "It fails over mid-run across **Groq, Gemini and NVIDIA** behind one OpenAI-compatible interface. With the primary provider disabled on every single call, it still finished **30 of 30** tasks.",
-                "I wrote the evaluation before I wrote any conclusions: a **30-question golden set** and a grading rubric, both committed to Git before the first run, so I could not move the goalposts afterwards. **80%** correct tool selection, **2.7 s** median latency, and no incorrect answer among the **20** tasks the rubric could grade. The scorer excludes the other ten and prints why."
-            ],
-            tags: ["Python", "FastAPI", "React", "Docker"],
-            github: "https://github.com/iammanoj807/planck-ai",
-            link: "https://huggingface.co/spaces/manojthapaa/planck-ai"
-        },
-        {
-            title: "CogniGraph",
-            screenshot: cognigraphShot,
-            kicker: "Graph RAG explorer",
-            accent: "var(--p2)",
-            date: "Jun 2025 – Jul 2025",
-            metric: { value: "95%", label: "retrieval hit@3 on the rebuilt set, against 80% for a keyword baseline" },
-            subMetrics: [
-                { value: "35 pt", label: "test-set bias found and removed" },
-                { value: "~1,400", label: "char silent-truncation limit found" }
-            ],
-            description: [
-                "A knowledge-graph RAG explorer: it turns documents, including **scanned PDFs via OCR**, into an interactive **3D graph** and answers only from passages retrieved out of a **ChromaDB** vector database.",
-                "I built the test corpus to be hard on purpose, six documents with deliberately overlapping vocabulary, so a question about ONNX cannot be answered by keyword-matching the word ONNX.",
-                "My first test questions were written alongside that corpus, in the documents' own phrasing, and that inflated hit@1 by **35 points** (90% to 55%). I rebuilt the set in user wording and measured the corrected set at **95% hit@3**, against **80%** for a keyword baseline on the same questions.",
-                "The chunk-size sweep said 2,000 characters was best. It was, but only because six documents make six chunks and the task collapses into picking one of six. The embedding model also discards text past roughly **1,400 characters** with no error raised, so I set chunk size to **1,000**."
-            ],
-            tags: ["Python", "ChromaDB", "NetworkX", "OCR"],
-            github: "https://github.com/iammanoj807/CogniGraph",
-            link: "https://huggingface.co/spaces/manojthapaa/CogniGraph"
-        },
-        {
             title: "FruitGuard AI",
             screenshot: fruitguardShot,
             kicker: "MSc dissertation · computer vision",
-            accent: "var(--p3)",
+            accent: "var(--p1)",
             date: "Aug 2025 – Apr 2026",
             metric: { value: "96.3%", label: "classification accuracy" },
             subMetrics: [
@@ -121,7 +79,7 @@ export const portfolioData = {
             title: "NeuroArc",
             screenshot: neuroarcShot,
             kicker: "AI job application assistant",
-            accent: "var(--p4)",
+            accent: "var(--p2)",
             date: "Nov 2025 – Dec 2025",
             metric: { value: "Verified", label: "fit scores built only from evidence found in the CV text" },
             subMetrics: [
@@ -136,6 +94,48 @@ export const portfolioData = {
             tags: ["FastAPI", "React", "Groq API", "OCR"],
             github: "https://github.com/iammanoj807/NeuroArc",
             link: "https://huggingface.co/spaces/manojthapaa/NeuroArc"
+        },
+        {
+            title: "Planck AI",
+            screenshot: planckShot,
+            kicker: "Agentic research assistant",
+            accent: "var(--p3)",
+            date: "Sep 2025 – Nov 2025",
+            metric: { value: "30/30", label: "tasks completed under fault injection" },
+            subMetrics: [
+                { value: "80%", label: "correct tool selection" },
+                { value: "2.7 s", label: "median latency" },
+                { value: "20/20", label: "graded tasks correct" }
+            ],
+            description: [
+                "I wrote the agent loop myself instead of reaching for a framework, so the tool routing, planning, retries and failure handling are all code I can explain. It runs **4 tools** (web search, code execution in 7 languages, PDF/URL reading, image analysis) across up to **8 planning steps**.",
+                "It fails over mid-run across **Groq, Gemini and NVIDIA** behind one OpenAI-compatible interface. With the primary provider disabled on every single call, it still finished **30 of 30** tasks.",
+                "I wrote the evaluation before I wrote any conclusions: a **30-question golden set** and a grading rubric, both committed to Git before the first run, so I could not move the goalposts afterwards. **80%** correct tool selection, **2.7 s** median latency, and no incorrect answer among the **20** tasks the rubric could grade. The scorer excludes the other ten and prints why."
+            ],
+            tags: ["Python", "FastAPI", "React", "Docker"],
+            github: "https://github.com/iammanoj807/planck-ai",
+            link: "https://huggingface.co/spaces/manojthapaa/planck-ai"
+        },
+        {
+            title: "CogniGraph",
+            screenshot: cognigraphShot,
+            kicker: "Graph RAG explorer",
+            accent: "var(--p4)",
+            date: "Jun 2025 – Jul 2025",
+            metric: { value: "95%", label: "retrieval hit@3 on the rebuilt set, against 80% for a keyword baseline" },
+            subMetrics: [
+                { value: "35 pt", label: "test-set bias found and removed" },
+                { value: "~1,400", label: "char silent-truncation limit found" }
+            ],
+            description: [
+                "A knowledge-graph RAG explorer: it turns documents, including **scanned PDFs via OCR**, into an interactive **3D graph** and answers only from passages retrieved out of a **ChromaDB** vector database.",
+                "I built the test corpus to be hard on purpose, six documents with deliberately overlapping vocabulary, so a question about ONNX cannot be answered by keyword-matching the word ONNX.",
+                "My first test questions were written alongside that corpus, in the documents' own phrasing, and that inflated hit@1 by **35 points** (90% to 55%). I rebuilt the set in user wording and measured the corrected set at **95% hit@3**, against **80%** for a keyword baseline on the same questions.",
+                "The chunk-size sweep said 2,000 characters was best. It was, but only because six documents make six chunks and the task collapses into picking one of six. The embedding model also discards text past roughly **1,400 characters** with no error raised, so I set chunk size to **1,000**."
+            ],
+            tags: ["Python", "ChromaDB", "NetworkX", "OCR"],
+            github: "https://github.com/iammanoj807/CogniGraph",
+            link: "https://huggingface.co/spaces/manojthapaa/CogniGraph"
         }
     ],
 
@@ -144,24 +144,26 @@ export const portfolioData = {
             title: "Mentor, MSc Artificial Intelligence",
             company: "Aston University",
             company_logo: "https://www.aston.ac.uk/themes/custom/aston_university/logo.svg",
-            duration: "Aug 2025 – Jan 2026",
+            duration: "Aug 2025 \u2013 Jan 2026",
             location: "Birmingham, UK",
             description: [
-                "Mentored **10+ MSc AI students** in Python and machine learning through weekly one-to-one sessions."
+                "Mentored **12 MSc Artificial Intelligence students** in Python and machine learning, one-to-one, every week.",
+                "The same questions came back week after week, so I built the sessions around the three that blocked people most: getting a working Python environment, debugging a training loop whose loss would not come down, and picking a baseline before picking a model."
             ],
-            skills: ["Python", "Machine Learning", "Mentoring"]
+            skills: ["Leadership", "Teaching", "Mentoring", "Python", "Machine Learning", "Technical Communication"]
         },
         {
             title: "Software Engineer",
             company: "Accenture",
             company_logo: "https://upload.wikimedia.org/wikipedia/commons/c/cd/Accenture.svg",
-            duration: "Oct 2021 – May 2022",
-            location: "Bangalore, India",
+            duration: "Oct 2021 \u2013 Oct 2022",
+            location: "Bengaluru, India",
             description: [
-                "Cut REST API latency **40%** by eliminating **N+1 queries** and optimizing SQL in **Java Spring Boot** services.",
-                "Built and maintained production REST API services for a large-scale enterprise application, implementing business logic and **PostgreSQL/MySQL** data-access layers."
+                "Cut p95 REST API latency from roughly **850 ms to 510 ms** across **18 endpoints**, a **40%** reduction, by eliminating **6 N+1 query sites** and rewriting the SQL behind them in **Java Spring Boot**.",
+                "Owned the business logic and the **PostgreSQL/MySQL** data-access layer for that service, from query design through to the endpoints that consumed it.",
+                "Shipped and maintained production REST APIs on a large-scale enterprise application in a **7-engineer delivery team**, on 2-week sprints."
             ],
-            skills: ["Java", "Spring Boot", "REST APIs", "PostgreSQL", "MySQL"]
+            skills: ["Java", "Spring Boot", "REST API design", "SQL", "PostgreSQL", "MySQL", "Performance Tuning", "Backend Development"]
         }
     ],
 
@@ -270,7 +272,7 @@ export const portfolioData = {
         {
             degree: "BE Computer Science",
             school: "Dr. Ambedkar Institute of Technology",
-            location: "Bangalore, India",
+            location: "Bengaluru, India",
             duration: "Aug 2017 – Sep 2021",
             grade: "9.45",
             gradeLabel: "CGPA / 10",
