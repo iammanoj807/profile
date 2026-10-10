@@ -22,6 +22,25 @@ const EducationSection = () => (
                         <h3 className="edu-degree">{edu.degree}</h3>
                         <p className="edu-school">{edu.school} · {edu.location}</p>
                         <p className="edu-desc">{edu.description}</p>
+                        {edu.publication && (
+                            <a
+                                className="edu-pub"
+                                href={edu.publication.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <i className="fa-solid fa-file-lines" aria-hidden="true"></i>
+                                <span>
+                                    <strong>{edu.publication.title}</strong>
+                                    <em>{edu.publication.venue}</em>
+                                </span>
+                            </a>
+                        )}
+                        {edu.skills && (
+                            <div className="tag-list edu-tags">
+                                {edu.skills.map(skill => <span key={skill} className="tag">{skill}</span>)}
+                            </div>
+                        )}
                         <div className="edu-grade">
                             <span className="edu-grade-value">{edu.grade}</span>
                             <span className="edu-grade-label">{edu.gradeLabel}</span>

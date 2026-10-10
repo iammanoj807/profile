@@ -267,7 +267,8 @@ export const portfolioData = {
             duration: "Jan 2025 – Jul 2026",
             grade: "Distinction",
             gradeLabel: "70.37% overall",
-            description: "Deep learning, NLP and computer vision. Dissertation: FruitGuard AI, few-shot fruit detection with YOLOv8 (96.3% accuracy from 207 labelled images)."
+            description: "Deep learning, NLP and computer vision. Dissertation: FruitGuard AI, few-shot fruit detection with YOLOv8, 96.3% accuracy from 207 labelled images, a 34x reduction against the pre-training set.",
+            skills: ["PyTorch", "Deep Learning", "Computer Vision", "NLP", "Python"]
         },
         {
             degree: "BE Computer Science",
@@ -276,7 +277,13 @@ export const portfolioData = {
             duration: "Aug 2017 – Sep 2021",
             grade: "9.45",
             gradeLabel: "CGPA / 10",
-            description: "Data structures and algorithms, operating systems and DBMS, plus coursework in machine learning and full-stack development."
+            description: "Data structures and algorithms, operating systems and DBMS, plus coursework in machine learning and full-stack development. Final-year project published in IJIRCCE: Indian banknote recognition for visually impaired users.",
+            skills: ["C++", "Data Structures", "DBMS", "Operating Systems", "Full-stack Development"],
+            publication: {
+                title: "Indian Currency Recognition for Visually Impaired using Deep Learning Technique",
+                venue: "IJIRCCE, Vol. 9 Issue 7, July 2021 \u00b7 DOI 10.15680/IJIRCCE.2021.0907159",
+                link: `${import.meta.env.BASE_URL}indian-currency-recognition-ijircce-2021.pdf`
+            }
         }
     ],
 

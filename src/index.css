@@ -807,15 +807,7 @@ footer {
 }
 
 .portrait-glow {
-  position: absolute;
-  left: 50%;
-  top: 32%;
-  width: 80%;
-  aspect-ratio: 1;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(var(--a1-rgb), 0.55) 0%, rgba(var(--a2-rgb), 0.18) 40%, transparent 70%);
-  filter: blur(10px);
+  display: none;
 }
 
 .portrait-img {
@@ -1656,6 +1648,53 @@ footer {
   color: var(--text-3);
   font-size: 0.93rem;
   line-height: 1.65;
+}
+
+.edu-pub {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin: 0 0 18px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-2);
+  text-decoration: none;
+  transition: border-color 0.3s var(--ease), background 0.3s var(--ease);
+}
+
+.edu-pub:hover {
+  border-color: var(--border-strong);
+  background: var(--surface-2);
+}
+
+.edu-pub i {
+  margin-top: 3px;
+  color: var(--a1);
+  font-size: 0.9rem;
+}
+
+.edu-pub span {
+  display: grid;
+  gap: 3px;
+}
+
+.edu-pub strong {
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--text-1);
+}
+
+.edu-pub em {
+  font-style: normal;
+  font-size: 0.8rem;
+  color: var(--text-3, var(--text-2));
+}
+
+.edu-tags {
+  margin: 0 0 18px;
 }
 
 .edu-grade {
