@@ -111,11 +111,10 @@ const Navigation = () => {
                             type="button"
                             className="icon-btn"
                             onClick={toggleTheme}
-                            aria-pressed={isDark}
                             aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
                             title={isDark ? 'Light mode' : 'Dark mode'}
                         >
-                            {isDark ? <MoonIcon /> : <SunIcon />}
+                            {isDark ? <SunIcon /> : <MoonIcon />}
                         </button>
                         <a
                             href={portfolioData.resume_link}
