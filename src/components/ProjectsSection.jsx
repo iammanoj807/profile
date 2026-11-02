@@ -1,103 +1,94 @@
 import React from 'react';
 import { portfolioData } from '../data/portfolioData';
 import { renderBoldText } from '../utils/renderBoldText';
-import { Reveal, SectionHeader, handleSpotlight } from './ui';
+import { Reveal, SectionHead } from './ui';
 
-const ProjectsSection = () => {
-    const { projects } = portfolioData;
+const github = portfolioData.social_links.find(l => l.name === 'GitHub');
 
-    return (
-        <section id="projects" className="section">
-            <div className="container">
-                <SectionHeader
-                    index="01"
-                    eyebrow="Selected work"
-                    title="Things I've built,"
-                    accent="and how I measured them."
-                    description="Live demos and source code, plus the evaluation behind the results: golden sets, baselines and failure tests."
-                />
+const ProjectsSection = () => (
+    <section id="projects" className="section">
+        <div className="container">
+            <SectionHead
+                eyebrow="Selected work"
+                title="Things I've built,"
+                accent="and how I measured them."
+                lead="Live demos and source code, plus the evaluation behind the results: golden sets, baselines and failure tests."
+                link={github && { href: github.url, label: 'All on GitHub' }}
+            />
 
-                <div className="projects-list">
-                    {projects.map((project, index) => (
-                        <Reveal
-                            as="article"
-                            key={project.title}
-                            className="project-card"
-                            style={{ '--accent': project.accent }}
-                            onMouseMove={handleSpotlight}
-                        >
-                            <div className="project-main">
-                                <div className="project-top">
-                                    <span className="project-index">{String(index + 1).padStart(2, '0')}</span>
-                                    <span className="project-date">{project.date}</span>
-                                </div>
-                                <h3 className="project-title">{project.title}</h3>
-                                <p className="project-kicker">{project.kicker}</p>
+            <div className="projects-list">
+                {portfolioData.projects.map((project, index) => (
+                    <Reveal as="article" key={project.title} className="project-card">
+                        <div className="project-main">
+                            <div className="project-meta">
+                                <span className="project-index">{String(index + 1).padStart(2, '0')}</span>
+                                <span className="chip">{project.kicker}</span>
+                                <span className="project-date">{project.date}</span>
+                            </div>
+                            <h3 className="project-title">{project.title}</h3>
 
-                                <ul className="project-points">
-                                    {project.description.map((point, i) => (
-                                        <li key={i}>{renderBoldText(point)}</li>
-                                    ))}
+                            <ul className="project-points">
+                                {project.description.map((point, i) => (
+                                    <li key={i}>{renderBoldText(point)}</li>
+                                ))}
+                            </ul>
+
+                            <div className="project-footer">
+                                <ul className="tag-list" aria-label="Built with">
+                                    {project.tags.map(tag => <li key={tag} className="tag">{tag}</li>)}
                                 </ul>
-
-                                <div className="project-footer">
-                                    <div className="tag-list">
-                                        {project.tags.map(tag => <span key={tag} className="tag">{tag}</span>)}
-                                    </div>
-                                    <div className="project-links">
-                                        {project.github && (
-                                            <a href={project.github} target="_blank" rel="noopener noreferrer" className="link-btn">
-                                                <i className="fa-brands fa-github" aria-hidden="true"></i> Code
-                                            </a>
-                                        )}
-                                        {project.link && (
-                                            <a href={project.link} target="_blank" rel="noopener noreferrer" className="link-btn link-btn-accent">
-                                                Live demo <i className="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                                            </a>
-                                        )}
-                                    </div>
+                                <div className="project-links">
+                                    {project.github && (
+                                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn-ghost btn-sm">
+                                            <i className="fa-brands fa-github" aria-hidden="true"></i> Code
+                                        </a>
+                                    )}
+                                    {project.link && (
+                                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-sm">
+                                            Live demo <i className="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                        </a>
+                                    )}
                                 </div>
                             </div>
+                        </div>
 
-                            <aside className="project-metrics">
-                                <div className="metric-hero">
-                                    <span className={`metric-hero-value ${Number.isNaN(parseFloat(project.metric.value)) ? 'is-word' : ''}`}>{project.metric.value}</span>
-                                    <span className="metric-hero-label">{project.metric.label}</span>
-                                </div>
-                                {project.screenshot && (
-                                    <a
-                                        href={project.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="project-shot"
-                                        aria-label={`Open the ${project.title} live demo`}
-                                    >
-                                        <span className="project-shot-bar" aria-hidden="true"><i /><i /><i /></span>
-                                        <img
-                                            src={project.screenshot}
-                                            alt={`${project.title} live demo interface`}
-                                            width="800"
-                                            height="500"
-                                            loading="lazy"
-                                            decoding="async"
-                                        />
-                                    </a>
-                                )}
-                                <dl className="metric-list">
-                                    {project.subMetrics.map(m => (
-                                        <div key={m.label} className="metric-row">
-                                            <dt>{m.value}</dt>
-                                            <dd>{m.label}</dd>
-                                        </div>
-                                    ))}
-                                </dl>
-                            </aside>
-                        </Reveal>
-                    ))}
-                </div>
+                        <aside className="project-aside" aria-label={`${project.title} results`}>
+                            {project.screenshot && (
+                                <a
+                                    href={project.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="project-shot"
+                                    aria-label={`Open the ${project.title} live demo`}
+                                >
+                                    <img
+                                        src={project.screenshot}
+                                        alt={`${project.title} live demo interface`}
+                                        width="800"
+                                        height="500"
+                                        loading="lazy"
+                                        decoding="async"
+                                    />
+                                </a>
+                            )}
+                            <div className="metric-hero">
+                                <span className="metric-hero-value">{project.metric.value}</span>
+                                <span className="metric-hero-label">{project.metric.label}</span>
+                            </div>
+                            <dl className="metric-list">
+                                {project.subMetrics.map(m => (
+                                    <div key={m.label} className="metric-row">
+                                        <dt>{m.value}</dt>
+                                        <dd>{m.label}</dd>
+                                    </div>
+                                ))}
+                            </dl>
+                        </aside>
+                    </Reveal>
+                ))}
             </div>
-        </section>
-    );
-};
+        </div>
+    </section>
+);
 
 export default ProjectsSection;

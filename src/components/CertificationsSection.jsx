@@ -1,13 +1,12 @@
 import React from 'react';
 import { portfolioData } from '../data/portfolioData';
-import { Icon, Reveal, handleSpotlight } from './ui';
+import { Icon, Reveal } from './ui';
 
 const CertificationsSection = () => (
-    <section id="certifications" className="section section-tight">
+    <section id="certifications" className="section section-tight" aria-labelledby="certs-title">
         <div className="container">
             <Reveal className="subsection-head">
-                <h3>Certifications</h3>
-                <span className="subsection-line" />
+                <h3 id="certs-title">Certifications</h3>
             </Reveal>
 
             <div className="cert-grid">
@@ -15,14 +14,13 @@ const CertificationsSection = () => (
                     <Reveal
                         as="a"
                         key={cert.title}
-                        delay={(i % 3) * 0.08}
+                        delay={(i % 3) * 0.05}
                         href={cert.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="cert-card"
-                        onMouseMove={handleSpotlight}
+                        className="card cert-card"
                     >
-                        <span className="cert-icon">
+                        <span className="icon-tile cert-icon">
                             <Icon name={cert.icon} style={cert.iconColor ? { color: cert.iconColor } : undefined} />
                         </span>
                         <span className="cert-text">
