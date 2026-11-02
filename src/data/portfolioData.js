@@ -34,31 +34,12 @@ export const portfolioData = {
         { value: 40, suffix: "%", label: "REST API latency cut in Spring Boot services", source: "Accenture" }
     ],
 
-    marquee: [
-        { name: "Python", icon: "simple-icons:python" },
-        { name: "FastAPI", icon: "simple-icons:fastapi" },
-        { name: "React", icon: "simple-icons:react" },
-        { name: "TypeScript", icon: "simple-icons:typescript" },
-        { name: "PyTorch", icon: "simple-icons:pytorch" },
-        { name: "YOLOv8", icon: "fa-solid fa-eye" },
-        { name: "ONNX Runtime", icon: "simple-icons:onnx" },
-        { name: "LangGraph", icon: "simple-icons:langchain" },
-        { name: "ChromaDB", icon: "fa-solid fa-database" },
-        { name: "Docker", icon: "simple-icons:docker" },
-        { name: "PostgreSQL", icon: "simple-icons:postgresql" },
-        { name: "Spring Boot", icon: "simple-icons:springboot" },
-        { name: "Hugging Face", icon: "simple-icons:huggingface" },
-        { name: "Gemini", icon: "simple-icons:googlegemini" },
-        { name: "NVIDIA", icon: "simple-icons:nvidia" },
-        { name: "Tailwind CSS", icon: "simple-icons:tailwindcss" }
-    ],
 
     projects: [
         {
             title: "FruitGuard AI",
             screenshot: fruitguardShot,
             kicker: "MSc dissertation · computer vision",
-            accent: "var(--p1)",
             date: "Aug 2025 – Apr 2026",
             metric: { value: "96.3%", label: "classification accuracy" },
             subMetrics: [
@@ -79,7 +60,6 @@ export const portfolioData = {
             title: "Planck AI",
             screenshot: planckShot,
             kicker: "Agentic research assistant",
-            accent: "var(--p2)",
             date: "Sep 2025 – Nov 2025",
             metric: { value: "30/30", label: "tasks completed under fault injection" },
             subMetrics: [
@@ -100,7 +80,6 @@ export const portfolioData = {
             title: "CogniGraph",
             screenshot: cognigraphShot,
             kicker: "Graph RAG explorer",
-            accent: "var(--p3)",
             date: "Jun 2025 – Jul 2025",
             metric: { value: "95%", label: "retrieval hit@3 on the rebuilt set, against 80% for a keyword baseline" },
             subMetrics: [
@@ -121,7 +100,6 @@ export const portfolioData = {
             title: "NeuroArc",
             screenshot: neuroarcShot,
             kicker: "AI job application assistant",
-            accent: "var(--p4)",
             date: "Nov 2025 – Dec 2025",
             metric: { value: "Verified", label: "fit scores built only from evidence found in the CV text" },
             subMetrics: [
@@ -171,7 +149,6 @@ export const portfolioData = {
         {
             category: "LLMs & Agents",
             icon: "fa-solid fa-robot",
-            wide: true,
             skills: [
                 { name: "Tool / function calling" },
                 { name: "Agent loops" },

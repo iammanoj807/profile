@@ -48,9 +48,11 @@ export const SectionHead = ({ eyebrow, title, accent, lead, link }) => (
 export const LogoMark = () => (
     <svg className="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
         <rect width="40" height="40" rx="11" fill="var(--accent)" />
-        {/* an "M" drawn as a rising plot line, ending on a data point */}
-        <path d="M9 29 V13 L20 24 L31 11" fill="none" stroke="var(--accent-ink)" strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round" />
-        <circle cx="31" cy="11" r="3.4" fill="var(--accent-ink)" />
-        <path d="M31 17 V29" stroke="var(--accent-ink)" strokeWidth="3.4" strokeLinecap="round" opacity=".55" />
+        {/* an "M" whose last stroke becomes a trend line heading up */}
+        <path d="M9 30 V15 L18 24 L22.5 19.5" fill="none" stroke="var(--accent-ink)" strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round" />
+        <g className="logo-rise">
+            <path d="M22.5 19.5 L31.5 10.5" fill="none" stroke="var(--accent-ink)" strokeWidth="3.4" strokeLinecap="round" />
+            <path d="M24 10 H32 V18" fill="none" stroke="var(--accent-ink)" strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round" />
+        </g>
     </svg>
 );

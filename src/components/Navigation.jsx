@@ -12,7 +12,7 @@ const links = [
 ];
 
 const THEME_KEY = 'mkt-theme';
-const THEME_COLOR = { light: '#f6f8f7', dark: '#0a1213' };
+const THEME_COLOR = { light: '#f6f8fc', dark: '#0b1120' };
 
 const useTheme = () => {
     const [theme, setTheme] = useState(() =>
