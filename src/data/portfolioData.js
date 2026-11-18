@@ -117,6 +117,87 @@ export const portfolioData = {
         }
     ],
 
+    // Merged pull requests only, newest first. When another one merges, add it at the top.
+    openSource: [
+        {
+            project: "River",
+            area: "Online machine learning",
+            repo: "online-ml/river",
+            pr: 2111,
+            merged: "17 Nov 2026",
+            mergedBy: "MaxHalford",
+            title: "Hoeffding tree leaves that stopped learning",
+            summary: "River 0.27.0's new Rust tree never reactivated a deactivated leaf, so the default HoeffdingTreeClassifier and ARFClassifier could stop learning on imbalanced or changing streams: recall **0.0** where 0.26.1 gave **1.0**. The fix restores the old behaviour and also heals models pickled with 0.27.0.",
+            tags: ["Rust", "Python", "Streaming ML"]
+        },
+        {
+            project: "Feast",
+            area: "Feature store",
+            repo: "feast-dev/feast",
+            pr: 7159,
+            merged: "16 Nov 2026",
+            mergedBy: "ntkathole",
+            title: "Wrong training data from a partial join-key map",
+            summary: "When with_join_key_map renamed only some join keys, the DuckDB offline store dropped the others from the point-in-time join and silently returned another row's features (**99** instead of **10**). The file store and online retrieval already gave the right answer.",
+            tags: ["Python", "DuckDB", "Ibis"]
+        },
+        {
+            project: "librosa",
+            area: "Audio analysis",
+            repo: "librosa/librosa",
+            pr: 2125,
+            merged: "14 Nov 2026",
+            mergedBy: "bmcfee",
+            title: "peak_pick returned peaks below its threshold",
+            summary: "On long float32 signals, peak_pick summed its windows in float32 and lost precision, so it reported peaks below the threshold. The window sums now accumulate in **float64**.",
+            tags: ["Python", "NumPy"]
+        },
+        {
+            project: "DocETL",
+            area: "LLM pipelines · UC Berkeley",
+            repo: "ucbepic/docetl",
+            pr: 528,
+            merged: "14 Nov 2026",
+            mergedBy: "shreyashankar",
+            title: "Reduce prompts that lost their retrieved context",
+            summary: "The reduce operator dropped retriever context from its fold and merge calls, so those LLM prompts ran without the retrieved documents.",
+            tags: ["Python", "LLMs", "RAG"]
+        },
+        {
+            project: "DocETL",
+            area: "LLM pipelines · UC Berkeley",
+            repo: "ucbepic/docetl",
+            pr: 529,
+            merged: "14 Nov 2026",
+            mergedBy: "shreyashankar",
+            title: "Crash when saving intermediate results",
+            summary: "Turning on persist_intermediates in a fold-and-merge reduce with a merge_prompt crashed the pipeline with a KeyError.",
+            tags: ["Python", "LLMs"]
+        },
+        {
+            project: "open-notebook",
+            area: "Feature",
+            repo: "lfnovo/open-notebook",
+            pr: 1562,
+            merged: "14 Nov 2026",
+            mergedBy: "lfnovo",
+            title: "Docling vision settings",
+            summary: "Made the Docling vision endpoint (URL, model and prompt) configurable in Settings.",
+            tags: ["Python", "React", "TypeScript"]
+        },
+        {
+            project: "supervision",
+            area: "Computer vision · Roboflow",
+            repo: "roboflow/supervision",
+            pr: 2624,
+            merged: "25 Sep 2026",
+            mergedBy: "Borda",
+            title: "IconAnnotator crash on palette icons",
+            summary: "Without OpenCV installed, supervision read palette images with transparency as palette index and alpha instead of colour, so IconAnnotator crashed on them. Shipped in release **0.30.6**.",
+            tags: ["Python", "OpenCV", "Pillow"]
+        }
+    ],
+
     experience: [
         {
             title: "Mentor, MSc Artificial Intelligence",

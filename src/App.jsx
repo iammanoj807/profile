@@ -5,6 +5,7 @@ import HeroSection from './components/HeroSection';
 import StatsSection from './components/StatsSection';
 import ProjectsSection from './components/ProjectsSection';
 import MethodSection from './components/MethodSection';
+import OpenSourceSection from './components/OpenSourceSection';
 import ExperienceSection from './components/ExperienceSection';
 import SkillsSection from './components/SkillsSection';
 import EducationSection from './components/EducationSection';
@@ -19,6 +20,7 @@ const App = () => (
             <StatsSection />
             <ProjectsSection />
             <MethodSection />
+            <OpenSourceSection />
             <ExperienceSection />
             <SkillsSection />
             <EducationSection />

@@ -5,6 +5,7 @@ import { LogoMark } from './ui';
 
 const links = [
     { id: 'projects', label: 'Work' },
+    { id: 'open-source', label: 'Open source' },
     { id: 'experience', label: 'Experience' },
     { id: 'skills', label: 'Skills' },
     { id: 'education', label: 'Education' },
