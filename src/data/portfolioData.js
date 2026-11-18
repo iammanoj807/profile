@@ -8,6 +8,8 @@ import planckFig from '../assets/figures/planck.svg';
 import cognigraphFig from '../assets/figures/cognigraph.svg';
 import neuroarcFig from '../assets/figures/neuroarc.svg';
 import rehearsalFig from '../assets/figures/rehearsal.svg';
+// Project logo used instead of the owner's GitHub avatar (open-notebook's README logo, MIT licence)
+import openNotebookLogo from '../assets/logos/open-notebook.svg';
 
 export const portfolioData = {
     name: "Manoj Kumar Thapa",
@@ -156,7 +158,8 @@ export const portfolioData = {
 
     // Merged pull requests only (merged = ISO date). The site lists projects in the order they first
     // appear here, so add a new PR next to its project's other PRs, or where the new project should go.
-    // The site groups PRs by repo and shows the owner's GitHub avatar.
+    // The site groups PRs by repo and shows the owner's GitHub avatar, or `logo` if a PR of that repo sets one.
+    // News combines PRs merged on the same day into one item.
     openSource: [
         {
             project: "supervision",
@@ -222,6 +225,7 @@ export const portfolioData = {
             project: "open-notebook",
             area: "Feature",
             repo: "lfnovo/open-notebook",
+            logo: openNotebookLogo,
             pr: 1562,
             merged: "2026-11-14",
             title: "Docling vision settings",

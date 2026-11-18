@@ -11,7 +11,9 @@ const groupByRepo = (prs) => {
     const groups = new Map();
     for (const pr of prs) {
         if (!groups.has(pr.repo)) groups.set(pr.repo, { repo: pr.repo, project: pr.project, area: pr.area, prs: [] });
-        groups.get(pr.repo).prs.push(pr);
+        const g = groups.get(pr.repo);
+        g.logo ||= pr.logo;
+        g.prs.push(pr);
     }
     const list = [...groups.values()];
     for (const g of list) g.prs.sort((a, b) => b.merged.localeCompare(a.merged) || b.pr - a.pr);
@@ -38,7 +40,7 @@ const OpenSource = () => {
                     <article key={g.repo} className="item oss">
                         <a className="oss-thumb" href={repoUrl} {...ext} tabIndex={-1} aria-hidden="true">
                             <img
-                                src={`https://github.com/${owner}.png?size=288`}
+                                src={g.logo || `https://github.com/${owner}.png?size=288`}
                                 alt=""
                                 width="88"
                                 height="88"
