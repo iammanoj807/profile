@@ -53,7 +53,7 @@ export const portfolioData = {
             figure: rehearsalFig,
             kicker: "NASA Space Apps Challenge 2026 · planetary terrain analogs",
             abstract: "Finds where on Earth the terrain matches Artemis III candidate sites on the Moon and the Jezero landing area on Mars, and when the real Sun casts south-pole-like shadows there. It scores **43,794** Earth patches at 60 m against NASA LOLA and Mars CTX elevation models, using 20 readable terrain features plus a pretrained ResNet-18 embedding; the embedding recognises Earth impact craters with ROC AUC **0.976**. A pre-registered test of self-supervised terrain encoders (VICReg) did not beat the ImageNet model, so the app keeps it.",
-            date: "Nov 2026",
+            date: "Sep 2026 – Nov 2026",
             tags: ["Python", "PyTorch", "Geospatial", "React"],
             github: "https://github.com/iammanoj807/rehearsal-grounds",
             link: "https://iammanoj807.github.io/rehearsal-grounds/"
