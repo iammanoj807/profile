@@ -159,4 +159,23 @@ arrow((84.5, 33.2), (84.5, 27), "pass", offset=(5.5, 0), color=BLUE)
 arrow((76, 33.2), (61, 27), "fail", offset=(-4.5, 2), color=ORANGE)
 save(fig, "neuroarc")
 
+# Rehearsal Grounds: the Malapert massif target patch and its rank-1 Earth match, as exported by the app
+# (web/public/data/results/moon_site23_malapert.json: score 89.1, 43,794 candidates; patches are 3.84 km wide)
+RG = Path(__file__).resolve().parents[3] / "Hackathon" / "rehearsal-grounds" / "web" / "public" / "data" / "img" / "patches"
+if RG.exists():
+    fig = new_fig("A Moon site and its closest Earth match",
+                  "Shaded relief of 3.84 km patches; similarity 89.1/100, rank 1 of 43,794 Earth patches")
+    panels = [("moon_site23_malapert_128_128_r1.png", "Moon: Malapert massif"),
+              ("atacama_yungay_1568_160.png", "Earth: Atacama Desert near Yungay")]
+    for k, (fname, caption) in enumerate(panels):
+        ax = fig.add_axes([0.08 + k * 0.47, 0.06, 0.38, 0.68])
+        ax.imshow(plt.imread(RG / fname), cmap="gray", interpolation="lanczos")
+        ax.set_xticks([])
+        ax.set_yticks([])
+        for spine in ax.spines.values():
+            spine.set_visible(True)
+            spine.set_color("#c9ced4")
+        ax.set_title(caption, fontsize=14, color=INK, pad=8)
+    save(fig, "rehearsal")
+
 print("wrote", sorted(p.name for p in OUT.glob("*.svg")))

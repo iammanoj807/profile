@@ -7,6 +7,7 @@ import fruitguardFig from '../assets/figures/fruitguard.svg';
 import planckFig from '../assets/figures/planck.svg';
 import cognigraphFig from '../assets/figures/cognigraph.svg';
 import neuroarcFig from '../assets/figures/neuroarc.svg';
+import rehearsalFig from '../assets/figures/rehearsal.svg';
 
 export const portfolioData = {
     name: "Manoj Kumar Thapa",
@@ -47,6 +48,16 @@ export const portfolioData = {
 
 
     projects: [
+        {
+            title: "Rehearsal Grounds",
+            figure: rehearsalFig,
+            kicker: "NASA Space Apps Challenge 2026 · planetary terrain analogs",
+            abstract: "Finds where on Earth the terrain matches Artemis III candidate sites on the Moon and the Jezero landing area on Mars, and when the real Sun casts south-pole-like shadows there. It scores **43,794** Earth patches at 60 m against NASA LOLA and Mars CTX elevation models, using 20 readable terrain features plus a pretrained ResNet-18 embedding; the embedding recognises Earth impact craters with ROC AUC **0.976**. A pre-registered test of self-supervised terrain encoders (VICReg) did not beat the ImageNet model, so the app keeps it.",
+            date: "Nov 2026",
+            tags: ["Python", "PyTorch", "Geospatial", "React"],
+            github: "https://github.com/iammanoj807/rehearsal-grounds",
+            link: "https://iammanoj807.github.io/rehearsal-grounds/"
+        },
         {
             title: "FruitGuard AI",
             screenshot: fruitguardShot,
@@ -139,6 +150,7 @@ export const portfolioData = {
 
     // News items besides merged PRs (those are listed automatically). date: "YYYY-MM" or "YYYY-MM-DD".
     news: [
+        { date: "2026-11-15", text: "Took part in the **2026 NASA Space Apps Challenge** (14–15 Nov) with Rehearsal Grounds, which finds Earth terrain that matches Moon and Mars landing sites." },
         { date: "2026-07", text: "Completed my MSc in Artificial Intelligence at Aston University with **Distinction**." }
     ],
 
@@ -373,6 +385,11 @@ export const portfolioData = {
     ],
 
     certifications: [
+        {
+            title: "Galactic Problem Solver",
+            subtitle: "NASA Space Apps Challenge 2026",
+            link: `${import.meta.env.BASE_URL}space-apps-2026-certificate.jpg`
+        },
         {
             title: "AI Agents Intensive",
             subtitle: "Google × Kaggle",
