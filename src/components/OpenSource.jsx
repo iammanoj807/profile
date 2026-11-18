@@ -6,14 +6,7 @@ const ext = { target: '_blank', rel: 'noopener noreferrer' };
 const ALL_MERGED =
     'https://github.com/search?q=author%3Aiammanoj807+is%3Apr+is%3Amerged+-user%3Aiammanoj807&type=pullrequests';
 
-// "2026-11-17" -> "17 Nov 2026". Plain string work, so no time zone or locale can shift it.
-const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-const formatDate = (iso) => {
-    const [y, m, d] = iso.split('-').map(Number);
-    return `${d} ${MONTHS[m - 1]} ${y}`;
-};
-
-// One group per repository, newest merge first; PRs inside a group newest first.
+// One group per repository, in the order the repos first appear in openSource; PRs inside a group newest first.
 const groupByRepo = (prs) => {
     const groups = new Map();
     for (const pr of prs) {
@@ -21,11 +14,8 @@ const groupByRepo = (prs) => {
         groups.get(pr.repo).prs.push(pr);
     }
     const list = [...groups.values()];
-    for (const g of list) {
-        g.prs.sort((a, b) => b.merged.localeCompare(a.merged) || b.pr - a.pr);
-        g.latest = g.prs[0].merged;
-    }
-    return list.sort((a, b) => b.latest.localeCompare(a.latest));
+    for (const g of list) g.prs.sort((a, b) => b.merged.localeCompare(a.merged) || b.pr - a.pr);
+    return list;
 };
 
 const OpenSource = () => {
@@ -64,8 +54,7 @@ const OpenSource = () => {
                                     <li key={pr.pr}>
                                         <a className="pr-num" href={`${repoUrl}/pull/${pr.pr}`} {...ext}>#{pr.pr}</a>{' '}
                                         <strong>{pr.title}.</strong>{' '}
-                                        {renderBoldText(pr.summary)}{' '}
-                                        <span className="pr-merged">Merged {formatDate(pr.merged)} by @{pr.mergedBy}.</span>
+                                        {renderBoldText(pr.summary)}
                                     </li>
                                 ))}
                             </ul>
