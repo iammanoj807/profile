@@ -5,7 +5,7 @@ import { renderBoldText } from '../utils/renderBoldText';
 const ext = { target: '_blank', rel: 'noopener noreferrer' };
 
 const gradeText = (edu) =>
-    edu.gradeLabel?.startsWith('CGPA') ? `CGPA ${edu.grade}/10` : `${edu.grade} (${edu.gradeLabel})`;
+    edu.gradeLabel?.startsWith('CGPA') ? `CGPA ${edu.grade}/10` : `${edu.gradeLabel[0].toUpperCase()}${edu.gradeLabel.slice(1)} ${edu.grade}`;
 
 /** Publication, experience, education and certificates: the short, list-style part of the page. */
 const Background = () => {
@@ -51,7 +51,13 @@ const Background = () => {
                         <li key={e.degree}>
                             <span className="when">{e.duration}</span>
                             <div>
-                                <strong>{e.degree}</strong>, {e.school}, {e.location}. {gradeText(e)}.
+                                <strong>{e.degree}</strong>, {e.school}, {e.location}. {gradeText(e)}
+                                {e.transcript && (
+                                    <>
+                                        <span className="sep" aria-hidden="true">/</span>
+                                        <a href={e.transcript} {...ext}>transcript</a>
+                                    </>
+                                )}
                             </div>
                         </li>
                     ))}
