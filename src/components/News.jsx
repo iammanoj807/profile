@@ -5,10 +5,10 @@ import { renderBoldText } from '../utils/renderBoldText';
 const ext = { target: '_blank', rel: 'noopener noreferrer' };
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-// Month and year only: "2026-11-17" -> "Nov 2026". Items still sort by the full date.
+// "2026-11-17" -> "17 Nov 2026"; "2026-07" -> "Jul 2026"
 const formatDate = (iso) => {
-    const [y, m] = iso.split('-').map(Number);
-    return `${MONTHS[m - 1]} ${y}`;
+    const [y, m, d] = iso.split('-').map(Number);
+    return d ? `${d} ${MONTHS[m - 1]} ${y}` : `${MONTHS[m - 1]} ${y}`;
 };
 
 /** Dated updates: the hand-written news items plus every merged pull request, newest first. */
