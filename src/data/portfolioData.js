@@ -20,7 +20,7 @@ export const portfolioData = {
     // Short bio for the homepage. {mergedCount} is filled in from openSource.
     bio: [
         "I am an AI engineer in Birmingham, UK. I completed my MSc in Artificial Intelligence at **Aston University** in 2026; my dissertation studied how little labelled data a YOLOv8 detector needs. Before that I was a software engineer at **Accenture**, and I studied Computer Science at Dr. Ambedkar Institute of Technology.",
-        "I am interested in **LLM agents**, **retrieval** and the **evaluation of machine-learning systems**: building them, then checking that the numbers hold up. I also find and fix bugs in open-source ML libraries, and {mergedCount} of my pull requests have been merged.",
+        "I am interested in **LLM agents**, **retrieval** and the **evaluation of machine-learning systems**: building them, then checking that the numbers hold up. I also find and fix bugs in open-source ML libraries, and {mergedCount} of my pull requests have been merged. On [Hamropedia](https://hamropedia.com/learn/) I write free courses in machine learning, system design, SQL and algorithms.",
         "I am looking for research opportunities in machine learning and am open to AI and ML engineering roles in the UK (Graduate Route visa to 2028, no sponsorship required)."
     ],
     address: "Birmingham, UK",
@@ -159,7 +159,7 @@ export const portfolioData = {
     // Merged pull requests only (merged = ISO date). The site lists projects in the order they first
     // appear here, so add a new PR next to its project's other PRs, or where the new project should go.
     // The site groups PRs by repo and shows the owner's GitHub avatar, or `logo` if a PR of that repo sets one.
-    // News combines PRs merged on the same day into one item.
+    // News shows one item per month of merges, listing projects and PR numbers without titles.
     openSource: [
         {
             project: "supervision",

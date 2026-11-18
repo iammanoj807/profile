@@ -18,39 +18,27 @@ const joinWithAnd = (parts) =>
 
 const prUrl = (pr) => `https://github.com/${pr.repo}/pull/${pr.pr}`;
 
-// One news item per merge date. A single PR reads "Fix merged into Feast: <title> (#7166)."; several PRs
-// merged on the same day read "Four pull requests merged into DocETL (#528, #529), librosa (#2125) and ...".
+// One news item per month of merges: "Seven pull requests merged into Feast (#7159, #7166), River (#2111) and ...".
+// Projects are listed by their latest merge, newest first; the item sorts by the month's latest merge.
 const prItems = (openSource) => {
-    const byDate = new Map();
+    const byMonth = new Map();
     for (const pr of openSource) {
-        if (!byDate.has(pr.merged)) byDate.set(pr.merged, []);
-        byDate.get(pr.merged).push(pr);
+        const month = pr.merged.slice(0, 7);
+        if (!byMonth.has(month)) byMonth.set(month, []);
+        byMonth.get(month).push(pr);
     }
 
-    return [...byDate].map(([date, prs]) => {
-        if (prs.length === 1) {
-            const [pr] = prs;
-            return {
-                date,
-                key: prUrl(pr),
-                content: (
-                    <>
-                        {pr.area === 'Feature' ? 'Feature' : 'Fix'} merged into <strong>{pr.project}</strong>: {pr.title}{' '}
-                        (<a href={prUrl(pr)} {...ext}>#{pr.pr}</a>).
-                    </>
-                )
-            };
-        }
-
+    return [...byMonth].map(([month, prs]) => {
+        const newestFirst = [...prs].sort((a, b) => b.merged.localeCompare(a.merged));
         const byProject = new Map();
-        for (const pr of prs) {
+        for (const pr of newestFirst) {
             if (!byProject.has(pr.project)) byProject.set(pr.project, []);
             byProject.get(pr.project).push(pr);
         }
         const projects = [...byProject].map(([project, list]) => (
             <React.Fragment key={project}>
                 <strong>{project}</strong> (
-                {list.map((pr, i) => (
+                {[...list].sort((a, b) => a.pr - b.pr).map((pr, i) => (
                     <React.Fragment key={pr.pr}>
                         {i > 0 && ', '}
                         <a href={prUrl(pr)} {...ext}>#{pr.pr}</a>
@@ -59,11 +47,13 @@ const prItems = (openSource) => {
                 )
             </React.Fragment>
         ));
+        const count = NUMBER_WORDS[prs.length] ?? prs.length;
 
         return {
-            date,
-            key: `prs-${date}`,
-            content: <>{NUMBER_WORDS[prs.length] ?? prs.length} pull requests merged into {joinWithAnd(projects)}.</>
+            date: newestFirst[0].merged,
+            label: month,
+            key: `prs-${month}`,
+            content: <>{count} pull request{prs.length > 1 ? 's' : ''} merged into {joinWithAnd(projects)}.</>
         };
     });
 };
@@ -84,7 +74,7 @@ const News = () => {
             <ul className="plain-list dated news">
                 {items.map(item => (
                     <li key={item.key}>
-                        <span className="when">{formatDate(item.date)}</span>
+                        <span className="when">{formatDate(item.label ?? item.date)}</span>
                         <div>{item.content}</div>
                     </li>
                 ))}
