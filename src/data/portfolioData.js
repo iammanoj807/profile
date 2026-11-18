@@ -159,7 +159,7 @@ export const portfolioData = {
     // Merged pull requests only (merged = ISO date). The site lists projects in the order they first
     // appear here, so add a new PR next to its project's other PRs, or where the new project should go.
     // The site groups PRs by repo and shows the owner's GitHub avatar, or `logo` if a PR of that repo sets one.
-    // News shows one item per month of merges, listing projects and PR numbers without titles.
+    // News lists every merged PR as its own item (with its title), newest first.
     openSource: [
         {
             project: "supervision",
