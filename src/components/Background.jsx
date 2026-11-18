@@ -5,7 +5,7 @@ import { renderBoldText } from '../utils/renderBoldText';
 const ext = { target: '_blank', rel: 'noopener noreferrer' };
 
 const gradeText = (edu) =>
-    edu.gradeLabel?.startsWith('CGPA') ? `CGPA ${edu.grade}/10` : `${edu.gradeLabel[0].toUpperCase()}${edu.gradeLabel.slice(1)} ${edu.grade}`;
+    edu.gradeLabel?.startsWith('CGPA') ? `CGPA ${edu.grade}/10` : `${edu.gradeLabel}: ${edu.grade}`;
 
 /** Publication, experience, education and certificates: the short, list-style part of the page. */
 const Background = () => {
