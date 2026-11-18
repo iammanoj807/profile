@@ -104,6 +104,16 @@ strong { font-weight: 600; }
 .item-meta { color: var(--muted); font-style: italic; }
 .item-links { margin-top: 2px; }
 
+/* Projects: figure on the left of title and text on wide screens */
+.item.project {
+  grid-template-areas: "thumb head" "thumb text";
+  grid-template-rows: auto 1fr;
+  row-gap: 0;
+}
+.item.project .item-head { grid-area: head; }
+.item.project .item-thumb { grid-area: thumb; align-self: start; }
+.item.project .item-text { grid-area: text; margin: 8px 0 0; }
+
 /* Open source: the project's GitHub avatar instead of a screenshot */
 .item.oss { grid-template-columns: 240px minmax(0, 1fr); }
 .oss-thumb { display: flex; justify-content: center; padding-top: 4px; }
@@ -145,6 +155,11 @@ strong { font-weight: 600; }
   .photo { order: -1; justify-self: center; width: 150px; height: 150px; }
   .name { font-size: 30px; }
   .item, .item.oss { grid-template-columns: 1fr; gap: 12px; }
+  /* Phones: title, then its figure, then its text, with a rule between projects */
+  .item.project { grid-template-areas: "head" "thumb" "text"; grid-template-rows: auto; row-gap: 12px; padding: 20px 12px; }
+  .item.project .item-text { margin: 0; }
+  .item.project + .item.project { border-top: 1px solid var(--rule); border-radius: 0; }
+  .item.project.highlight { border-radius: 6px; }
   .oss-thumb { justify-content: flex-start; }
   .dated li { grid-template-columns: 1fr; gap: 2px; }
   .pr-merged { white-space: normal; }

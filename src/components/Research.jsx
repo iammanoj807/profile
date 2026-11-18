@@ -17,7 +17,17 @@ const Research = () => (
             const main = p.link || p.github;
             const picture = p.figure || p.screenshot;
             return (
-                <article key={p.title} className={`item${p.highlight ? ' highlight' : ''}`}>
+                <article key={p.title} className={`item project${p.highlight ? ' highlight' : ''}`}>
+                    {/* Title first in the markup so phones show it above its figure */}
+                    <div className="item-head">
+                        <a className="item-title" href={main} {...ext}>{p.title}</a>
+                        <div className="item-meta">{p.kicker} · {p.date}</div>
+                        <div className="item-links">
+                            {p.github && <a href={p.github} {...ext}>code</a>}
+                            {p.github && p.link && <span className="sep" aria-hidden="true">/</span>}
+                            {p.link && <a href={p.link} {...ext}>demo</a>}
+                        </div>
+                    </div>
                     {/* The result figure opens full size in a new tab */}
                     <a className="item-thumb" href={picture} {...ext} title="Open the figure full size">
                         <img
@@ -29,16 +39,7 @@ const Research = () => (
                             decoding="async"
                         />
                     </a>
-                    <div className="item-body">
-                        <a className="item-title" href={main} {...ext}>{p.title}</a>
-                        <div className="item-meta">{p.kicker} · {p.date}</div>
-                        <div className="item-links">
-                            {p.github && <a href={p.github} {...ext}>code</a>}
-                            {p.github && p.link && <span className="sep" aria-hidden="true">/</span>}
-                            {p.link && <a href={p.link} {...ext}>demo</a>}
-                        </div>
-                        <p>{renderBoldText(p.abstract)}</p>
-                    </div>
+                    <p className="item-text">{renderBoldText(p.abstract)}</p>
                 </article>
             );
         })}
