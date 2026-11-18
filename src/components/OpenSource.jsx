@@ -38,10 +38,10 @@ const OpenSource = () => {
                     <article key={g.repo} className="item oss">
                         <a className="oss-thumb" href={repoUrl} {...ext} tabIndex={-1} aria-hidden="true">
                             <img
-                                src={`https://github.com/${owner}.png?size=128`}
+                                src={`https://github.com/${owner}.png?size=288`}
                                 alt=""
-                                width="64"
-                                height="64"
+                                width="88"
+                                height="88"
                                 loading="lazy"
                                 onError={(e) => { e.currentTarget.style.visibility = 'hidden'; }}
                             />

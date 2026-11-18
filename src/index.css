@@ -118,9 +118,9 @@ strong { font-weight: 600; }
 .item.oss { grid-template-columns: 240px minmax(0, 1fr); }
 .oss-thumb { display: flex; justify-content: center; padding-top: 4px; }
 .oss-thumb img {
-  width: 64px;
-  height: 64px;
-  border-radius: 10px;
+  width: 88px;
+  height: 88px;
+  border-radius: 12px;
   border: 1px solid var(--thumb-border);
   background: #fff;
 }
@@ -160,6 +160,7 @@ strong { font-weight: 600; }
   .item.project + .item.project { border-top: 1px solid var(--rule); border-radius: 0; }
   .item.project.highlight { border-radius: 6px; }
   .oss-thumb { justify-content: flex-start; }
+  .oss-thumb img { width: 72px; height: 72px; }
   .dated li { grid-template-columns: 1fr; gap: 2px; }
 }
 
