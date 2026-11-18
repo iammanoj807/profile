@@ -46,6 +46,21 @@ AI Software Engineer with an MSc in Artificial Intelligence from Aston Universit
 
 ---
 
+### 🧩 Open Source Contributions
+
+Merged pull requests only, newest first. Most are bug fixes in machine learning libraries. [All my merged PRs →](https://github.com/search?q=author%3Aiammanoj807+is%3Apr+is%3Amerged+-user%3Aiammanoj807&type=pullrequests)
+
+| Project | What I fixed | Pull request | Merged |
+|---------|--------------|--------------|--------|
+| **River**<br>online machine learning | River 0.27.0's Rust Hoeffding tree never reactivated a deactivated leaf, so the default `HoeffdingTreeClassifier` and `ARFClassifier` could stop learning on imbalanced or changing streams (recall **0.0** where 0.26.1 gave **1.0**). The fix also heals models pickled with 0.27.0 | [online-ml/river#2111](https://github.com/online-ml/river/pull/2111) | 17 Nov 2026 |
+| **Feast**<br>feature store | With a partial `with_join_key_map`, the DuckDB offline store dropped the unrenamed join keys from the point-in-time join and silently returned another row's features (**99** instead of **10**) | [feast-dev/feast#7159](https://github.com/feast-dev/feast/pull/7159) | 16 Nov 2026 |
+| **librosa**<br>audio analysis | `peak_pick` reported peaks below its threshold on long float32 signals because its window sums lost precision; they now accumulate in **float64** | [librosa/librosa#2125](https://github.com/librosa/librosa/pull/2125) | 14 Nov 2026 |
+| **DocETL**<br>LLM pipelines, UC Berkeley | The reduce operator dropped retriever context from its fold and merge calls (#528), and `persist_intermediates` with a `merge_prompt` crashed with a `KeyError` (#529) | [ucbepic/docetl#528](https://github.com/ucbepic/docetl/pull/528) · [#529](https://github.com/ucbepic/docetl/pull/529) | 14 Nov 2026 |
+| **open-notebook** | Made the Docling vision endpoint (URL, model and prompt) configurable in Settings | [lfnovo/open-notebook#1562](https://github.com/lfnovo/open-notebook/pull/1562) | 14 Nov 2026 |
+| **supervision**<br>computer vision, Roboflow | Without OpenCV installed, palette images with transparency were read as palette index and alpha instead of colour, so `IconAnnotator` crashed on them. Shipped in **0.30.6** | [roboflow/supervision#2624](https://github.com/roboflow/supervision/pull/2624) | 25 Sep 2026 |
+
+---
+
 ### 📄 Publication
 
 Vinutha H., **M. K. Thapa**, P. Pandey, N. Pun, N. Paudel. *Indian Currency Recognition for Visually Impaired using Deep Learning Technique*. IJIRCCE, 9(7), July 2021. DOI: 10.15680/IJIRCCE.2021.0907159 · [PDF](https://iammanoj807.github.io/profile/indian-currency-recognition-ijircce-2021.pdf)

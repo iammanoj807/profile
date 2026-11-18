@@ -1,34 +1,20 @@
 import React from 'react';
-import { MotionConfig } from 'framer-motion';
-import Navigation from './components/Navigation';
-import HeroSection from './components/HeroSection';
-import StatsSection from './components/StatsSection';
-import ProjectsSection from './components/ProjectsSection';
-import MethodSection from './components/MethodSection';
-import OpenSourceSection from './components/OpenSourceSection';
-import ExperienceSection from './components/ExperienceSection';
-import SkillsSection from './components/SkillsSection';
-import EducationSection from './components/EducationSection';
-import CertificationsSection from './components/CertificationsSection';
-import Footer, { ContactSection } from './components/Footer';
+import Intro from './components/Intro';
+import News from './components/News';
+import Research from './components/Research';
+import OpenSource from './components/OpenSource';
+import Background from './components/Background';
 
+// A plain, single-column academic homepage.
 const App = () => (
-    <MotionConfig reducedMotion="user">
-        <Navigation />
-        <main id="main">
-            <HeroSection />
-            <StatsSection />
-            <ProjectsSection />
-            <MethodSection />
-            <OpenSourceSection />
-            <ExperienceSection />
-            <SkillsSection />
-            <EducationSection />
-            <CertificationsSection />
-            <ContactSection />
-        </main>
-        <Footer />
-    </MotionConfig>
+    <main className="page">
+        <Intro />
+        <News />
+        <Research />
+        <OpenSource />
+        <Background />
+        <footer className="page-footer">© {new Date().getFullYear()} Manoj Kumar Thapa</footer>
+    </main>
 );
 
 export default App;

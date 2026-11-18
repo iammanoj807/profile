@@ -2,6 +2,11 @@ import planckShot from '../assets/projects/planck.webp';
 import cognigraphShot from '../assets/projects/cognigraph.webp';
 import fruitguardShot from '../assets/projects/fruitguard.webp';
 import neuroarcShot from '../assets/projects/neuroarc.webp';
+// Result figures drawn from each project's own result files by scripts/make_figures.py
+import fruitguardFig from '../assets/figures/fruitguard.svg';
+import planckFig from '../assets/figures/planck.svg';
+import cognigraphFig from '../assets/figures/cognigraph.svg';
+import neuroarcFig from '../assets/figures/neuroarc.svg';
 
 export const portfolioData = {
     name: "Manoj Kumar Thapa",
@@ -9,6 +14,12 @@ export const portfolioData = {
     headlineWords: ["LLM agents", "graph-RAG systems", "vision models", "production APIs"],
     description: "MSc Artificial Intelligence graduate (**Distinction**) from Aston University. I build AI systems end to end: **Python and FastAPI** on the back, **React** on the front, and **golden sets, fault injection and baselines** to show they work. Before my MSc I was a software engineer at **Accenture**, where I cut REST API latency by **40%** in Java Spring Boot services.",
     resume_link: `${import.meta.env.BASE_URL}CV.pdf`,
+    // Short bio for the homepage. {mergedCount} is filled in from openSource.
+    bio: [
+        "I am an AI engineer in Birmingham, UK. I completed my MSc in Artificial Intelligence at **Aston University** with **Distinction** in 2026; my dissertation studied how little labelled data a YOLOv8 detector needs. Before that I was a software engineer at **Accenture**, and I studied Computer Science at Dr. Ambedkar Institute of Technology.",
+        "I am interested in **LLM agents**, **retrieval** and the **evaluation of machine-learning systems**: building them, then checking that the numbers hold up. I also find and fix bugs in open-source ML libraries, and {mergedCount} of my pull requests have been merged.",
+        "I am looking for research opportunities in machine learning and am open to AI and ML engineering roles in the UK (Graduate Route visa to 2028, no sponsorship required)."
+    ],
     address: "Birmingham, UK",
     relocation: "Open to relocation",
     visa: "UK Graduate Route visa valid to 2028",
@@ -39,7 +50,10 @@ export const portfolioData = {
         {
             title: "FruitGuard AI",
             screenshot: fruitguardShot,
+            figure: fruitguardFig,
             kicker: "MSc dissertation · computer vision",
+            abstract: "Fine-tuned YOLOv8 with a two-phase transfer-learning pipeline: **96.3%** classification accuracy from only **207** labelled images, a 34x reduction against the 7,108 used for pre-training, **+6.03 pp** mAP@0.5:0.95 over the COCO-pretrained baseline, and **73 FPS** with ONNX Runtime.",
+            highlight: true,
             date: "Aug 2025 – Apr 2026",
             metric: { value: "96.3%", label: "classification accuracy" },
             subMetrics: [
@@ -59,7 +73,9 @@ export const portfolioData = {
         {
             title: "Planck AI",
             screenshot: planckShot,
+            figure: planckFig,
             kicker: "Agentic research assistant",
+            abstract: "An LLM research agent written without an agent framework: 4 tools, up to 8 planning steps and mid-run failover across Groq, Gemini and NVIDIA. It finished **30/30** tasks with the primary provider disabled on every call, and chose the correct tool **80%** of the time on a 30-question golden set whose rubric was committed before the first run.",
             date: "Sep 2025 – Nov 2025",
             metric: { value: "30/30", label: "tasks completed under fault injection" },
             subMetrics: [
@@ -79,7 +95,9 @@ export const portfolioData = {
         {
             title: "CogniGraph",
             screenshot: cognigraphShot,
+            figure: cognigraphFig,
             kicker: "Graph RAG explorer",
+            abstract: "A graph RAG explorer that turns documents, including scanned PDFs, into a 3D knowledge graph. My first test questions overstated hit@1 by **35 points**; on the rebuilt set it reaches **95% hit@3** against 80% for a keyword baseline. I also found that the embedding model silently drops text past about 1,400 characters.",
             date: "Jun 2025 – Jul 2025",
             metric: { value: "95%", label: "retrieval hit@3 on the rebuilt set, against 80% for a keyword baseline" },
             subMetrics: [
@@ -99,7 +117,9 @@ export const portfolioData = {
         {
             title: "NeuroArc",
             screenshot: neuroarcShot,
+            figure: neuroarcFig,
             kicker: "AI job application assistant",
+            abstract: "A job-application assistant that scores CV–job fit only from evidence quoted from the CV: the model returns requirement–evidence pairs as structured JSON, and code drops any requirement whose quote is not in the CV.",
             date: "Nov 2025 – Dec 2025",
             metric: { value: "Verified", label: "fit scores built only from evidence found in the CV text" },
             subMetrics: [
@@ -117,14 +137,20 @@ export const portfolioData = {
         }
     ],
 
-    // Merged pull requests only, newest first. When another one merges, add it at the top.
+    // News items besides merged PRs (those are listed automatically). date: "YYYY-MM" or "YYYY-MM-DD".
+    news: [
+        { date: "2026-07", text: "Completed my MSc in Artificial Intelligence at Aston University with **Distinction**." }
+    ],
+
+    // Merged pull requests only. When another one merges, add it at the top (merged = ISO date).
+    // The site groups PRs by repo and shows the owner's GitHub avatar; README.md has the same list.
     openSource: [
         {
             project: "River",
             area: "Online machine learning",
             repo: "online-ml/river",
             pr: 2111,
-            merged: "17 Nov 2026",
+            merged: "2026-11-17",
             mergedBy: "MaxHalford",
             title: "Hoeffding tree leaves that stopped learning",
             summary: "River 0.27.0's new Rust tree never reactivated a deactivated leaf, so the default HoeffdingTreeClassifier and ARFClassifier could stop learning on imbalanced or changing streams: recall **0.0** where 0.26.1 gave **1.0**. The fix restores the old behaviour and also heals models pickled with 0.27.0.",
@@ -135,7 +161,7 @@ export const portfolioData = {
             area: "Feature store",
             repo: "feast-dev/feast",
             pr: 7159,
-            merged: "16 Nov 2026",
+            merged: "2026-11-16",
             mergedBy: "ntkathole",
             title: "Wrong training data from a partial join-key map",
             summary: "When with_join_key_map renamed only some join keys, the DuckDB offline store dropped the others from the point-in-time join and silently returned another row's features (**99** instead of **10**). The file store and online retrieval already gave the right answer.",
@@ -146,7 +172,7 @@ export const portfolioData = {
             area: "Audio analysis",
             repo: "librosa/librosa",
             pr: 2125,
-            merged: "14 Nov 2026",
+            merged: "2026-11-14",
             mergedBy: "bmcfee",
             title: "peak_pick returned peaks below its threshold",
             summary: "On long float32 signals, peak_pick summed its windows in float32 and lost precision, so it reported peaks below the threshold. The window sums now accumulate in **float64**.",
@@ -157,7 +183,7 @@ export const portfolioData = {
             area: "LLM pipelines · UC Berkeley",
             repo: "ucbepic/docetl",
             pr: 528,
-            merged: "14 Nov 2026",
+            merged: "2026-11-14",
             mergedBy: "shreyashankar",
             title: "Reduce prompts that lost their retrieved context",
             summary: "The reduce operator dropped retriever context from its fold and merge calls, so those LLM prompts ran without the retrieved documents.",
@@ -168,7 +194,7 @@ export const portfolioData = {
             area: "LLM pipelines · UC Berkeley",
             repo: "ucbepic/docetl",
             pr: 529,
-            merged: "14 Nov 2026",
+            merged: "2026-11-14",
             mergedBy: "shreyashankar",
             title: "Crash when saving intermediate results",
             summary: "Turning on persist_intermediates in a fold-and-merge reduce with a merge_prompt crashed the pipeline with a KeyError.",
@@ -179,7 +205,7 @@ export const portfolioData = {
             area: "Feature",
             repo: "lfnovo/open-notebook",
             pr: 1562,
-            merged: "14 Nov 2026",
+            merged: "2026-11-14",
             mergedBy: "lfnovo",
             title: "Docling vision settings",
             summary: "Made the Docling vision endpoint (URL, model and prompt) configurable in Settings.",
@@ -190,7 +216,7 @@ export const portfolioData = {
             area: "Computer vision · Roboflow",
             repo: "roboflow/supervision",
             pr: 2624,
-            merged: "25 Sep 2026",
+            merged: "2026-09-25",
             mergedBy: "Borda",
             title: "IconAnnotator crash on palette icons",
             summary: "Without OpenCV installed, supervision read palette images with transparency as palette index and alpha instead of colour, so IconAnnotator crashed on them. Shipped in release **0.30.6**.",
@@ -339,6 +365,7 @@ export const portfolioData = {
             skills: ["C++", "Data Structures", "DBMS", "Operating Systems", "Full-stack Development"],
             publication: {
                 title: "Indian Currency Recognition for Visually Impaired using Deep Learning Technique",
+                authors: "Vinutha H., **M. K. Thapa**, P. Pandey, N. Pun, N. Paudel",
                 venue: "IJIRCCE, Vol. 9 Issue 7, July 2021 \u00b7 DOI 10.15680/IJIRCCE.2021.0907159",
                 link: `${import.meta.env.BASE_URL}indian-currency-recognition-ijircce-2021.pdf`
             }
