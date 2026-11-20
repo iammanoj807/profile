@@ -9,7 +9,7 @@ import cognigraphFig from '../assets/figures/cognigraph.svg';
 import neuroarcFig from '../assets/figures/neuroarc.svg';
 import rehearsalFig from '../assets/figures/rehearsal.svg';
 // Project logo used instead of the owner's GitHub avatar (open-notebook's README logo, MIT licence)
-import openNotebookLogo from '../assets/logos/open-notebook.svg';
+import openNotebookLogo from '../assets/logos/open-notebook.png';
 
 export const portfolioData = {
     name: "Manoj Kumar Thapa",
@@ -20,7 +20,7 @@ export const portfolioData = {
     // Short bio for the homepage. {mergedCount} is filled in from openSource.
     bio: [
         "I am an AI engineer in Birmingham, UK. I completed my MSc in Artificial Intelligence at **Aston University** in 2026; my dissertation studied how little labelled data a YOLOv8 detector needs. Before that I was a software engineer at **Accenture**, and I studied Computer Science at Dr. Ambedkar Institute of Technology.",
-        "I am interested in **LLM agents**, **retrieval** and the **evaluation of machine-learning systems**: building them, then checking that the numbers hold up. I also find and fix bugs in open-source ML libraries, and {mergedCount} of my pull requests have been merged. On [Hamropedia](https://hamropedia.com/learn/) I write free courses in machine learning, system design, SQL and algorithms.",
+        "I am interested in **LLM agents**, **retrieval** and the **evaluation of machine-learning systems**: building them, then checking that the numbers hold up. I also find and fix bugs in open-source ML libraries, and {mergedCount} of my pull requests have been merged. On [learn.hamropedia.com](https://learn.hamropedia.com/) I publish free courses in machine learning, SQL and system design.",
         "I am looking for research opportunities in machine learning and am open to AI and ML engineering roles in the UK (Graduate Route visa to 2028, no sponsorship required)."
     ],
     address: "Birmingham, UK",
@@ -162,6 +162,16 @@ export const portfolioData = {
     // News lists every merged PR as its own item (with its title), newest first.
     openSource: [
         {
+            project: "OpenCV",
+            area: "Computer vision",
+            repo: "opencv/opencv",
+            pr: 30822,
+            merged: "2026-11-20",
+            title: "64-bit integer add and subtract that lost precision",
+            summary: "In OpenCV 5.x, cv::add and cv::subtract of a 64-bit integer array with a narrower integer array computed through double, so values above 2⁵³ lost their low bits. They now stay in 64-bit integers, which is also up to **3.6×** faster on one thread.",
+            tags: ["C++", "OpenCV"]
+        },
+        {
             project: "supervision",
             area: "Computer vision · Roboflow",
             repo: "roboflow/supervision",
@@ -241,16 +251,6 @@ export const portfolioData = {
             title: "Hoeffding tree leaves that stopped learning",
             summary: "River 0.27.0's new Rust tree never reactivated a deactivated leaf, so the default HoeffdingTreeClassifier and ARFClassifier could stop learning on imbalanced or changing streams: recall **0.0** where 0.26.1 gave **1.0**. The fix restores the old behaviour and also heals models pickled with 0.27.0.",
             tags: ["Rust", "Python", "Streaming ML"]
-        },
-        {
-            project: "OpenCV",
-            area: "Computer vision",
-            repo: "opencv/opencv",
-            pr: 30822,
-            merged: "2026-11-20",
-            title: "64-bit integer add and subtract that lost precision",
-            summary: "In OpenCV 5.x, cv::add and cv::subtract of a 64-bit integer array with a narrower integer array computed through double, so values above 2⁵³ lost their low bits. They now stay in 64-bit integers, which is also up to **3.6×** faster on one thread.",
-            tags: ["C++", "OpenCV"]
         }
     ],
 
