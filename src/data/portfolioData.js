@@ -241,6 +241,16 @@ export const portfolioData = {
             title: "Hoeffding tree leaves that stopped learning",
             summary: "River 0.27.0's new Rust tree never reactivated a deactivated leaf, so the default HoeffdingTreeClassifier and ARFClassifier could stop learning on imbalanced or changing streams: recall **0.0** where 0.26.1 gave **1.0**. The fix restores the old behaviour and also heals models pickled with 0.27.0.",
             tags: ["Rust", "Python", "Streaming ML"]
+        },
+        {
+            project: "OpenCV",
+            area: "Computer vision",
+            repo: "opencv/opencv",
+            pr: 30822,
+            merged: "2026-11-20",
+            title: "64-bit integer add and subtract that lost precision",
+            summary: "In OpenCV 5.x, cv::add and cv::subtract of a 64-bit integer array with a narrower integer array computed through double, so values above 2⁵³ lost their low bits. They now stay in 64-bit integers, which is also up to **3.6×** faster on one thread.",
+            tags: ["C++", "OpenCV"]
         }
     ],
 
