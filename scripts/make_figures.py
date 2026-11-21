@@ -63,7 +63,8 @@ PREVIEW = os.environ.get("FIG_PREVIEW_DIR")  # optional: also write PNG previews
 def save(fig, name):
     fig.savefig(OUT / f"{name}.svg", format="svg", facecolor="white")
     if PREVIEW:
-        fig.savefig(Path(PREVIEW) / f"{name}.png", format="png", facecolor="white")
+        fig.savefig(Path(PREVIEW) / f"{name}.png", format="png", facecolor="white",
+                    dpi=int(os.environ.get("FIG_PREVIEW_DPI", "100")))
     plt.close(fig)
 
 
