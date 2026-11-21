@@ -251,6 +251,16 @@ export const portfolioData = {
             title: "Hoeffding tree leaves that stopped learning",
             summary: "River 0.27.0's new Rust tree never reactivated a deactivated leaf, so the default HoeffdingTreeClassifier and ARFClassifier could stop learning on imbalanced or changing streams: recall **0.0** where 0.26.1 gave **1.0**. The fix restores the old behaviour and also heals models pickled with 0.27.0.",
             tags: ["Rust", "Python", "Streaming ML"]
+        },
+        {
+            project: "geoai",
+            area: "Geospatial AI · University of Tennessee",
+            repo: "opengeos/geoai",
+            pr: 981,
+            merged: "2026-11-21",
+            title: "Detection mAP that differed from COCO",
+            summary: "evaluate_coco_metrics broke two COCO rules: a predicted class without ground truth lowered only mAP@[0.5:0.95], and a detection whose best ground-truth box was already matched counted as a false positive even when another box qualified. On 10–40-image evaluation sets mAP@[0.5:0.95] came out too low in up to **65%** of draws; it now matches pycocotools on 1,438 random scenes.",
+            tags: ["Python", "Object detection", "COCO"]
         }
     ],
 
