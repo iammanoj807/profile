@@ -13,15 +13,15 @@ import openNotebookLogo from '../assets/logos/open-notebook.png';
 
 export const portfolioData = {
     name: "Manoj Kumar Thapa",
-    title: "Prospective PhD student in machine learning",
+    title: "Prospective PhD student in Computer Science and AI",
     // Shown under the name on the homepage.
-    tagline: "Prospective PhD student in machine learning · Fall 2027",
+    tagline: "Prospective PhD student · Computer Science & AI · Fall 2027",
     headlineWords: ["LLM agents", "graph-RAG systems", "vision models", "production APIs"],
     description: "MSc Artificial Intelligence graduate from Aston University. I build AI systems end to end: **Python and FastAPI** on the back, **React** on the front, and **golden sets, fault injection and baselines** to show they work. Before my MSc I was a software engineer at **Accenture**, where I cut REST API latency by **40%** in Java Spring Boot services.",
     resume_link: `${import.meta.env.BASE_URL}CV.pdf`,
     // Short bio for the homepage. {mergedCount} is filled in from openSource.
     bio: [
-        "I am applying to **PhD programs in Computer Science for Fall 2027**. I completed my MSc in Artificial Intelligence at **Aston University** in 2026; my thesis, supervised by Dr. Dan Dai, studied how far transfer learning can cut the labelled data an object detector needs. Before that I was a software engineer at **Accenture**, and I studied Computer Science at Dr. Ambedkar Institute of Technology.",
+        "I am applying to **PhD programs in Computer Science and AI for Fall 2027**. I completed my MSc in Artificial Intelligence at **Aston University** in 2026; my thesis, supervised by Dr. Dan Dai, studied how far transfer learning can cut the labelled data an object detector needs. Before that I was a software engineer at **Accenture**, and I studied Computer Science at Dr. Ambedkar Institute of Technology.",
         "My research interests are **large language models and AI agents**, **retrieval-augmented generation**, **computer vision**, **low-data and self-supervised learning**, and **reliable ML systems**. I like to build a model and then test whether its numbers hold up against baselines, ablations and reference implementations. I also find and fix bugs in widely used ML libraries: {mergedCount} of my pull requests have been merged, in projects including OpenCV, Feast and UC Berkeley's DocETL.",
         "I am also open to research assistant positions in machine learning. On [learn.hamropedia.com](https://learn.hamropedia.com/) I publish free courses in machine learning, SQL and system design."
     ],
@@ -155,7 +155,7 @@ export const portfolioData = {
 
     // News items besides merged PRs (those are listed automatically). date: "YYYY-MM" or "YYYY-MM-DD".
     news: [
-        { date: "2026-11-23", text: "Applying to **PhD programs in Computer Science** for Fall 2027." },
+        { date: "2026-11-23", text: "Applying to **PhD programs in Computer Science and AI** for Fall 2027." },
         { date: "2026-11-15", text: "Took part in the **2026 NASA Space Apps Challenge** (14–15 Nov) with Rehearsal Grounds, which finds Earth terrain that matches Moon and Mars landing sites." },
         { date: "2026-04-09", text: "Awarded my MSc in Artificial Intelligence by Aston University." }
     ],

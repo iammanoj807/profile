@@ -16,7 +16,7 @@ colors = [darkest((80, t, 740, b)) for t, b in bands[:3]] + [(0x17, 0x64, 0xc0)]
 weights = [400, 400, 400, 600]
 lines = [
     "Manoj Kumar Thapa",
-    "Prospective PhD student in machine learning",
+    "Prospective PhD student · Computer Science & AI",
     "LLM agents · computer vision · reliable ML",
     "iammanoj807.github.io/profile",
 ]
