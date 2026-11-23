@@ -6,7 +6,7 @@
   --text: #24292f;
   --muted: #5d636b;
   --link: #1764c0;
-  --link-hover: #d9730d;
+  --link-hover: #1764c0;  /* same blue as links: hover shows only the underline */
   --rule: #e6e4df;
   --highlight: #fff6d0;
   --thumb-border: #e0ded8;
