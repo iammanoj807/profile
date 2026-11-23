@@ -21,7 +21,7 @@ export const portfolioData = {
     bio: [
         "I am an AI engineer in Birmingham, UK. I completed my MSc in Artificial Intelligence at **Aston University** in 2026; my dissertation studied how little labelled data a YOLOv8 detector needs. Before that I was a software engineer at **Accenture**, and I studied Computer Science at Dr. Ambedkar Institute of Technology.",
         "I am interested in **LLM agents**, **retrieval** and the **evaluation of machine-learning systems**: building them, then checking that the numbers hold up. I also find and fix bugs in open-source ML libraries, and {mergedCount} of my pull requests have been merged. On [learn.hamropedia.com](https://learn.hamropedia.com/) I publish free courses in machine learning, SQL and system design.",
-        "I am looking for research opportunities in machine learning and am open to AI and ML engineering roles in the UK (Graduate Route visa to 2028, no sponsorship required)."
+        "I am looking for research opportunities in machine learning and am open to AI and ML engineering roles in the UK."
     ],
     address: "Birmingham, UK",
     relocation: "Open to relocation",
