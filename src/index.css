@@ -1,15 +1,15 @@
 /* A plain academic homepage: soft off-white page, one sans-serif font, blue links, one column. */
 
 :root {
-  --bg: #faf9f6;        /* warm off-white page, easier on the eyes than pure white */
+  --bg: #f2efe7;        /* warm off-white page, easier on the eyes than pure white */
   --card: #ffffff;      /* figures and logos sit on white cards */
   --text: #24292f;
   --muted: #5d636b;
   --link: #1764c0;
   --link-hover: #1764c0;  /* same blue as links: hover shows only the underline */
-  --rule: #e6e4df;
+  --rule: #dad6cc;
   --highlight: #fff6d0;
-  --thumb-border: #e0ded8;
+  --thumb-border: #d6d2c8;
   --page: 860px;
 }
 
