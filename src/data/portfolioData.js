@@ -275,6 +275,16 @@ export const portfolioData = {
             title: "Detection mAP that differed from COCO",
             summary: "evaluate_coco_metrics broke two COCO rules: a predicted class without ground truth lowered only mAP@[0.5:0.95], and a detection whose best ground-truth box was already matched counted as a false positive even when another box qualified. On 10–40-image evaluation sets mAP@[0.5:0.95] came out too low in up to **65%** of draws; it now matches pycocotools on 1,438 random scenes.",
             tags: ["Python", "Object detection", "COCO"]
+        },
+        {
+            project: "PyTorch Connectomics",
+            area: "Biomedical image segmentation · Boston College",
+            repo: "PytorchConnectomics/pytorch_connectomics",
+            pr: 233,
+            merged: "2026-11-23",
+            title: "Dice metric that crashed or measured pixel accuracy",
+            summary: "The dice evaluation metric used torchmetrics.Dice, which torchmetrics 1.7 removed, so the test stage crashed on every fresh install; on older torchmetrics the evaluation dice was really pixel accuracy (**0.976** where the true Dice was **0.600**). It now uses an F1-score metric that matches 2TP/(2TP+FP+FN).",
+            tags: ["Python", "PyTorch", "Segmentation"]
         }
     ],
 
