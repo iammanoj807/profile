@@ -232,6 +232,16 @@ export const portfolioData = {
             tags: ["Python", "DuckDB", "Ibis"]
         },
         {
+            project: "Feast",
+            area: "Feature store",
+            repo: "feast-dev/feast",
+            pr: 7177,
+            merged: "2026-11-22",
+            title: "Request columns read as the source timestamp",
+            summary: "In the file (Dask) offline store, an entity dataframe column named like a source's timestamp field was used in place of the source's own timestamps, so get_historical_features returned missing or future feature values (**NA, NA, 30** instead of **20, 20, 20**) and dropped the request column. The source timestamp is now kept under a separate name during the join.",
+            tags: ["Python", "Dask", "pandas"]
+        },
+        {
             project: "open-notebook",
             area: "Feature",
             repo: "lfnovo/open-notebook",
