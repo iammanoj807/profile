@@ -7,9 +7,9 @@ const ext = { target: '_blank', rel: 'noopener noreferrer' };
 const gradeText = (edu) =>
     edu.gradeLabel?.startsWith('CGPA') ? `CGPA ${edu.grade}/10` : `${edu.gradeLabel}: ${edu.grade}`;
 
-/** Publication, experience, education and certificates: the short, list-style part of the page. */
+/** Publication, education and experience: the short, list-style part of the page. */
 const Background = () => {
-    const { education, experience, certifications } = portfolioData;
+    const { education, experience } = portfolioData;
     const publications = education.map(e => e.publication).filter(Boolean);
 
     return (
@@ -29,20 +29,7 @@ const Background = () => {
                 </section>
             )}
 
-            <section className="section" aria-labelledby="experience">
-                <h2 id="experience">Experience</h2>
-                <ul className="plain-list dated">
-                    {experience.map(e => (
-                        <li key={e.company}>
-                            <span className="when">{e.duration}</span>
-                            <div>
-                                <strong>{e.title}</strong>, {e.company}, {e.location}.
-                                <div className="muted">{renderBoldText(e.description[0])}</div>
-                            </div>
-                        </li>
-                    ))}
-                </ul>
-            </section>
+
 
             <section className="section" aria-labelledby="education">
                 <h2 id="education">Education</h2>
@@ -58,21 +45,30 @@ const Background = () => {
                                         <a href={e.transcript} {...ext}>transcript</a>
                                     </>
                                 )}
+                                {e.thesis && (
+                                    <div className="muted">
+                                        Thesis: <em>{e.thesis}</em>{e.supervisor && <>, supervised by {e.supervisor}</>}
+                                    </div>
+                                )}
                             </div>
                         </li>
                     ))}
                 </ul>
-                {certifications?.length > 0 && (
-                    <p className="certs">
-                        Certificates:{' '}
-                        {certifications.map((c, i) => (
-                            <React.Fragment key={c.title}>
-                                {i > 0 && ' · '}
-                                <a href={c.link} {...ext}>{c.title}</a> ({c.subtitle})
-                            </React.Fragment>
-                        ))}
-                    </p>
-                )}
+            </section>
+
+            <section className="section" aria-labelledby="experience">
+                <h2 id="experience">Teaching and work experience</h2>
+                <ul className="plain-list dated">
+                    {experience.map(e => (
+                        <li key={e.company}>
+                            <span className="when">{e.duration}</span>
+                            <div>
+                                <strong>{e.title}</strong>, {e.company}, {e.location}.
+                                <div className="muted">{renderBoldText(e.description[0])}</div>
+                            </div>
+                        </li>
+                    ))}
+                </ul>
             </section>
         </>
     );

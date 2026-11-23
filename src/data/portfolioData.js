@@ -13,15 +13,17 @@ import openNotebookLogo from '../assets/logos/open-notebook.png';
 
 export const portfolioData = {
     name: "Manoj Kumar Thapa",
-    title: "AI Software Engineer",
+    title: "Prospective PhD student in machine learning",
+    // Shown under the name on the homepage.
+    tagline: "Prospective PhD student in machine learning · Fall 2027",
     headlineWords: ["LLM agents", "graph-RAG systems", "vision models", "production APIs"],
     description: "MSc Artificial Intelligence graduate from Aston University. I build AI systems end to end: **Python and FastAPI** on the back, **React** on the front, and **golden sets, fault injection and baselines** to show they work. Before my MSc I was a software engineer at **Accenture**, where I cut REST API latency by **40%** in Java Spring Boot services.",
     resume_link: `${import.meta.env.BASE_URL}CV.pdf`,
     // Short bio for the homepage. {mergedCount} is filled in from openSource.
     bio: [
-        "I am an AI engineer in Birmingham, UK. I completed my MSc in Artificial Intelligence at **Aston University** in 2026; my dissertation studied how little labelled data a YOLOv8 detector needs. Before that I was a software engineer at **Accenture**, and I studied Computer Science at Dr. Ambedkar Institute of Technology.",
-        "I am interested in **LLM agents**, **retrieval** and the **evaluation of machine-learning systems**: building them, then checking that the numbers hold up. I also find and fix bugs in open-source ML libraries, and {mergedCount} of my pull requests have been merged. On [learn.hamropedia.com](https://learn.hamropedia.com/) I publish free courses in machine learning, SQL and system design.",
-        "I am looking for research opportunities in machine learning and am open to AI and ML engineering roles in the UK."
+        "I am applying to **PhD programs in Computer Science for Fall 2027**. I completed my MSc in Artificial Intelligence at **Aston University** in 2026; my thesis, supervised by Dr. Dan Dai, studied how far transfer learning can cut the labelled data an object detector needs. Before that I was a software engineer at **Accenture**, and I studied Computer Science at Dr. Ambedkar Institute of Technology.",
+        "My research interests are **large language models and AI agents**, **retrieval-augmented generation**, **computer vision**, **low-data and self-supervised learning**, and **reliable ML systems**. I like to build a model and then test whether its numbers hold up against baselines, ablations and reference implementations. I also find and fix bugs in widely used ML libraries: {mergedCount} of my pull requests have been merged, in projects including OpenCV, Feast and UC Berkeley's DocETL.",
+        "I am also open to research assistant positions in machine learning. On [learn.hamropedia.com](https://learn.hamropedia.com/) I publish free courses in machine learning, SQL and system design."
     ],
     address: "Birmingham, UK",
     relocation: "Open to relocation",
@@ -64,7 +66,7 @@ export const portfolioData = {
             title: "FruitGuard AI",
             screenshot: fruitguardShot,
             figure: fruitguardFig,
-            kicker: "MSc dissertation · computer vision",
+            kicker: "MSc thesis · computer vision",
             abstract: "Fine-tuned YOLOv8 with a two-phase transfer-learning pipeline: **96.3%** classification accuracy from only **207** labelled images, a 34x reduction against the 7,108 used for pre-training, **+6.03 pp** mAP@0.5:0.95 over the COCO-pretrained baseline, and **73 FPS** with ONNX Runtime.",
             highlight: true,
             date: "Aug 2025 – Apr 2026",
@@ -129,6 +131,7 @@ export const portfolioData = {
         },
         {
             title: "NeuroArc",
+            hidden: true, // not shown on the research-focused homepage
             screenshot: neuroarcShot,
             figure: neuroarcFig,
             kicker: "AI job application assistant",
@@ -152,6 +155,7 @@ export const portfolioData = {
 
     // News items besides merged PRs (those are listed automatically). date: "YYYY-MM" or "YYYY-MM-DD".
     news: [
+        { date: "2026-11-23", text: "Applying to **PhD programs in Computer Science** for Fall 2027." },
         { date: "2026-11-15", text: "Took part in the **2026 NASA Space Apps Challenge** (14–15 Nov) with Rehearsal Grounds, which finds Earth terrain that matches Moon and Mars landing sites." },
         { date: "2026-04-09", text: "Awarded my MSc in Artificial Intelligence by Aston University." }
     ],
@@ -400,7 +404,9 @@ export const portfolioData = {
             location: "Birmingham, UK",
             duration: "Jan 2025 – Jul 2026",
             grade: "70.37%",
-            gradeLabel: "Marks",
+            gradeLabel: "Average mark",
+            thesis: "Fruit Detection based on Transfer Learning for Agricultural Automation",
+            supervisor: "Dr. Dan Dai",
             transcript: `${import.meta.env.BASE_URL}transcripts/msc-ai-aston-transcript.jpg`,
             description: "Deep learning, NLP and computer vision. Dissertation: FruitGuard AI, few-shot fruit detection with YOLOv8, 96.3% accuracy from 207 labelled images, a 34x reduction against the pre-training set.",
             skills: ["PyTorch", "Deep Learning", "Computer Vision", "NLP", "Python"]

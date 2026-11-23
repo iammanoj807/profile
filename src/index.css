@@ -57,6 +57,7 @@ strong { font-weight: 600; }
   letter-spacing: 0.01em;
 }
 .intro p { margin: 0 0 12px; }
+.intro .tagline { margin: -4px 0 14px; font-size: 18px; color: var(--muted); text-align: center; }
 .links { text-align: center; margin-top: 18px !important; font-size: 17px; }
 .photo {
   width: 200px;

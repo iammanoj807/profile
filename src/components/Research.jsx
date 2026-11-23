@@ -8,12 +8,12 @@ const Research = () => (
     <section className="section" aria-labelledby="research">
         <h2 id="research">Research and projects</h2>
         <p className="section-intro">
-            Systems I built and then measured with golden sets, baselines and fault injection.
+            Research projects and systems I built, each measured against baselines, ablations or held-out test sets.
             Each figure shows a real result and opens full size; the <span className="hl-sample">highlighted</span> project
-            is my MSc dissertation.
+            is my MSc thesis.
         </p>
 
-        {portfolioData.projects.map(p => {
+        {portfolioData.projects.filter(p => !p.hidden).map(p => {
             const main = p.link || p.github;
             const picture = p.figure || p.screenshot;
             return (

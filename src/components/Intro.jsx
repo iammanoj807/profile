@@ -9,7 +9,7 @@ const inWords = (n) => NUMBER_WORDS[n] ?? String(n);
 const external = (href) => (href.startsWith('mailto:') ? {} : { target: '_blank', rel: 'noopener noreferrer' });
 
 const Intro = () => {
-    const { name, bio, email, resume_link, social_links, openSource } = portfolioData;
+    const { name, tagline, bio, email, resume_link, social_links, openSource } = portfolioData;
     const profile = (label) => social_links.find(l => l.name === label)?.url;
     const links = [
         { label: 'Email', href: `mailto:${email}` },
@@ -23,6 +23,7 @@ const Intro = () => {
         <header className="intro">
             <div className="intro-text">
                 <h1 className="name">{name}</h1>
+                {tagline && <p className="tagline">{tagline}</p>}
                 {bio.map((paragraph, i) => (
                     <p key={i}>{renderBoldText(paragraph.replace('{mergedCount}', merged))}</p>
                 ))}
