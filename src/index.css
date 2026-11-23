@@ -127,7 +127,9 @@ strong { font-weight: 600; }
   background: var(--card);
 }
 .pr-list { list-style: none; margin: 6px 0 0; padding: 0; display: grid; gap: 4px; }
-.pr-list summary { cursor: pointer; }
+.pr-list summary { cursor: pointer; list-style: none; }
+.pr-list summary::-webkit-details-marker { display: none; }
+.pr-list summary::before { content: "– "; color: var(--muted); }
 .pr-list summary:hover { color: var(--link-hover); }
 .pr-summary { margin: 4px 0 6px 18px; color: var(--muted); }
 .more { margin-top: 10px; padding: 0; border: 0; background: none; font: inherit; color: var(--link); cursor: pointer; }
