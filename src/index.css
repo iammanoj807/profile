@@ -117,16 +117,21 @@ strong { font-weight: 600; }
 .item.project .item-text { grid-area: text; margin: 8px 0 0; }
 
 /* Open source: the project's GitHub avatar instead of a screenshot */
-.item.oss { grid-template-columns: 240px minmax(0, 1fr); }
+.item.oss { grid-template-columns: 120px minmax(0, 1fr); }
 .oss-thumb { display: flex; justify-content: center; padding-top: 4px; }
 .oss-thumb img {
-  width: 88px;
-  height: 88px;
-  border-radius: 12px;
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
   border: 1px solid var(--thumb-border);
   background: var(--card);
 }
-.pr-list { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 8px; }
+.pr-list { list-style: none; margin: 6px 0 0; padding: 0; display: grid; gap: 4px; }
+.pr-list summary { cursor: pointer; }
+.pr-list summary:hover { color: var(--link-hover); }
+.pr-summary { margin: 4px 0 6px 18px; color: var(--muted); }
+.more { margin-top: 10px; padding: 0; border: 0; background: none; font: inherit; color: var(--link); cursor: pointer; }
+.more:hover { color: var(--link-hover); text-decoration: underline; text-underline-offset: 2px; }
 .pr-num { font-weight: 600; font-variant-numeric: tabular-nums; }
 
 /* Plain lists: publication, experience, education */
@@ -162,7 +167,7 @@ strong { font-weight: 600; }
   .item.project + .item.project { border-top: 1px solid var(--rule); border-radius: 0; }
   .item.project.highlight { border-radius: 6px; }
   .oss-thumb { justify-content: flex-start; }
-  .oss-thumb img { width: 72px; height: 72px; }
+  .oss-thumb img { width: 48px; height: 48px; }
   .dated li { grid-template-columns: 1fr; gap: 2px; }
 }
 

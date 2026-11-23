@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { portfolioData } from '../data/portfolioData';
 import { renderBoldText } from '../utils/renderBoldText';
 
 const ext = { target: '_blank', rel: 'noopener noreferrer' };
+// Newest items shown before "Show all"; every merge keeps its own line.
+const VISIBLE = 6;
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 // "2026-11-17" -> "17 Nov 2026"; "2026-07" -> "Jul 2026"
@@ -14,6 +16,7 @@ const formatDate = (iso) => {
 /** Dated updates: the hand-written news items plus every merged pull request, newest first. */
 const News = () => {
     const { news = [], openSource = [] } = portfolioData;
+    const [showAll, setShowAll] = useState(false);
     const items = [
         ...news.map(n => ({ date: n.date, key: n.text, content: renderBoldText(n.text) })),
         ...openSource.map(pr => {
@@ -32,18 +35,24 @@ const News = () => {
     ].sort((a, b) => b.date.localeCompare(a.date));
 
     if (!items.length) return null;
+    const shown = showAll ? items : items.slice(0, VISIBLE);
 
     return (
         <section className="section" aria-labelledby="news">
             <h2 id="news">News</h2>
             <ul className="plain-list dated news">
-                {items.map(item => (
+                {shown.map(item => (
                     <li key={item.key}>
                         <span className="when">{formatDate(item.date)}</span>
                         <div>{item.content}</div>
                     </li>
                 ))}
             </ul>
+            {items.length > VISIBLE && (
+                <button type="button" className="more" onClick={() => setShowAll(v => !v)} aria-expanded={showAll}>
+                    {showAll ? 'Show fewer' : `Show all ${items.length} updates`}
+                </button>
+            )}
         </section>
     );
 };

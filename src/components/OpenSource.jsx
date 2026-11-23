@@ -30,7 +30,7 @@ const OpenSource = () => {
             <h2 id="open-source">Open source</h2>
             <p className="section-intro">
                 {prs.length} merged pull requests in {groups.length} projects, mostly bug fixes in machine learning
-                libraries. <a href={ALL_MERGED} {...ext}>All merged PRs</a>
+                libraries. Click a pull request to see what it fixed. <a href={ALL_MERGED} {...ext}>All merged PRs</a>
             </p>
 
             {groups.map(g => {
@@ -42,8 +42,8 @@ const OpenSource = () => {
                             <img
                                 src={g.logo || `https://github.com/${owner}.png?size=288`}
                                 alt=""
-                                width="88"
-                                height="88"
+                                width="56"
+                                height="56"
                                 loading="lazy"
                                 onError={(e) => { e.currentTarget.style.visibility = 'hidden'; }}
                             />
@@ -54,9 +54,13 @@ const OpenSource = () => {
                             <ul className="pr-list">
                                 {g.prs.map(pr => (
                                     <li key={pr.pr}>
-                                        <a className="pr-num" href={`${repoUrl}/pull/${pr.pr}`} {...ext}>#{pr.pr}</a>{' '}
-                                        <strong>{pr.title}.</strong>{' '}
-                                        {renderBoldText(pr.summary)}
+                                        <details>
+                                            <summary>
+                                                <a className="pr-num" href={`${repoUrl}/pull/${pr.pr}`} {...ext}>#{pr.pr}</a>{' '}
+                                                {pr.title}
+                                            </summary>
+                                            <p className="pr-summary">{renderBoldText(pr.summary)}</p>
+                                        </details>
                                     </li>
                                 ))}
                             </ul>
