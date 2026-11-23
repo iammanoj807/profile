@@ -407,7 +407,7 @@ export const portfolioData = {
             gradeLabel: "Average mark",
             thesis: "Fruit Detection based on Transfer Learning for Agricultural Automation",
             supervisor: "Dr. Dan Dai",
-            transcript: `${import.meta.env.BASE_URL}transcripts/msc-ai-aston-transcript.jpg`,
+            transcript: `${import.meta.env.BASE_URL}transcripts/msc-ai-aston-transcript.pdf`,
             description: "Deep learning, NLP and computer vision. Dissertation: FruitGuard AI, few-shot fruit detection with YOLOv8, 96.3% accuracy from 207 labelled images, a 34x reduction against the pre-training set.",
             skills: ["PyTorch", "Deep Learning", "Computer Vision", "NLP", "Python"]
         },
