@@ -277,6 +277,16 @@ export const portfolioData = {
             tags: ["Python", "Object detection", "COCO"]
         },
         {
+            project: "geoai",
+            area: "Geospatial AI · University of Tennessee",
+            repo: "opengeos/geoai",
+            pr: 983,
+            merged: "2026-11-27",
+            title: "Tiled inference that blanked the raster border",
+            summary: "Tiled inference tapered the blending weights on every tile side, including sides on the raster's own border where no other tile overlaps, so border pixels got almost no weight: spline blending pulled them toward 0, linear and cosine blending left a nodata ring, and canopy height read **0 m** along the first row and column. Border sides now keep full weight, and a per-pixel model is reproduced exactly on every pixel in 700 random runs.",
+            tags: ["Python", "Geospatial", "Inference"]
+        },
+        {
             project: "PyTorch Connectomics",
             area: "Biomedical image segmentation · Boston College",
             repo: "PytorchConnectomics/pytorch_connectomics",
@@ -285,6 +295,16 @@ export const portfolioData = {
             title: "Dice metric that crashed or measured pixel accuracy",
             summary: "The dice evaluation metric used torchmetrics.Dice, which torchmetrics 1.7 removed, so the test stage crashed on every fresh install; on older torchmetrics the evaluation dice was really pixel accuracy (**0.976** where the true Dice was **0.600**). It now uses an F1-score metric that matches 2TP/(2TP+FP+FN).",
             tags: ["Python", "PyTorch", "Segmentation"]
+        },
+        {
+            project: "PyHealth",
+            area: "Healthcare AI · UIUC",
+            repo: "sunlabuiuc/PyHealth",
+            pr: 1492,
+            merged: "2026-11-27",
+            title: "Time-series values lost when rows share a time step",
+            summary: "The time-series processors wrote whole rows onto the sampling grid, so when two rows fell in the same time step, the later row's missing values erased earlier observed values of other features. With the built-in in-hospital mortality task on the MIMIC-IV demo, **712** of 5,398 observed lab cells (13.2%) became missing; now none are lost.",
+            tags: ["Python", "Healthcare", "Time series"]
         }
     ],
 
